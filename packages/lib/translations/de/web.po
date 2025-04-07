@@ -2484,6 +2484,10 @@ msgstr "Dokumente"
 msgid "Documents created from template"
 msgstr "Dokumente erstellt aus Vorlage"
 
+#: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
+msgid "Documents limit cannot be less than the number of documents created."
+msgstr ""
+
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "Documents Received"
 msgstr "Dokumente empfangen"
@@ -2746,6 +2750,7 @@ msgstr "Geben Sie Ihren Namen ein"
 msgid "Enter your text here"
 msgstr "Geben Sie hier Ihren Text ein"
 
+#: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
 #: apps/remix/app/components/general/verify-email-banner.tsx
@@ -3451,6 +3456,10 @@ msgstr "MAU (hat Dokument abgeschlossen)"
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
 msgid "Max"
 msgstr "Max"
+
+#: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
+msgid "Max Documents"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
 msgid "Maximum file size: 4MB. Maximum 100 rows per upload. Blank values will use template defaults."
