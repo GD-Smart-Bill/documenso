@@ -70,6 +70,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
           ))}
 
           <button
+            type="button"
             className="text-foreground hover:text-foreground/80 text-2xl font-semibold"
             onClick={async () => authClient.signOut()}
           >
