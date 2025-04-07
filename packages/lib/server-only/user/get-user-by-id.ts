@@ -9,5 +9,13 @@ export const getUserById = async ({ id }: GetUserByIdOptions) => {
     where: {
       id,
     },
+    include: {
+      subscriptions: true,
+      documents: {
+        select: {
+          id: true,
+        },
+      },
+    },
   });
 };
