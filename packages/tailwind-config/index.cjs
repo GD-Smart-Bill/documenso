@@ -66,13 +66,13 @@ module.exports = {
           foreground: 'hsl(var(--widget-foreground))',
         },
         documenso: {
-          DEFAULT: '#A2E771',
+          DEFAULT: '#ff7f16',
           50: '#FFFFFF',
           100: '#FDFFFD',
           200: '#E7F9DA',
           300: '#D0F3B7',
           400: '#B9ED94',
-          500: '#A2E771',
+          500: '#ff7f16',
           600: '#83DF41',
           700: '#66C622',
           800: '#4D9619',
@@ -156,8 +156,8 @@ module.exports = {
 };
 
 function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme('colors'));
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme('colors'));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
