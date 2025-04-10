@@ -255,6 +255,14 @@ export const SignUpForm = ({
       </div>
 
       <div className="border-border dark:bg-background relative z-10 flex min-h-[min(850px,80vh)] w-full max-w-lg flex-col rounded-xl border bg-neutral-100 p-6">
+        {/* לוגו במרכז הדף */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src="https://sign.smartbill.co.il/assets/logo-A0g9BgrK.png"
+            alt="SmartBill Logo"
+            className="h-16"
+          />
+        </div>
         {step === 'BASIC_DETAILS' && (
           <div className="h-20">
             <h1 className="text-xl font-semibold md:text-2xl">
@@ -534,7 +542,7 @@ export const SignUpForm = ({
           <Trans>
             By proceeding, you agree to our{' '}
             <Link
-              to="https://documen.so/terms"
+              to="https://sign.smartbill.co.il/Terms-heb.html"
               target="_blank"
               className="text-documenso-700 duration-200 hover:opacity-70"
             >
@@ -542,7 +550,7 @@ export const SignUpForm = ({
             </Link>{' '}
             and{' '}
             <Link
-              to="https://documen.so/privacy"
+              to="https://sign.smartbill.co.il/Privacy-heb.html"
               target="_blank"
               className="text-documenso-700 duration-200 hover:opacity-70"
             >

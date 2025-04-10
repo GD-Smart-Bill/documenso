@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#. "$(dirname -- "$0")/_/husky.sh"
 
 SCRIPT_DIR="$(readlink -f "$(dirname "$0")")"
 MONOREPO_ROOT="$(readlink -f "$SCRIPT_DIR/../")"

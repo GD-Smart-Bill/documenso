@@ -41,8 +41,17 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
   const { isGoogleSSOEnabled, isOIDCSSOEnabled, oidcProviderLabel } = loaderData;
 
   return (
-    <div className="w-screen max-w-lg px-4">
+    <div className="mx-auto w-screen max-w-lg px-4">
       <div className="border-border dark:bg-background z-10 rounded-xl border bg-neutral-100 p-6">
+        {/* לוגו במרכז הדף */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src="https://sign.smartbill.co.il/assets/logo-A0g9BgrK.png"
+            alt="SmartBill Logo"
+            className="h-16"
+          />
+        </div>
+
         <h1 className="text-2xl font-semibold">
           <Trans>Sign in to your account</Trans>
         </h1>
