@@ -1,4 +1,4 @@
-import { type User } from '@prisma/client';
+import type { User } from '@prisma/client';
 import { base32 } from '@scure/base';
 import crypto from 'crypto';
 import { createTOTPKeyURI } from 'oslo/otp';
@@ -12,7 +12,7 @@ type SetupTwoFactorAuthenticationOptions = {
   user: Pick<User, 'id' | 'email'>;
 };
 
-const ISSUER = 'Documenso';
+const ISSUER = 'Smartsign';
 
 export const setupTwoFactorAuthentication = async ({
   user,

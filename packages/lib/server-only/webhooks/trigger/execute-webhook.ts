@@ -25,7 +25,7 @@ export const executeWebhook = async ({ event, webhook, data }: ExecuteWebhookOpt
     body: JSON.stringify(payload),
     headers: {
       'Content-Type': 'application/json',
-      'X-Documenso-Secret': secret ?? '',
+      'X-Smartsign-Secret': secret ?? '',
     },
   });
 

@@ -343,14 +343,14 @@ test('[DOCUMENT_FLOW]: should be able to approve a document', async ({ page }) =
 
   const { recipients } = await seedPendingDocumentWithFullFields({
     owner: user,
-    recipients: ['user@documenso.com', 'approver@documenso.com'],
+    recipients: ['user@smartbill.co.il', 'approver@smartbill.co.il'],
     recipientsCreateOptions: [
       {
-        email: 'user@documenso.com',
+        email: 'user@smartbill.co.il',
         role: RecipientRole.SIGNER,
       },
       {
-        email: 'approver@documenso.com',
+        email: 'approver@smartbill.co.il',
         role: RecipientRole.APPROVER,
       },
     ],
@@ -378,10 +378,14 @@ test('[DOCUMENT_FLOW]: should be able to approve a document', async ({ page }) =
     }
 
     await page
-      .getByRole('button', { name: role === RecipientRole.SIGNER ? 'Complete' : 'Approve' })
+      .getByRole('button', {
+        name: role === RecipientRole.SIGNER ? 'Complete' : 'Approve',
+      })
       .click();
     await page
-      .getByRole('button', { name: role === RecipientRole.SIGNER ? 'Sign' : 'Approve' })
+      .getByRole('button', {
+        name: role === RecipientRole.SIGNER ? 'Sign' : 'Approve',
+      })
       .click();
     await page.waitForURL(`${signUrl}/complete`);
   }
@@ -405,7 +409,7 @@ test('[DOCUMENT_FLOW]: should be able to create, send with redirect url, sign a 
   await expect(page.getByRole('heading', { name: 'General' })).toBeVisible();
   await page.getByLabel('Title').fill(documentTitle);
   await page.getByRole('button', { name: 'Advanced Options' }).click();
-  await page.getByLabel('Redirect URL').fill('https://documenso.com');
+  await page.getByLabel('Redirect URL').fill('https://smartbill.co.il');
 
   await page.getByRole('button', { name: 'Continue' }).click();
 
@@ -453,7 +457,7 @@ test('[DOCUMENT_FLOW]: should be able to create, send with redirect url, sign a 
   await expect(page.getByRole('dialog').getByText('Complete Approval').first()).toBeVisible();
   await page.getByRole('button', { name: 'Approve' }).click();
 
-  await page.waitForURL('https://documenso.com');
+  await page.waitForURL('https://smartbill.co.il');
 
   await expect(async () => {
     // Check if document has been signed
@@ -601,7 +605,10 @@ test('[DOCUMENT_FLOW]: should be able to create and sign a document with 3 recip
 
     if (i > 0) {
       const previousRecipient = await prisma.recipient.findFirst({
-        where: { email: `user${i}@example.com`, documentId: createdDocument?.id },
+        where: {
+          email: `user${i}@example.com`,
+          documentId: createdDocument?.id,
+        },
       });
 
       expect(previousRecipient?.signingStatus).toBe(SigningStatus.SIGNED);

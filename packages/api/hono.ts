@@ -14,7 +14,7 @@ import { unsubscribeHandler } from '@documenso/lib/server-only/webhooks/zapier/u
 export const tsRestHonoApp = new Hono();
 
 tsRestHonoApp
-  .get('/openapi', (c) => c.redirect('https://openapi-v1.documenso.com'))
+  .get('/openapi', (c) => c.redirect('https://openapi-v1.smartbill.co.il'))
   .get('/openapi.json', (c) => c.json(OpenAPIV1))
   .get('/me', async (c) => testCredentialsHandler(c.req.raw));
 

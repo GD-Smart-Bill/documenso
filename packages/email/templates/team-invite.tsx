@@ -31,7 +31,7 @@ export type TeamInviteEmailProps = {
 
 export const TeamInviteEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://documenso.com',
+  baseUrl = 'https://smartbill.co.il',
   senderName = 'John Doe',
   teamName = 'Team Name',
   teamUrl = 'demo',
@@ -40,7 +40,7 @@ export const TeamInviteEmailTemplate = ({
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`Accept invitation to join a team on Documenso`;
+  const previewText = msg`Accept invitation to join a team on Smartsign`;
 
   return (
     <Html>
@@ -70,7 +70,7 @@ export const TeamInviteEmailTemplate = ({
 
             <Section className="p-2 text-slate-500">
               <Text className="text-center text-lg font-medium text-black">
-                <Trans>Join {teamName} on Documenso</Trans>
+                <Trans>Join {teamName} on Smartsign</Trans>
               </Text>
 
               <Text className="my-1 text-center text-base">

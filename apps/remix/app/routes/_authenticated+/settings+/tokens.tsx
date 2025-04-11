@@ -29,8 +29,9 @@ export default function ApiTokensPage() {
             On this page, you can create and manage API tokens. See our{' '}
             <a
               className="text-primary underline"
-              href={'https://docs.documenso.com/developers/public-api'}
+              href={'https://docs.smartbill.co.il/developers/public-api'}
               target="_blank"
+              rel="noreferrer"
             >
               Documentation
             </a>{' '}
