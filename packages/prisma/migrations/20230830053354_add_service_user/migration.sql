@@ -1,4 +1,4 @@
 INSERT INTO "User" ("email", "name") VALUES (
-  'serviceaccount@documenso.com',
+  'serviceaccount@smartbill.co.il',
   'Service Account'
 ) ON CONFLICT DO NOTHING;

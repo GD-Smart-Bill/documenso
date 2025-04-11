@@ -259,7 +259,7 @@ export const SignUpForm = ({
         <div className="mb-6 flex justify-center">
           <img
             src="https://sign.smartbill.co.il/assets/logo-A0g9BgrK.png"
-            alt="SmartBill Logo"
+            alt="Smartsign logo"
             className="h-16"
           />
         </div>

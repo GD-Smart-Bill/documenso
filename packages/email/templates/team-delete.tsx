@@ -17,7 +17,7 @@ export type TeamDeleteEmailProps = {
 
 export const TeamDeleteEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://documenso.com',
+  baseUrl = 'https://smartbill.co.il',
   teamUrl = 'demo',
   isOwner = false,
 }: TeamDeleteEmailProps) => {

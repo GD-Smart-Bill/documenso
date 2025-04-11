@@ -128,13 +128,13 @@ msgstr "{0} הזמינ/ה אותך ל{recipientActionVerb} מסמך"
 
 #. placeholder {0}: memberName || memberEmail
 #: packages/email/templates/team-join.tsx
-msgid "{0} joined the team {teamName} on Documenso"
-msgstr "{0} הצטרף/ה לצוות {teamName} ב-Documenso"
+msgid "{0} joined the team {teamName} on Smartsign"
+msgstr "{0} הצטרף/ה לצוות {teamName} ב-Smartsign"
 
 #. placeholder {0}: memberName || memberEmail
 #: packages/email/templates/team-leave.tsx
-msgid "{0} left the team {teamName} on Documenso"
-msgstr "{0} עזב/ה את הצוות {teamName} ב-Documenso"
+msgid "{0} left the team {teamName} on Smartsign"
+msgstr "{0} עזב/ה את הצוות {teamName} ב-Smartsign"
 
 #. placeholder {0}: remaining.documents
 #. placeholder {1}: quota.documents
@@ -396,171 +396,7 @@ msgstr "{userName} צפה/תה במסמך"
 #: packages/ui/primitives/data-table-pagination.tsx
 msgid "{visibleRows, plural, one {Showing # result.} other {Showing # results.}}"
 msgstr "{visibleRows, plural, one {מציג תוצאה אחת} other {מציג # תוצאות}}"
-####################################################
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
-msgid "A confirmation email has been sent, and it should arrive in your inbox shortly."
-msgstr "אימייל לאישור נשלח, והוא אמור להגיע לתיבת הדואר שלך בקרוב."
 
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "A device capable of accessing, opening, and reading documents"
-msgstr "מכשיר שיכול לגשת, לפתוח ולקרוא מסמכים"
-
-#: packages/lib/jobs/definitions/emails/send-signing-email.handler.ts
-msgid "A document was created by your direct template that requires you to {recipientActionVerb} it."
-msgstr "מסמך נוצר מהתבנית הישירה שלך, ונדרש ממך {recipientActionVerb} אותו."
-
-#: apps/remix/app/components/dialogs/template-use-dialog.tsx
-msgid "A draft document will be created"
-msgstr "מסמך טיוטה ייווצר"
-
-#: packages/lib/utils/document-audit-logs.ts
-msgid "A field was added"
-msgstr "שדה נוסף"
-
-#: packages/lib/utils/document-audit-logs.ts
-msgid "A field was removed"
-msgstr "שדה הוסר"
-
-#: packages/lib/utils/document-audit-logs.ts
-msgid "A field was updated"
-msgstr "שדה עודכן"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "A means to print or download documents for your records"
-msgstr "אפשרות להדפיס או להוריד מסמכים לשמירה אצלך"
-
-#: packages/lib/jobs/definitions/emails/send-team-member-joined-email.handler.ts
-msgid "A new member has joined your team"
-msgstr "חבר צוות חדש הצטרף לצוות שלך"
-
-#: apps/remix/app/components/forms/token.tsx
-msgid "A new token was created successfully."
-msgstr "אסימון חדש נוצר בהצלחה."
-
-#: apps/remix/app/routes/_unauthenticated+/check-email.tsx
-#: apps/remix/app/components/forms/forgot-password.tsx
-msgid "A password reset email has been sent, if you have an account you should see it in your inbox shortly."
-msgstr "אימייל לאיפוס סיסמה נשלח. אם יש לך חשבון, תראה אותו בתיבת הדואר הנכנס בקרוב."
-
-#: packages/lib/utils/document-audit-logs.ts
-msgid "A recipient was added"
-msgstr "נמען נוסף"
-
-#: packages/lib/utils/document-audit-logs.ts
-msgid "A recipient was removed"
-msgstr "נמען הוסר"
-
-#: packages/lib/utils/document-audit-logs.ts
-msgid "A recipient was updated"
-msgstr "נמען עודכן"
-
-#. placeholder {0}: transferVerification.name
-#. placeholder {1}: transferVerification.email
-#: apps/remix/app/components/general/teams/team-transfer-status.tsx
-msgid "A request to transfer the ownership of this team has been sent to <0>{0} ({1})</0>"
-msgstr "בקשה להעברת בעלות על הצוות נשלחה ל-<0>{0} ({1})</0>"
-
-#. placeholder {0}: team.name
-#: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Documenso"
-msgstr "{0} יזם/ה בקשה להשתמש בכתובת האימייל שלך ב-Documenso"
-
-#: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso"
-msgstr "מפתח סודי שישלח לכתובת ה-URL שלך, כדי שתוכל/י לוודא שהבקשה נשלחה על ידי Documenso"
-
-#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
-#: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
-msgstr "מפתח סודי שישלח לכתובת ה-URL שלך כדי שתוכל/י לוודא שהבקשה נשלחה על ידי Documenso."
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "A stable internet connection"
-msgstr "חיבור אינטרנט יציב"
-
-#: packages/email/templates/team-join.tsx
-msgid "A team member has joined a team on Documenso"
-msgstr "חבר צוות הצטרף לצוות ב-Documenso"
-
-#. placeholder {0}: team.name
-#: packages/lib/jobs/definitions/emails/send-team-member-left-email.handler.ts
-msgid "A team member has left {0}"
-msgstr "חבר צוות עזב את {0}"
-
-#: packages/email/templates/team-leave.tsx
-msgid "A team member has left a team on Documenso"
-msgstr "חבר צוות עזב צוות ב-Documenso"
-
-#: packages/email/templates/team-delete.tsx
-#: packages/email/templates/team-delete.tsx
-msgid "A team you were a part of has been deleted"
-msgstr "צוות שהיית חלק ממנו נמחק"
-
-#: apps/remix/app/components/forms/public-profile-form.tsx
-msgid "A unique URL to access your profile"
-msgstr "כתובת URL ייחודית לגישה לפרופיל שלך"
-
-#: apps/remix/app/components/forms/team-update-form.tsx
-#: apps/remix/app/components/dialogs/team-create-dialog.tsx
-msgid "A unique URL to identify your team"
-msgstr "כתובת URL ייחודית לזיהוי הצוות שלך"
-
-#: apps/remix/app/components/dialogs/team-email-add-dialog.tsx
-msgid "A verification email will be sent to the provided email."
-msgstr "אימייל לאימות יישלח לכתובת שסיפקת."
-
-#: apps/remix/app/components/general/teams/team-invitations.tsx
-#: packages/email/templates/team-transfer-request.tsx
-#: packages/email/templates/team-invite.tsx
-#: packages/email/templates/confirm-team-email.tsx
-msgid "Accept"
-msgstr "אישור"
-
-#: packages/email/templates/team-invite.tsx
-msgid "Accept invitation to join a team on Documenso"
-msgstr "אשר הזמנה להצטרפות לצוות ב-Documenso"
-
-#: packages/email/templates/confirm-team-email.tsx
-msgid "Accept team email request for {teamName} on Documenso"
-msgstr "אשר בקשת אימייל עבור הצוות {teamName} ב-Documenso"
-
-#: packages/email/templates/team-transfer-request.tsx
-msgid "Accept team transfer request on Documenso"
-msgstr "אשר בקשת העברת צוות ב-Documenso"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Acceptance and Consent"
-msgstr "הסכמה ואישור"
-
-#: apps/remix/app/components/general/teams/team-invitations.tsx
-msgid "Accepted team invitation"
-msgstr "הזמנת צוות אושרה"
-
-#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
-msgid "Account Authentication"
-msgstr "אימות חשבון"
-
-#: apps/remix/app/components/dialogs/admin-user-delete-dialog.tsx
-#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Account deleted"
-msgstr "החשבון נמחק"
-
-#: apps/remix/app/components/dialogs/admin-user-disable-dialog.tsx
-msgid "Account disabled"
-msgstr "החשבון הושבת"
-
-#: apps/remix/app/components/dialogs/admin-user-enable-dialog.tsx
-msgid "Account enabled"
-msgstr "החשבון הופעל"
-
-#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
-msgid "Account Re-Authentication"
-msgstr "אימות מחודש של החשבון"
-
-#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Acknowledgment"
-msgstr "אישור קבלה"
-##############################
 #. placeholder {0}: document.title
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
 msgid "<0>\"{0}\"</0>is no longer available to sign"
@@ -571,8 +407,8 @@ msgid "<0>{senderName}</0> has requested that you take ownership of the followin
 msgstr "<0>{senderName}</0> ביקש שתיקח בעלות על הצוות הבא"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
-msgstr "<0>{teamName}</0> ביקש להשתמש בכתובת האימייל שלך עבור הצוות שלהם ב-Documenso."
+msgid "<0>{teamName}</0> has requested to use your email address for their team on Smartsign."
+msgstr "<0>{teamName}</0> ביקש להשתמש בכתובת האימייל שלך עבור הצוות שלהם ב-Smartsign."
 
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 msgid "<0>Click to upload</0> or drag and drop"
@@ -750,25 +586,25 @@ msgstr "בקשה להעברת הבעלות על צוות זה נשלחה אל <0
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Documenso"
-msgstr "בקשה להשתמש באימייל שלך נוצרה על ידי {0} ב-Documenso"
+msgid "A request to use your email has been initiated by {0} on Smartsign"
+msgstr "בקשה להשתמש באימייל שלך נוצרה על ידי {0} ב-Smartsign"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso"
-msgstr "סוד שיישלח לכתובת ה-URL שלך כדי שתוכל לאמת שהבקשה נשלחה על ידי Documenso"
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign"
+msgstr "סוד שיישלח לכתובת ה-URL שלך כדי שתוכל לאמת שהבקשה נשלחה על ידי Smartsign"
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
-msgstr "סוד שיישלח לכתובת ה-URL שלך כדי שתוכל לאמת שהבקשה נשלחה על ידי Documenso."
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign."
+msgstr "סוד שיישלח לכתובת ה-URL שלך כדי שתוכל לאמת שהבקשה נשלחה על ידי Smartsign."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "A stable internet connection"
 msgstr "חיבור אינטרנט יציב"
 
 #: packages/email/templates/team-join.tsx
-msgid "A team member has joined a team on Documenso"
-msgstr "חבר צוות הצטרף לצוות ב-Documenso"
+msgid "A team member has joined a team on Smartsign"
+msgstr "חבר צוות הצטרף לצוות ב-Smartsign"
 
 #. placeholder {0}: team.name
 #: packages/lib/jobs/definitions/emails/send-team-member-left-email.handler.ts
@@ -776,8 +612,8 @@ msgid "A team member has left {0}"
 msgstr "חבר צוות עזב את {0}"
 
 #: packages/email/templates/team-leave.tsx
-msgid "A team member has left a team on Documenso"
-msgstr "חבר צוות עזב צוות ב-Documenso"
+msgid "A team member has left a team on Smartsign"
+msgstr "חבר צוות עזב צוות ב-Smartsign"
 
 #: packages/email/templates/team-delete.tsx
 #: packages/email/templates/team-delete.tsx
@@ -805,16 +641,16 @@ msgid "Accept"
 msgstr "קבל"
 
 #: packages/email/templates/team-invite.tsx
-msgid "Accept invitation to join a team on Documenso"
-msgstr "קבל הזמנה להצטרף לצוות ב-Documenso"
+msgid "Accept invitation to join a team on Smartsign"
+msgstr "קבל הזמנה להצטרף לצוות ב-Smartsign"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "Accept team email request for {teamName} on Documenso"
-msgstr "קבל בקשת אימייל צוות עבור {teamName} ב-Documenso"
+msgid "Accept team email request for {teamName} on Smartsign"
+msgstr "קבל בקשת אימייל צוות עבור {teamName} ב-Smartsign"
 
 #: packages/email/templates/team-transfer-request.tsx
-msgid "Accept team transfer request on Documenso"
-msgstr "קבל בקשת העברת צוות ב-Documenso"
+msgid "Accept team transfer request on Smartsign"
+msgstr "קבל בקשת העברת צוות ב-Smartsign"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Acceptance and Consent"
@@ -962,8 +798,7 @@ msgstr "הוסף מצייני מקום"
 #: packages/ui/primitives/document-flow/add-signers.tsx
 msgid "Add Signer"
 msgstr "הוסף חותם"
-###########################################
-###########################################
+
 #: apps/remix/app/components/general/document/document-edit-form.tsx
 msgid "Add Signers"
 msgstr "הוסף חותמים"
@@ -1362,7 +1197,7 @@ msgstr "האם אתה בטוח שברצונך להשלים את המסמך? לא
 #: apps/remix/app/components/dialogs/token-delete-dialog.tsx
 msgid "Are you sure you want to delete this token?"
 msgstr "האם אתה בטוח שברצונך למחוק טוקן זה?"
-###################################
+
 #: apps/remix/app/components/general/document-signing/document-signing-reject-dialog.tsx
 msgid "Are you sure you want to reject this document? This action cannot be undone."
 msgstr "האם אתה בטוח שברצונך לדחות מסמך זה? פעולה זו אינה ניתנת לביטול."
@@ -1566,8 +1401,8 @@ msgid "By enabling 2FA, you will be required to enter a code from your authentic
 msgstr "על ידי הפעלת אימות דו-שלבי, תידרש להזין קוד מאפליקציית האימות שלך בכל פעם שתתחבר באמצעות סיסמת דוא\"ל."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By proceeding to use the electronic signature service provided by Documenso, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
-msgstr "על ידי המשך השימוש בשירות החתימה האלקטרונית המסופק על ידי Documenso, אתה מאשר שקראת והבנת גילוי זה. אתה מסכים לכל התנאים וההגבלות הקשורים לשימוש בחתימות אלקטרוניות ועסקאות אלקטרוניות כפי שמפורט כאן."
+msgid "By proceeding to use the electronic signature service provided by Smartsign, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
+msgstr "על ידי המשך השימוש בשירות החתימה האלקטרונית המסופק על ידי Smartsign, אתה מאשר שקראת והבנת גילוי זה. אתה מסכים לכל התנאים וההגבלות הקשורים לשימוש בחתימות אלקטרוניות ועסקאות אלקטרוניות כפי שמפורט כאן."
 
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "By proceeding with your electronic signature, you acknowledge and consent that it will be used to sign the given document and holds the same legal validity as a handwritten signature. By completing the electronic signing process, you affirm your understanding and acceptance of these conditions."
@@ -1861,6 +1696,7 @@ msgstr "אשר על ידי הקלדת: <0>{deleteMessage}</0>"
 #: apps/remix/app/components/dialogs/account-delete-dialog.tsx
 msgid "Confirm Deletion"
 msgstr "אשר מחיקה"
+
 #: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
 #: packages/email/template-components/template-confirmation-email.tsx
 msgid "Confirm email"
@@ -2385,8 +2221,8 @@ msgid "Do you want to duplicate this template?"
 msgstr "האם אתה רוצה לשכפל תבנית זו?"
 
 #: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Documenso will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
-msgstr "Documenso ימחק <0>את כל המסמכים שלך</0>, יחד עם כל המסמכים המושלמים שלך, החתימות, וכל המשאבים האחרים השייכים לחשבון שלך."
+msgid "Smartsign will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
+msgstr "Smartsign ימחק <0>את כל המסמכים שלך</0>, יחד עם כל המסמכים המושלמים שלך, החתימות, וכל המשאבים האחרים השייכים לחשבון שלך."
 
 #: apps/remix/app/routes/_authenticated+/documents.$id.logs.tsx
 #: apps/remix/app/components/general/template/template-page-view-documents-table.tsx
@@ -2704,7 +2540,7 @@ msgstr "גרור ושחרר את ה-PDF שלך כאן."
 
 #: packages/lib/constants/document.ts
 msgid "Draw"
-msgstr "ציור"
+msgstr "מצוייר"
 
 #: packages/ui/primitives/template-flow/add-template-fields.tsx
 #: packages/ui/primitives/document-flow/add-fields.tsx
@@ -2960,6 +2796,507 @@ msgstr "שגיאה"
 #: apps/remix/app/components/forms/team-document-preferences-form.tsx
 msgid "Everyone can access and view the document"
 msgstr "כל אחד יכול לגשת ולצפות במסמך"
+
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+msgid "Everyone has signed"
+msgstr ""
+
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+msgid "Everyone has signed! You will receive an Email copy of the signed document."
+msgstr ""
+
+#: apps/remix/app/components/dialogs/passkey-create-dialog.tsx
+msgid "Exceeded timeout"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._index.tsx
+msgid "Expired"
+msgstr ""
+
+#. placeholder {0}: i18n.date(token.expires, DateTime.DATETIME_FULL)
+#: apps/remix/app/routes/_authenticated+/settings+/tokens.tsx
+msgid "Expires on {0}"
+msgstr ""
+
+#: packages/ui/primitives/template-flow/add-template-settings.tsx
+#: packages/ui/primitives/document-flow/add-settings.tsx
+msgid "External ID"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
+msgid "Failed to reseal document"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-item-advanced-settings.tsx
+msgid "Failed to save settings."
+msgstr ""
+
+#: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
+msgid "Failed to update recipient"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
+#: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
+msgid "Failed to update webhook"
+msgstr ""
+
+#: packages/email/templates/bulk-send-complete.tsx
+msgid "Failed: {failedCount}"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+msgid "Field character limit"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/name-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/initials-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/email-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/date-field.tsx
+msgid "Field font size"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+msgid "Field format"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/radio-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/checkbox-field.tsx
+msgid "Field label"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+msgid "Field placeholder"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Field prefilled by assistant"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Field signed"
+msgstr ""
+
+#: packages/lib/utils/document-audit-logs.ts
+msgid "Field unsigned"
+msgstr ""
+
+#: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
+msgid "Fields"
+msgstr ""
+
+#: apps/remix/app/components/general/document/document-upload.tsx
+msgid "File cannot be larger than {APP_DOCUMENT_UPLOAD_SIZE_LIMIT}MB"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/template-use-dialog.tsx
+msgid "File size exceeds the limit of {APP_DOCUMENT_UPLOAD_SIZE_LIMIT} MB"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/name-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/initials-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/email-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/date-field.tsx
+msgid "Font Size"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
+msgid "For any questions regarding this disclosure, electronic signatures, or any related process, please contact us at: <0>{SUPPORT_EMAIL}</0>"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
+msgid "For each recipient, provide their email (required) and name (optional) in separate columns. Download the template CSV below for the correct format."
+msgstr ""
+
+#: packages/lib/server-only/auth/send-forgot-password.ts
+msgid "Forgot Password?"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/forgot-password.tsx
+#: apps/remix/app/components/forms/signin.tsx
+#: packages/email/template-components/template-forgot-password.tsx
+msgid "Forgot your password?"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/types.ts
+msgid "Free Signature"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/document-signing-name-field.tsx
+#: apps/remix/app/components/general/document-signing/document-signing-form.tsx
+#: apps/remix/app/components/general/direct-template/direct-template-signing-form.tsx
+#: apps/remix/app/components/forms/signup.tsx
+#: apps/remix/app/components/forms/profile.tsx
+#: apps/remix/app/components/embed/embed-document-signing-page.tsx
+#: apps/remix/app/components/embed/embed-direct-template-client-page.tsx
+msgid "Full Name"
+msgstr ""
+
+#: apps/remix/app/components/general/template/template-edit-form.tsx
+#: apps/remix/app/components/general/teams/team-settings-nav-mobile.tsx
+#: apps/remix/app/components/general/teams/team-settings-nav-desktop.tsx
+#: apps/remix/app/components/general/document/document-edit-form.tsx
+#: apps/remix/app/components/general/direct-template/direct-template-page.tsx
+msgid "General"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/add-subject.tsx
+msgid "Generate Links"
+msgstr ""
+
+#: packages/ui/components/document/document-global-auth-action-select.tsx
+msgid "Global recipient action authentication"
+msgstr ""
+
+#: apps/remix/app/routes/_recipient+/_layout.tsx
+#: apps/remix/app/routes/_profile+/_layout.tsx
+#: apps/remix/app/components/general/generic-error-layout.tsx
+#: packages/ui/primitives/document-flow/document-flow-root.tsx
+msgid "Go Back"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
+#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
+#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
+#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
+msgid "Go back home"
+msgstr ""
+
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+#: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
+msgid "Go Back Home"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
+msgid "Go to owner"
+msgstr ""
+
+#: apps/remix/app/routes/_profile+/p.$url.tsx
+msgid "Go to your <0>public profile settings</0> to add documents."
+msgstr ""
+
+#: packages/ui/primitives/signature-pad/signature-pad-color-picker.tsx
+msgid "Green"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
+msgid "has invited you to approve this document"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
+msgid "has invited you to assist this document"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
+msgid "has invited you to sign this document"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
+msgid "has invited you to view this document"
+msgstr ""
+
+#: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
+#: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
+#: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
+#: packages/ui/primitives/document-flow/add-signers.tsx
+#: packages/ui/primitives/document-flow/add-signers.tsx
+#: packages/ui/primitives/document-flow/add-signers.tsx
+msgid "Having an assistant as the last signer means they will be unable to take any action as there are no subsequent signers to assist."
+msgstr ""
+
+#: apps/remix/app/components/embed/embed-document-signing-page.tsx
+msgid "Help complete the document for other signers."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/settings+/profile.tsx
+msgid "Here you can edit your personal details."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/settings+/security._index.tsx
+msgid "Here you can manage your password and security settings."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.preferences.tsx
+msgid "Here you can set preferences and defaults for branding."
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.preferences.tsx
+msgid "Here you can set preferences and defaults for your team."
+msgstr ""
+
+#: apps/remix/app/components/dialogs/template-direct-link-dialog.tsx
+msgid "Here's how it works:"
+msgstr ""
+
+#: apps/remix/app/components/general/user-profile-timur.tsx
+msgid "Hey I’m Timur"
+msgstr ""
+
+#: packages/email/templates/bulk-send-complete.tsx
+msgid "Hi {userName},"
+msgstr ""
+
+#: packages/email/templates/reset-password.tsx
+msgid "Hi, {userName} <0>({userEmail})</0>"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/settings+/public-profile.tsx
+#: apps/remix/app/components/tables/documents-table-action-dropdown.tsx
+#: apps/remix/app/components/dialogs/document-delete-dialog.tsx
+msgid "Hide"
+msgstr ""
+
+#: apps/remix/app/components/general/document/document-history-sheet.tsx
+msgid "Hide additional information"
+msgstr ""
+
+#: packages/lib/constants/recipient-roles.ts
+msgid "I am a signer of this document"
+msgstr ""
+
+#: packages/lib/constants/recipient-roles.ts
+msgid "I am a viewer of this document"
+msgstr ""
+
+#: packages/lib/constants/recipient-roles.ts
+msgid "I am an approver of this document"
+msgstr ""
+
+#: packages/lib/constants/recipient-roles.ts
+msgid "I am an assistant of this document"
+msgstr ""
+
+#: packages/lib/constants/recipient-roles.ts
+msgid "I am required to receive a copy of this document"
+msgstr ""
+
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+msgid "I am the owner of this document"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/webhook-delete-dialog.tsx
+#: apps/remix/app/components/dialogs/token-delete-dialog.tsx
+msgid "I'm sure! Delete it"
+msgstr ""
+
+#: apps/remix/app/components/general/teams/team-transfer-status.tsx
+msgid "If they accept this request, the team will be transferred to their account."
+msgstr ""
+
+#: apps/remix/app/components/dialogs/passkey-create-dialog.tsx
+msgid "If you do not want to use the authenticator prompted, you can close it, which will then display the next available authenticator."
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
+msgid "If you don't find the confirmation link in your inbox, you can request a new one below."
+msgstr ""
+
+#: apps/remix/app/components/forms/2fa/enable-authenticator-app-dialog.tsx
+msgid "If your authenticator app does not support QR codes, you can use the following code instead:"
+msgstr ""
+
+#: apps/remix/app/components/general/document/document-status.tsx
+msgid "Inbox"
+msgstr ""
+
+#: apps/remix/app/components/general/app-command-menu.tsx
+msgid "Inbox documents"
+msgstr ""
+
+#: apps/remix/app/components/forms/team-document-preferences-form.tsx
+msgid "Include the Signing Certificate in the Document"
+msgstr ""
+
+#: apps/remix/app/components/general/template/template-page-view-information.tsx
+#: apps/remix/app/components/general/document/document-page-view-information.tsx
+msgid "Information"
+msgstr ""
+
+#: packages/ui/components/recipient/recipient-action-auth-select.tsx
+#: packages/ui/components/recipient/recipient-action-auth-select.tsx
+msgid "Inherit authentication method"
+msgstr ""
+
+#: apps/remix/app/components/general/document-signing/document-signing-initials-field.tsx
+#: packages/ui/primitives/document-flow/types.ts
+msgid "Initials"
+msgstr ""
+
+#: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
+msgid "Inserted"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
+msgid "Instance Stats"
+msgstr ""
+
+#: apps/remix/app/components/forms/2fa/view-recovery-codes-dialog.tsx
+msgid "Invalid code. Please try again."
+msgstr ""
+
+#: packages/ui/primitives/document-flow/add-signers.types.ts
+msgid "Invalid email"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/team.verify.transfer.token.tsx
+#: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
+msgid "Invalid link"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/team.invite.$token.tsx
+#: apps/remix/app/routes/_unauthenticated+/team.decline.$token.tsx
+msgid "Invalid token"
+msgstr ""
+
+#: apps/remix/app/components/forms/reset-password.tsx
+msgid "Invalid token provided. Please try again."
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/team.invite.$token.tsx
+msgid "Invitation accepted!"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/team.decline.$token.tsx
+msgid "Invitation declined"
+msgstr ""
+
+#: apps/remix/app/components/tables/team-settings-member-invites-table.tsx
+msgid "Invitation has been deleted"
+msgstr ""
+
+#: apps/remix/app/components/tables/team-settings-member-invites-table.tsx
+msgid "Invitation has been resent"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
+msgid "Invite"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
+msgid "Invite member"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
+msgid "Invite Members"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
+msgid "Invite team members"
+msgstr ""
+
+#: apps/remix/app/components/tables/team-settings-member-invites-table.tsx
+msgid "Invited At"
+msgstr ""
+
+#: apps/remix/app/components/tables/team-settings-billing-invoices-table.tsx
+msgid "Invoice"
+msgstr ""
+
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+#: apps/remix/app/components/tables/internal-audit-log-table.tsx
+msgid "IP Address"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
+msgid "It is crucial to keep your contact information, especially your email address, up to date with us. Please notify us immediately of any changes to ensure that you continue to receive all necessary communications."
+msgstr ""
+
+#. placeholder {0}: publicProfile.name
+#: apps/remix/app/routes/_profile+/p.$url.tsx
+msgid "It looks like {0} hasn't added any documents to their profile yet."
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
+msgid "It seems that the provided token has expired. We've just sent you another token, please check your email and try again."
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
+msgid "It seems that there is no token provided, if you are trying to verify your email please follow the link in your email."
+msgstr ""
+
+#: apps/remix/app/components/embed/embed-document-waiting-for-turn.tsx
+msgid "It's currently not your turn to sign. Please check back soon as this document should be available for you to sign shortly."
+msgstr ""
+
+#: apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx
+msgid "It's currently not your turn to sign. You will receive an email with instructions once it's your turn to sign the document."
+msgstr ""
+
+#: packages/email/templates/team-invite.tsx
+msgid "Join {teamName} on Smartsign"
+msgstr ""
+
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/radio-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
+#: packages/ui/primitives/document-flow/field-items-advanced-settings/checkbox-field.tsx
+msgid "Label"
+msgstr ""
+
+#: apps/remix/app/components/general/menu-switcher.tsx
+#: packages/ui/primitives/template-flow/add-template-settings.tsx
+#: packages/ui/primitives/document-flow/add-settings.tsx
+msgid "Language"
+msgstr ""
+
+#: apps/remix/app/components/general/period-selector.tsx
+msgid "Last 14 days"
+msgstr ""
+
+#: apps/remix/app/components/general/period-selector.tsx
+msgid "Last 30 days"
+msgstr ""
+
+#: apps/remix/app/components/general/period-selector.tsx
+msgid "Last 7 days"
+msgstr ""
+
+#: apps/remix/app/components/general/template/template-page-view-information.tsx
+#: apps/remix/app/components/general/document/document-page-view-information.tsx
+msgid "Last modified"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/documents.$id.logs.tsx
+msgid "Last updated"
+msgstr ""
+
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/audit-log.tsx
+msgid "Last Updated"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
+msgid "Last updated at"
+msgstr ""
+
+#: apps/remix/app/components/tables/settings-security-passkey-table.tsx
+msgid "Last used"
+msgstr ""
+
+#: apps/remix/app/routes/_authenticated+/admin+/_layout.tsx
+msgid "Leaderboard"
+msgstr ""
+
+#: apps/remix/app/components/tables/user-settings-current-teams-table.tsx
+#: apps/remix/app/components/dialogs/team-leave-dialog.tsx
+msgid "Leave"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/team-leave-dialog.tsx
+msgid "Leave team"
+msgstr ""
+
+#: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
+msgid "Legality of Electronic Signatures"
+msgstr ""
+
+#: apps/remix/app/components/general/app-command-menu.tsx
+msgid "Light Mode"
+msgstr ""
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Like to have your own public profile with agreements?"
@@ -4574,7 +4911,7 @@ msgstr "היקף החתימות"
 msgid "Signups are disabled."
 msgstr "ההרשמה מושבתת."
 
-#. placeholder {0}: DateTime.fromJSDate(publicProfile.badge.since).toFormat('LLL 'yy')
+#. placeholder {0}: DateTime.fromJSDate(publicProfile.badge.since).toFormat('LLL ‘yy')
 #: apps/remix/app/routes/_profile+/p.$url.tsx
 msgid "Since {0}"
 msgstr "מאז {0}"
@@ -4788,8 +5125,8 @@ msgstr "צוות"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Documenso"
-msgstr "צוות \"{0}\" נמחק ב-Documenso"
+msgid "Team \"{0}\" has been deleted on Smartsign"
+msgstr "צוות \"{0}\" נמחק ב-Smartsign"
 
 #: apps/remix/app/components/dialogs/team-checkout-create-dialog.tsx
 msgid "Team checkout"
@@ -4822,8 +5159,8 @@ msgid "Team email removed"
 msgstr "דוא״ל הצוות הוסר"
 
 #: packages/email/templates/team-email-removed.tsx
-msgid "Team email removed for {teamName} on Documenso"
-msgstr "דוא״ל הצוות הוסר עבור {teamName} ב-Documenso"
+msgid "Team email removed for {teamName} on Smartsign"
+msgstr "דוא״ל הצוות הוסר עבור {teamName} ב-Smartsign"
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Team email verification"
@@ -5005,8 +5342,8 @@ msgid "Text Color"
 msgstr "צבע טקסט"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Thank you for using Documenso to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
-msgstr "תודה שבחרת להשתמש ב-Documenso לביצוע חתימה אלקטרונית על מסמכים. מטרת גילוי זה היא ליידע אותך על התהליך, החוקיות והזכויות שלך בנוגע לשימוש בחתימות אלקטרוניות בפלטפורמה שלנו. בבחירתך להשתמש בחתימה אלקטרונית, אתה מסכים לתנאים ולהגבלות המפורטים להלן."
+msgid "Thank you for using Smartsign to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
+msgstr "תודה שבחרת להשתמש ב-Smartsign לביצוע חתימה אלקטרונית על מסמכים. מטרת גילוי זה היא ליידע אותך על התהליך, החוקיות והזכויות שלך בנוגע לשימוש בחתימות אלקטרוניות בפלטפורמה שלנו. בבחירתך להשתמש בחתימה אלקטרונית, אתה מסכים לתנאים ולהגבלות המפורטים להלן."
 
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "That's okay, it happens! Click the button below to reset your password."
@@ -5236,8 +5573,8 @@ msgstr "סוגי החתימות שהנמענים רשאים להשתמש בהם 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
-msgid "The URL for Documenso to send webhook events to."
-msgstr "כתובת ה-URL שאליה Documenso ישלח אירועי webhook."
+msgid "The URL for Smartsign to send webhook events to."
+msgstr "כתובת ה-URL שאליה Smartsign ישלח אירועי webhook."
 
 #: apps/remix/app/components/dialogs/webhook-delete-dialog.tsx
 msgid "The webhook has been successfully deleted."
@@ -5335,8 +5672,8 @@ msgid "This document was created using a direct link."
 msgstr "מסמך זה נוצר באמצעות קישור ישיר."
 
 #: packages/email/template-components/template-footer.tsx
-msgid "This document was sent using <0>Documenso.</0>"
-msgstr "מסמך זה נשלח באמצעות <0>Documenso.</0>"
+msgid "This document was sent using <0>Smartsign.</0>"
+msgstr "מסמך זה נשלח באמצעות <0>Smartsign.</0>"
 
 #: packages/email/template-components/template-document-rejection-confirmed.tsx
 msgid "This email confirms that you have rejected the document <0>\"{documentName}\"</0> sent by {documentOwnerName}."
@@ -5565,23 +5902,23 @@ msgstr "שם האסימון"
 
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "Total Documents"
-msgstr "מסמכים סה"כ"
+msgstr "מסמכים סה\"כ"
 
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "Total Recipients"
-msgstr "נמענים סה"כ"
+msgstr "נמענים סה\"כ"
 
 #: packages/email/templates/bulk-send-complete.tsx
 msgid "Total rows processed: {totalProcessed}"
-msgstr "סה"כ שורות שעובדו: {totalProcessed}"
+msgstr "סה\"כ שורות שעובדו: {totalProcessed}"
 
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "Total Signers that Signed Up"
-msgstr "סה"כ חותמים שנרשמו"
+msgstr "סה\"כ חותמים שנרשמו"
 
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "Total Users"
-msgstr "משתמשים סה"כ"
+msgstr "משתמשים סה\"כ"
 
 #: apps/remix/app/components/dialogs/team-transfer-dialog.tsx
 msgid "transfer {teamName}"
@@ -5639,7 +5976,7 @@ msgstr "אימות דו-שלבי מחדש"
 #: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
 #: packages/lib/constants/document.ts
 msgid "Type"
-msgstr "סוג"
+msgstr "מוקלד"
 
 #: apps/remix/app/components/general/app-command-menu.tsx
 msgid "Type a command or search..."
@@ -5833,7 +6170,7 @@ msgstr "שדרג"
 
 #: packages/lib/constants/document.ts
 msgid "Upload"
-msgstr "העלה"
+msgstr "הועלה"
 
 #: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
 msgid "Upload a CSV file to create multiple documents from this template. Each row represents one document with its recipient details."
@@ -6108,8 +6445,8 @@ msgid "Waiting for Your Turn"
 msgstr "ממתין לתורך"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
-msgid "Want to send slick signing links like this one? <0>Check out Documenso.</0>"
-msgstr "רוצה לשלוח קישורי חתימה מרשימים כמו זה? <0>בדוק את Documenso.</0>"
+msgid "Want to send slick signing links like this one? <0>Check out Smartsign.</0>"
+msgstr "רוצה לשלוח קישורי חתימה מרשימים כמו זה? <0>בדוק את Smartsign.</0>"
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Want your own public profile?"
@@ -6393,8 +6730,8 @@ msgid "Welcome back, we are lucky to have you."
 msgstr "ברוך שובך, אנחנו בר מזל שאתה איתנו."
 
 #: packages/email/template-components/template-confirmation-email.tsx
-msgid "Welcome to Documenso!"
-msgstr "ברוך הבא ל-Documenso!"
+msgid "Welcome to Smartsign!"
+msgstr "ברוך הבא ל-Smartsign!"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx
 msgid "Were you trying to edit this document instead?"
@@ -6418,8 +6755,8 @@ msgid "When you use our platform to affix your electronic signature to documents
 msgstr "כאשר אתה משתמש בפלטפורמה שלנו כדי להצמיד את חתימתך האלקטרונית למסמכים, אתה מסכים לעשות זאת תחת חוק החתימות האלקטרוניות במסחר גלובלי ולאומי (חוק E-Sign) וחוקים רלוונטיים אחרים. פעולה זו מציינת את הסכמתך להשתמש באמצעים אלקטרוניים לחתימה על מסמכים ולקבלת התראות."
 
 #: apps/remix/app/routes/_profile+/p.$url.tsx
-msgid "While waiting for them to do so you can create your own Documenso account and get started with document signing right away."
-msgstr "בזמן שאתה ממתין שהם יעשו זאת אתה יכול ליצור חשבון Documenso משלך ולהתחיל בחתימת מסמכים מיד."
+msgid "While waiting for them to do so you can create your own Smartsign account and get started with document signing right away."
+msgstr "בזמן שאתה ממתין שהם יעשו זאת אתה יכול ליצור חשבון Smartsign משלך ולהתחיל בחתימת מסמכים מיד."
 
 #: apps/remix/app/components/dialogs/document-resend-dialog.tsx
 msgid "Who do you want to remind?"
@@ -6472,7 +6809,7 @@ msgstr "אתה עומד להסיר את המשתמש הבא מ-<0>{teamName}</0>
 #. placeholder {1}: teamEmail.team.url
 #: apps/remix/app/components/general/teams/team-email-usage.tsx
 msgid "You are about to revoke access for team <0>{0}</0> ({1}) to use your email."
-msgstr "אתה עומד לבטל את הגישה עבור הצוות <0>{0}</0> ({1}) להשתמש בדוא"ל שלך."
+msgstr "אתה עומד לבטל את הגישה עבור הצוות <0>{0}</0> ({1}) להשתמש בדוא\"ל שלך."
 
 #: packages/ui/primitives/document-flow/send-document-action-dialog.tsx
 msgid "You are about to send this document to the recipients. Are you sure you want to continue?"
@@ -6523,8 +6860,8 @@ msgid "You can copy and share these links to recipients so they can action the d
 msgstr "אתה יכול להעתיק ולשתף קישורים אלה לנמענים כדי שיוכלו לפעול על המסמך."
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "You can revoke access at any time in your team settings on Documenso <0>here.</0>"
-msgstr "אתה יכול לבטל גישה בכל עת בהגדרות הצוות שלך ב-Documenso <0>כאן.</0>"
+msgid "You can revoke access at any time in your team settings on Smartsign <0>here.</0>"
+msgstr "אתה יכול לבטל גישה בכל עת בהגדרות הצוות שלך ב-Smartsign <0>כאן.</0>"
 
 #: apps/remix/app/components/forms/public-profile-form.tsx
 msgid "You can update the profile URL by updating the team URL in the general settings page."
@@ -6536,7 +6873,7 @@ msgstr "אתה יכול להשתמש במשתנים הבאים בהודעה של
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._index.tsx
 msgid "You can view documents associated with this email and use this identity when sending documents."
-msgstr "אתה יכול לצפות במסמכים הקשורים לדוא"ל זה ולהשתמש בזהות זו בעת שליחת מסמכים."
+msgstr "אתה יכול לצפות במסמכים הקשורים לדוא\"ל זה ולהשתמש בזהות זו בעת שליחת מסמכים."
 
 #: packages/email/templates/bulk-send-complete.tsx
 msgid "You can view the created documents in your dashboard under the \"Documents created from template\" section."
@@ -6592,7 +6929,7 @@ msgstr "כבר השלמת את העברת הבעלות עבור <0>{0}</0>."
 #. placeholder {0}: data.teamName
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "You have already verified your email address for <0>{0}</0>."
-msgstr "כבר אימתת את כתובת הדוא"ל שלך עבור <0>{0}</0>."
+msgstr "כבר אימתת את כתובת הדוא\"ל שלך עבור <0>{0}</0>."
 
 #. placeholder {0}: data.teamName
 #: apps/remix/app/routes/_unauthenticated+/team.invite.$token.tsx
@@ -6602,8 +6939,8 @@ msgstr "הוזמנת על ידי <0>{0}</0> להצטרף לצוות שלהם."
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-member-invites.ts
-msgid "You have been invited to join {0} on Documenso"
-msgstr "הוזמנת להצטרף ל-{0} ב-Documenso"
+msgid "You have been invited to join {0} on Smartsign"
+msgstr "הוזמנת להצטרף ל-{0} ב-Smartsign"
 
 #: packages/email/templates/team-invite.tsx
 msgid "You have been invited to join the following team"
@@ -6616,8 +6953,8 @@ msgstr "הוסרת ממסמך"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/request-team-ownership-transfer.ts
-msgid "You have been requested to take ownership of team {0} on Documenso"
-msgstr "התבקשת לקחת בעלות על צוות {0} ב-Documenso"
+msgid "You have been requested to take ownership of team {0} on Smartsign"
+msgstr "התבקשת לקחת בעלות על צוות {0} ב-Smartsign"
 
 #. placeholder {0}: data.teamName
 #: apps/remix/app/routes/_unauthenticated+/team.decline.$token.tsx
@@ -6671,8 +7008,8 @@ msgid "You have rejected this document"
 msgstr "דחית מסמך זה"
 
 #: packages/email/template-components/template-document-self-signed.tsx
-msgid "You have signed "{documentName}""
-msgstr "חתמת על "{documentName}""
+msgid "You have signed “{documentName}”"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/team-leave-dialog.tsx
 msgid "You have successfully left this team."
@@ -6681,7 +7018,7 @@ msgstr "עזבת בהצלחה את הצוות הזה."
 #: apps/remix/app/components/general/claim-account.tsx
 #: apps/remix/app/components/forms/signup.tsx
 msgid "You have successfully registered. Please verify your account by clicking on the link you received in the email."
-msgstr "נרשמת בהצלחה. אנא אמת את חשבונך על ידי לחיצה על הקישור שקיבלת בדוא"ל."
+msgstr "נרשמת בהצלחה. אנא אמת את חשבונך על ידי לחיצה על הקישור שקיבלת בדוא\"ל."
 
 #: apps/remix/app/components/dialogs/team-member-delete-dialog.tsx
 msgid "You have successfully removed this user from the team."
@@ -6702,7 +7039,7 @@ msgstr "עדכנת את {teamMemberName}."
 #. placeholder {0}: data.teamName
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "You have verified your email address for <0>{0}</0>."
-msgstr "אימתת את כתובת הדוא"ל שלך עבור <0>{0}</0>."
+msgstr "אימתת את כתובת הדוא\"ל שלך עבור <0>{0}</0>."
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.billing.tsx
 msgid "You must be an admin of this team to manage billing."
@@ -6748,7 +7085,7 @@ msgstr "מעתה תידרש להזין קוד מאפליקציית האימות 
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "You will receive an Email copy of the signed document once everyone has signed."
-msgstr "תקבל עותק בדוא"ל של המסמך החתום לאחר שכולם יחתמו."
+msgstr "תקבל עותק בדוא\"ל של המסמך החתום לאחר שכולם יחתמו."
 
 #: apps/remix/app/components/dialogs/account-delete-dialog.tsx
 msgid "Your account has been deleted successfully."
@@ -6772,7 +7109,7 @@ msgstr "העדפות המיתוג שלך עודכנו"
 
 #: apps/remix/app/components/dialogs/template-bulk-send-dialog.tsx
 msgid "Your bulk send has been initiated. You will receive an email notification upon completion."
-msgstr "שליחת ההמונים שלך החלה. תקבל הודעת דוא"ל עם השלמתה."
+msgstr "שליחת ההמונים שלך החלה. תקבל הודעת דוא\"ל עם השלמתה."
 
 #: packages/email/templates/bulk-send-complete.tsx
 msgid "Your bulk send operation for template \"{templateName}\" has completed."
@@ -6827,18 +7164,18 @@ msgid "Your documents"
 msgstr "המסמכים שלך"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
-msgstr "הדוא"ל שלך כבר אומת. אתה יכול עכשיו להשתמש בכל התכונות של Documenso."
+msgid "Your email has already been confirmed. You can now use all features of Smartsign."
+msgstr "הדוא\"ל שלך כבר אומת. אתה יכול עכשיו להשתמש בכל התכונות של Smartsign."
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has been successfully confirmed! You can now use all features of Documenso."
-msgstr "הדוא"ל שלך אומת בהצלחה! אתה יכול עכשיו להשתמש בכל התכונות של Documenso."
+msgid "Your email has been successfully confirmed! You can now use all features of Smartsign."
+msgstr "הדוא\"ל שלך אומת בהצלחה! אתה יכול עכשיו להשתמש בכל התכונות של Smartsign."
 
 #. placeholder {0}: teamEmail.team.name
 #. placeholder {1}: teamEmail.team.url
 #: apps/remix/app/components/general/teams/team-email-usage.tsx
 msgid "Your email is currently being used by team <0>{0}</0> ({1})."
-msgstr "הדוא"ל שלך נמצא כרגע בשימוש על ידי צוות <0>{0}</0> ({1})."
+msgstr "הדוא\"ל שלך נמצא כרגע בשימוש על ידי צוות <0>{0}</0> ({1})."
 
 #: apps/remix/app/routes/_authenticated+/settings+/tokens.tsx
 msgid "Your existing tokens"

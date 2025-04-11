@@ -25,11 +25,11 @@ export const seedDatabase = async () => {
 
   const exampleUser = await prisma.user.upsert({
     where: {
-      email: 'example@documenso.com',
+      email: 'example@smartbill.co.il',
     },
     create: {
       name: 'Example User',
-      email: 'example@documenso.com',
+      email: 'example@smartbill.co.il',
       emailVerified: new Date(),
       password: hashSync('password'),
       roles: [Role.USER],
@@ -39,11 +39,11 @@ export const seedDatabase = async () => {
 
   const adminUser = await prisma.user.upsert({
     where: {
-      email: 'admin@documenso.com',
+      email: 'admin@smartbill.co.il',
     },
     create: {
       name: 'Admin User',
-      email: 'admin@documenso.com',
+      email: 'admin@smartbill.co.il',
       emailVerified: new Date(),
       password: hashSync('password'),
       roles: [Role.USER, Role.ADMIN],
@@ -126,10 +126,10 @@ export const seedDatabase = async () => {
   ]);
 
   const testUsers = [
-    'test@documenso.com',
-    'test2@documenso.com',
-    'test3@documenso.com',
-    'test4@documenso.com',
+    'test@smartbill.co.il',
+    'test2@smartbill.co.il',
+    'test3@smartbill.co.il',
+    'test4@smartbill.co.il',
   ];
 
   const createdUsers = [];

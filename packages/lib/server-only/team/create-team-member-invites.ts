@@ -167,7 +167,10 @@ export const sendTeamMemberInviteEmail = async ({
     : undefined;
 
   const [html, text] = await Promise.all([
-    renderEmailWithI18N(template, { lang: team.teamGlobalSettings?.documentLanguage, branding }),
+    renderEmailWithI18N(template, {
+      lang: team.teamGlobalSettings?.documentLanguage,
+      branding,
+    }),
     renderEmailWithI18N(template, {
       lang: team.teamGlobalSettings?.documentLanguage,
       branding,
@@ -183,7 +186,7 @@ export const sendTeamMemberInviteEmail = async ({
       name: FROM_NAME,
       address: FROM_ADDRESS,
     },
-    subject: i18n._(msg`You have been invited to join ${team.name} on Documenso`),
+    subject: i18n._(msg`You have been invited to join ${team.name} on Smartsign`),
     html,
     text,
   });

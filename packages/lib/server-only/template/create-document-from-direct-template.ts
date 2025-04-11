@@ -118,7 +118,9 @@ export const createDocumentFromDirectTemplate = async ({
   });
 
   if (!template?.directLink?.enabled) {
-    throw new AppError(AppErrorCode.INVALID_REQUEST, { message: 'Invalid or missing template' });
+    throw new AppError(AppErrorCode.INVALID_REQUEST, {
+      message: 'Invalid or missing template',
+    });
   }
 
   const { recipients, directLink, user: templateOwner } = template;
@@ -134,7 +136,9 @@ export const createDocumentFromDirectTemplate = async ({
   }
 
   if (template.updatedAt.getTime() !== templateUpdatedAt.getTime()) {
-    throw new AppError(AppErrorCode.INVALID_REQUEST, { message: 'Template no longer matches' });
+    throw new AppError(AppErrorCode.INVALID_REQUEST, {
+      message: 'Template no longer matches',
+    });
   }
 
   if (user && user.email !== directRecipientEmail) {
@@ -157,7 +161,9 @@ export const createDocumentFromDirectTemplate = async ({
     .exhaustive();
 
   if (!isAccessAuthValid) {
-    throw new AppError(AppErrorCode.UNAUTHORIZED, { message: 'You must be logged in' });
+    throw new AppError(AppErrorCode.UNAUTHORIZED, {
+      message: 'You must be logged in',
+    });
   }
 
   const directTemplateRecipientAuthOptions = ZRecipientAuthOptionsSchema.parse(
@@ -591,7 +597,11 @@ export const createDocumentFromDirectTemplate = async ({
 
     const [html, text] = await Promise.all([
       renderEmailWithI18N(emailTemplate, { lang: metaLanguage, branding }),
-      renderEmailWithI18N(emailTemplate, { lang: metaLanguage, branding, plainText: true }),
+      renderEmailWithI18N(emailTemplate, {
+        lang: metaLanguage,
+        branding,
+        plainText: true,
+      }),
     ]);
 
     const i18n = await getI18nInstance(metaLanguage);
@@ -604,8 +614,8 @@ export const createDocumentFromDirectTemplate = async ({
         },
       ],
       from: {
-        name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Documenso',
-        address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@documenso.com',
+        name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Smartsign',
+        address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@smartbill.co.il',
       },
       subject: i18n._(msg`Document created from direct template`),
       html,

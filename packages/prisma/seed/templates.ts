@@ -73,7 +73,7 @@ export const seedTemplate = async (options: SeedTemplateOptions) => {
       },
       recipients: {
         create: {
-          email: 'recipient.1@documenso.com',
+          email: 'recipient.1@smartbill.co.il',
           name: 'Recipient 1',
           token: Math.random().toString().slice(2, 7),
           sendStatus: SendStatus.NOT_SENT,
