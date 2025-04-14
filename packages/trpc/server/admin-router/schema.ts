@@ -10,11 +10,17 @@ export const ZAdminFindDocumentsQuerySchema = ZFindSearchParamsSchema.extend({
 
 export type TAdminFindDocumentsQuerySchema = z.infer<typeof ZAdminFindDocumentsQuerySchema>;
 
+export const StrOrIntToIntSchema = z.union([
+  z.string().transform((val) => (val === '' ? null : Number.parseInt(val))),
+  z.number(),
+]);
+
 export const ZAdminUpdateProfileMutationSchema = z.object({
   id: z.number().min(1),
   name: z.string().nullish(),
   email: z.string().email().optional(),
   roles: z.array(z.nativeEnum(Role)).optional(),
+  documentsLimit: StrOrIntToIntSchema.optional(),
 });
 
 export type TAdminUpdateProfileMutationSchema = z.infer<typeof ZAdminUpdateProfileMutationSchema>;
