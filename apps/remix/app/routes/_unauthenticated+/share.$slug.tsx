@@ -6,15 +6,15 @@ import type { Route } from './+types/share.$slug';
 
 export function meta({ params: { slug } }: Route.MetaArgs) {
   return [
-    { title: 'Documenso - Share' },
-    { description: 'I just signed a document in style with Documenso!' },
+    { title: 'Smartsign - Share' },
+    { description: 'I just signed a document in style with Smartsign!' },
     {
       property: 'og:title',
-      content: 'Documenso - Join the open source signing revolution',
+      content: 'Smartsign - Join the open source signing revolution',
     },
     {
       property: 'og:description',
-      content: 'I just signed with Documenso!',
+      content: 'I just signed with Smartsign!',
     },
     {
       property: 'og:type',
@@ -38,7 +38,7 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
     },
     {
       name: 'twitter:description',
-      content: 'I just signed with Documenso!',
+      content: 'I just signed with Smartsign!',
     },
   ];
 }
@@ -50,7 +50,7 @@ export const loader = ({ request }: Route.LoaderArgs) => {
     return null;
   }
 
-  // Is hardcoded because this whole meta is hardcoded anyway for Documenso.
+  // Is hardcoded because this whole meta is hardcoded anyway for Smartsign.
   throw redirect('https://documenso.com');
 };
 
