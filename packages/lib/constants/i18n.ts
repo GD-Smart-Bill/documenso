@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const SUPPORTED_LANGUAGE_CODES = ['de', 'en', 'fr', 'es', 'it', 'pl'] as const;
+export const SUPPORTED_LANGUAGE_CODES = ['de', 'en', 'fr', 'es', 'it', 'pl', 'he'] as const;
 
 export const ZSupportedLanguageCodeSchema = z.enum(SUPPORTED_LANGUAGE_CODES).catch('en');
 
@@ -20,8 +20,8 @@ export type I18nLocaleData = {
 
 export const APP_I18N_OPTIONS = {
   supportedLangs: SUPPORTED_LANGUAGE_CODES,
-  sourceLang: 'en',
-  defaultLocale: 'en-US',
+  sourceLang: 'he',
+  defaultLocale: 'he-IL',
 } as const;
 
 type SupportedLanguage = {
@@ -53,6 +53,10 @@ export const SUPPORTED_LANGUAGES: Record<string, SupportedLanguage> = {
   pl: {
     short: 'pl',
     full: 'Polish',
+  },
+  he: {
+    short: 'he',
+    full: 'Hebrew',
   },
 } satisfies Record<SupportedLanguageCodes, SupportedLanguage>;
 
