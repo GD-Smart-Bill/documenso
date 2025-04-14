@@ -1,4 +1,4 @@
-import { DocumentSource, SubscriptionStatus } from '@prisma/client';
+import { DocumentSource } from '@prisma/client';
 import { DateTime } from 'luxon';
 
 import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
@@ -109,8 +109,9 @@ export const getServerLimits = async ({
     }),
   ]);
 
-  remaining.documents = Math.max(remaining.documents - documents, 0);
+  quota.documents = documentsLimit;
   remaining.directTemplates = Math.max(remaining.directTemplates - directTemplates, 0);
+  remaining.documents = Math.max(documentsLimit - documents, 0);
 
   return {
     quota,
