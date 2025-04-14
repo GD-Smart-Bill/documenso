@@ -1,14 +1,11 @@
-import { DocumentSource, SubscriptionStatus } from '@prisma/client';
+import { DocumentSource } from '@prisma/client';
 import { DateTime } from 'luxon';
 
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
 import { prisma } from '@documenso/prisma';
 
-import { getDocumentRelatedPrices } from '../stripe/get-document-related-prices.ts';
-import { FREE_PLAN_LIMITS, SELFHOSTED_PLAN_LIMITS, TEAM_PLAN_LIMITS } from './constants';
+import { FREE_PLAN_LIMITS, TEAM_PLAN_LIMITS } from './constants';
 import { ERROR_CODES } from './errors';
 import type { TLimitsResponseSchema } from './schema';
-import { ZLimitsSchema } from './schema';
 
 export type GetServerLimitsOptions = {
   email: string;
@@ -19,12 +16,12 @@ export const getServerLimits = async ({
   email,
   teamId,
 }: GetServerLimitsOptions): Promise<TLimitsResponseSchema> => {
-  if (!IS_BILLING_ENABLED()) {
-    return {
-      quota: SELFHOSTED_PLAN_LIMITS,
-      remaining: SELFHOSTED_PLAN_LIMITS,
-    };
-  }
+  // if (!IS_BILLING_ENABLED()) {
+  // 	return {
+  // 		quota: SELFHOSTED_PLAN_LIMITS,
+  // 		remaining: SELFHOSTED_PLAN_LIMITS,
+  // 	};
+  // }
 
   if (!email) {
     throw new Error(ERROR_CODES.UNAUTHORIZED);
@@ -42,52 +39,62 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
     where: {
       email,
     },
-    include: {
-      subscriptions: true,
-    },
+    // include: {
+    //   subscriptions: true,
+    // },
   });
 
   if (!user) {
     throw new Error(ERROR_CODES.USER_FETCH_FAILED);
   }
 
-  let quota = structuredClone(FREE_PLAN_LIMITS);
-  let remaining = structuredClone(FREE_PLAN_LIMITS);
+  const documentsLimit = user.documentsLimit ?? 0;
+  const quota = structuredClone(FREE_PLAN_LIMITS);
+  const remaining = structuredClone(FREE_PLAN_LIMITS);
 
-  const activeSubscriptions = user.subscriptions.filter(
-    ({ status }) => status === SubscriptionStatus.ACTIVE,
-  );
+  // const activeSubscriptions = user.subscriptions.filter(
+  // 	({ status }) => status === SubscriptionStatus.ACTIVE,
+  // );
 
-  if (activeSubscriptions.length > 0) {
-    const documentPlanPrices = await getDocumentRelatedPrices();
+  // if (activeSubscriptions.length > 0) {
+  // 	const documentPlanPrices = await getDocumentRelatedPrices();
 
-    for (const subscription of activeSubscriptions) {
-      const price = documentPlanPrices.find((price) => price.id === subscription.priceId);
+  // 	for (const subscription of activeSubscriptions) {
+  // 		const price = documentPlanPrices.find(
+  // 			(price) => price.id === subscription.priceId,
+  // 		);
 
-      if (!price || typeof price.product === 'string' || price.product.deleted) {
-        continue;
-      }
+  // 		if (
+  // 			!price ||
+  // 			typeof price.product === "string" ||
+  // 			price.product.deleted
+  // 		) {
+  // 			continue;
+  // 		}
 
-      const currentQuota = ZLimitsSchema.parse(
-        'metadata' in price.product ? price.product.metadata : {},
-      );
+  // 		const currentQuota = ZLimitsSchema.parse(
+  // 			"metadata" in price.product ? price.product.metadata : {},
+  // 		);
 
-      // Use the subscription with the highest quota.
-      if (currentQuota.documents > quota.documents && currentQuota.recipients > quota.recipients) {
-        quota = currentQuota;
-        remaining = structuredClone(quota);
-      }
-    }
+  // 		// Use the subscription with the highest quota.
+  // 		if (
+  // 			currentQuota.documents > quota.documents &&
+  // 			currentQuota.recipients > quota.recipients
+  // 		) {
+  // 			quota = currentQuota;
+  // 			remaining = structuredClone(quota);
+  // 		}
+  // 	}
 
-    // Assume all active subscriptions provide unlimited direct templates.
-    remaining.directTemplates = Infinity;
-  }
+  // 	// Assume all active subscriptions provide unlimited direct templates.
+  // 	remaining.directTemplates = Number.POSITIVE_INFINITY;
+  // }
 
   const [documents, directTemplates] = await Promise.all([
     prisma.document.count({
       where: {
         userId: user.id,
-        teamId: null,
+        // teamId: null,
         createdAt: {
           gte: DateTime.utc().startOf('month').toJSDate(),
         },
@@ -99,7 +106,7 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
     prisma.template.count({
       where: {
         userId: user.id,
-        teamId: null,
+        // teamId: null,
         directLink: {
           isNot: null,
         },
@@ -107,8 +114,9 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
     }),
   ]);
 
-  remaining.documents = Math.max(remaining.documents - documents, 0);
+  quota.documents = documentsLimit;
   remaining.directTemplates = Math.max(remaining.directTemplates - directTemplates, 0);
+  remaining.documents = Math.max(documentsLimit - documents, 0);
 
   return {
     quota,
@@ -134,7 +142,12 @@ const handleTeamLimits = async ({ email, teamId }: HandleTeamLimitsOptions) => {
       },
     },
     include: {
-      subscription: true,
+      // subscription: true,
+      owner: {
+        select: {
+          documentsLimit: true,
+        },
+      },
     },
   });
 
@@ -142,25 +155,61 @@ const handleTeamLimits = async ({ email, teamId }: HandleTeamLimitsOptions) => {
     throw new Error('Team not found');
   }
 
-  const { subscription } = team;
+  const documentsLimit = team.owner.documentsLimit ?? 0;
 
-  if (subscription && subscription.status === SubscriptionStatus.INACTIVE) {
-    return {
-      quota: {
-        documents: 0,
-        recipients: 0,
-        directTemplates: 0,
+  const [documents, directTemplates] = await Promise.all([
+    prisma.document.count({
+      where: {
+        OR: [
+          { userId: team.ownerUserId },
+          // {
+          // 	teamId: teamId,
+          // },
+        ],
+        createdAt: {
+          gte: DateTime.utc().startOf('month').toJSDate(),
+        },
+        source: {
+          not: DocumentSource.TEMPLATE_DIRECT_LINK,
+        },
       },
-      remaining: {
-        documents: 0,
-        recipients: 0,
-        directTemplates: 0,
+    }),
+    prisma.template.count({
+      where: {
+        userId: team.ownerUserId,
+        // teamId: teamId,
+        directLink: {
+          isNot: null,
+        },
       },
-    };
-  }
+    }),
+  ]);
+
+  // const { subscription } = team;
+
+  // if (subscription && subscription.status === SubscriptionStatus.INACTIVE) {
+  // 	return {
+  // 		quota: {
+  // 			documents: 0,
+  // 			recipients: 0,
+  // 			directTemplates: 0,
+  // 		},
+  // 		remaining: {
+  // 			documents: 0,
+  // 			recipients: 0,
+  // 			directTemplates: 0,
+  // 		},
+  // 	};
+  // }
+
+  const quota = structuredClone(TEAM_PLAN_LIMITS);
+  const remaining = structuredClone(TEAM_PLAN_LIMITS);
+
+  quota.documents = documentsLimit;
+  remaining.documents = Math.max(documentsLimit - documents, 0);
 
   return {
-    quota: structuredClone(TEAM_PLAN_LIMITS),
-    remaining: structuredClone(TEAM_PLAN_LIMITS),
+    quota,
+    remaining,
   };
 };

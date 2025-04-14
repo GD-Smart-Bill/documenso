@@ -76,7 +76,8 @@ model User {
   siteSettings       SiteSettings[]
   passkeys           Passkey[]
   avatarImage        AvatarImage?           @relation(fields: [avatarImageId], references: [id], onDelete: SetNull)
-
+  documentsLimit     Int?
+  
   @@index([email])
 }
 
