@@ -72,12 +72,8 @@ export default function TemplateEditPage() {
       <div className="flex flex-col justify-between sm:flex-row">
         <div>
           <Link
-            to={
-              template.folderId
-                ? `${templateRootPath}/f/${template.folderId}/${template.id}`
-                : `${templateRootPath}/${template.id}`
-            }
-            className="flex items-center text-[#7AC455] hover:opacity-80"
+            to={`${templateRootPath}/${template.id}`}
+            className="text-documenso-500 flex items-center hover:opacity-80"
           >
             <ChevronLeft className="mr-2 inline-block h-5 w-5" />
             <Trans>Template</Trans>

@@ -66,18 +66,18 @@ module.exports = {
           foreground: 'hsl(var(--widget-foreground))',
         },
         documenso: {
-          DEFAULT: '#A2E771',
-          50: '#FFFFFF',
-          100: '#FDFFFD',
-          200: '#E7F9DA',
-          300: '#D0F3B7',
-          400: '#B9ED94',
-          500: '#A2E771',
-          600: '#83DF41',
-          700: '#66C622',
-          800: '#4D9619',
-          900: '#356611',
-          950: '#284E0D',
+          DEFAULT: '#ff7f16',
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#ff7f16',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+          950: '#431407',
         },
         dawn: {
           DEFAULT: '#aaa89f',
@@ -164,8 +164,8 @@ module.exports = {
 };
 
 function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme('colors'));
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme('colors'));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
