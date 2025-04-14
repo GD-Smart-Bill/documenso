@@ -98,7 +98,10 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
       : undefined;
 
     const [html, text] = await Promise.all([
-      renderEmailWithI18N(template, { lang: document.documentMeta?.language, branding }),
+      renderEmailWithI18N(template, {
+        lang: document.documentMeta?.language,
+        branding,
+      }),
       renderEmailWithI18N(template, {
         lang: document.documentMeta?.language,
         branding,
@@ -114,8 +117,8 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
         },
       ],
       from: {
-        name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Documenso',
-        address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@documenso.com',
+        name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Smartsign',
+        address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@smartbill.co.il',
       },
       subject: i18n._(msg`Signing Complete!`),
       html,
@@ -175,7 +178,10 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
         : undefined;
 
       const [html, text] = await Promise.all([
-        renderEmailWithI18N(template, { lang: document.documentMeta?.language, branding }),
+        renderEmailWithI18N(template, {
+          lang: document.documentMeta?.language,
+          branding,
+        }),
         renderEmailWithI18N(template, {
           lang: document.documentMeta?.language,
           branding,
@@ -191,8 +197,8 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
           },
         ],
         from: {
-          name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Documenso',
-          address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@documenso.com',
+          name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Smartsign',
+          address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@smartbill.co.il',
         },
         subject:
           isDirectTemplate && document.documentMeta?.subject

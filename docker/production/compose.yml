@@ -16,7 +16,10 @@ services:
       - database:/var/lib/postgresql/data
 
   documenso:
-    image: documenso/documenso:latest
+    # image: documenso/documenso:latest
+    build:
+      context: ../../
+      dockerfile: docker/Dockerfile
     depends_on:
       database:
         condition: service_healthy
@@ -60,6 +63,7 @@ services:
       - NEXT_PUBLIC_DISABLE_SIGNUP=${NEXT_PUBLIC_DISABLE_SIGNUP}
       - NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH=${NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH:-/opt/documenso/cert.p12}
       - NEXT_PRIVATE_SIGNING_PASSPHRASE=${NEXT_PRIVATE_SIGNING_PASSPHRASE}
+      - NEXT_PUBLIC_FEATURE_BILLING_ENABLED=${NEXT_PUBLIC_FEATURE_BILLING_ENABLED}
     ports:
       - ${PORT:-3000}:${PORT:-3000}
     volumes:

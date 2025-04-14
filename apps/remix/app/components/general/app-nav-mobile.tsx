@@ -50,7 +50,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
         <Link to="/" onClick={handleMenuItemClick}>
           <img
             src={LogoImage}
-            alt="Documenso Logo"
+            alt="Smartsign logo"
             className="dark:invert"
             width={170}
             height={25}
@@ -70,6 +70,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
           ))}
 
           <button
+            type="button"
             className="text-foreground hover:text-foreground/80 text-2xl font-semibold"
             onClick={async () => authClient.signOut()}
           >
@@ -83,7 +84,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
           </div>
 
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Documenso, Inc. <br /> All rights reserved.
+            © {new Date().getFullYear()} Smartbill, Inc. <br /> All rights reserved.
           </p>
         </div>
       </SheetContent>

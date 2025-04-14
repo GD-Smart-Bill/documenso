@@ -20,15 +20,17 @@ test('[TEAMS]: send team email request', async ({ page }) => {
 
   await page.getByRole('button', { name: 'Add email' }).click();
   await page.getByPlaceholder('eg. Legal').click();
-  await page.getByPlaceholder('eg. Legal').fill('test@test.documenso.com');
+  await page.getByPlaceholder('eg. Legal').fill('test@test.smartbill.co.il');
   await page.getByPlaceholder('example@example.com').click();
-  await page.getByPlaceholder('example@example.com').fill('test@test.documenso.com');
+  await page.getByPlaceholder('example@example.com').fill('test@test.smartbill.co.il');
   await page.getByRole('button', { name: 'Add' }).click();
 
   await expect(
     page
       .getByRole('status')
-      .filter({ hasText: 'We have sent a confirmation email for verification.' })
+      .filter({
+        hasText: 'We have sent a confirmation email for verification.',
+      })
       .first(),
   ).toBeVisible();
 });
@@ -39,7 +41,7 @@ test('[TEAMS]: accept team email request', async ({ page }) => {
   });
 
   const teamEmailVerification = await seedTeamEmailVerification({
-    email: `team-email-verification--${team.url}@test.documenso.com`,
+    email: `team-email-verification--${team.url}@test.smartbill.co.il`,
     teamId: team.id,
   });
 

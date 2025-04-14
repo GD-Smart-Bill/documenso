@@ -20,16 +20,16 @@ export type TeamLeaveEmailProps = {
 
 export const TeamLeaveEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://documenso.com',
+  baseUrl = 'https://smartbill.co.il',
   memberName = 'John Doe',
-  memberEmail = 'johndoe@documenso.com',
+  memberEmail = 'johndoe@smartbill.co.il',
   teamName = 'Team Name',
   teamUrl = 'demo',
 }: TeamLeaveEmailProps) => {
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`A team member has left a team on Documenso`;
+  const previewText = msg`A team member has left a team on Smartsign`;
 
   return (
     <Html>
@@ -60,7 +60,7 @@ export const TeamLeaveEmailTemplate = ({
             <Section className="p-2 text-slate-500">
               <Text className="text-center text-lg font-medium text-black">
                 <Trans>
-                  {memberName || memberEmail} left the team {teamName} on Documenso
+                  {memberName || memberEmail} left the team {teamName} on Smartsign
                 </Trans>
               </Text>
 

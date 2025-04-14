@@ -225,7 +225,7 @@ test('[DIRECT_TEMPLATES]: use direct template link with 1 recipient', async ({ p
     await page.goto(formatDirectTemplatePath(template.directLink?.token || ''));
     await expect(page.getByRole('heading', { name: 'General' })).toBeVisible();
 
-    await page.getByPlaceholder('recipient@documenso.com').fill(seedTestEmail());
+    await page.getByPlaceholder('recipient@smartbill.co.il').fill(seedTestEmail());
 
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('button', { name: 'Complete' }).click();
@@ -299,7 +299,7 @@ test('[DIRECT_TEMPLATES]: use direct template link with 2 recipients', async ({ 
     await expect(page.getByRole('heading', { name: 'General' })).toBeVisible();
 
     await page.waitForTimeout(1000);
-    await page.getByPlaceholder('recipient@documenso.com').fill(seedTestEmail());
+    await page.getByPlaceholder('recipient@smartbill.co.il').fill(seedTestEmail());
 
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('button', { name: 'Complete' }).click();

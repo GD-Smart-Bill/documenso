@@ -19,7 +19,7 @@ export type TeamTransferRequestTemplateProps = {
 
 export const TeamTransferRequestTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
-  baseUrl = 'https://documenso.com',
+  baseUrl = 'https://smartbill.co.il',
   senderName = 'John Doe',
   teamName = 'Team Name',
   teamUrl = 'demo',
@@ -27,7 +27,7 @@ export const TeamTransferRequestTemplate = ({
 }: TeamTransferRequestTemplateProps) => {
   const { _ } = useLingui();
 
-  const previewText = msg`Accept team transfer request on Documenso`;
+  const previewText = msg`Accept team transfer request on Smartsign`;
 
   return (
     <Html>
