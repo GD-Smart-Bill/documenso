@@ -21,6 +21,7 @@ type UserData = {
   roles: Role[];
   subscriptions?: SubscriptionLite[] | null;
   documents: DocumentLite[];
+  documentsLimit: number | null;
 };
 
 type SubscriptionLite = Pick<
@@ -89,7 +90,12 @@ export const AdminDashboardUsersTable = ({
         header: _(msg`Documents`),
         accessorKey: 'documents',
         cell: ({ row }) => {
-          return <div>{row.original.documents?.length}</div>;
+          return (
+            <div>
+              {row.original.documents?.length}
+              {row.original.documentsLimit ? `/${row.original.documentsLimit}` : ''}
+            </div>
+          );
         },
       },
       {
