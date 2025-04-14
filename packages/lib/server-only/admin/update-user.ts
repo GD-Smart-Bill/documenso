@@ -7,9 +7,10 @@ export type UpdateUserOptions = {
   name: string | null | undefined;
   email: string | undefined;
   roles: Role[] | undefined;
+  documentsLimit: number | null | undefined;
 };
 
-export const updateUser = async ({ id, name, email, roles }: UpdateUserOptions) => {
+export const updateUser = async ({ id, name, email, roles, documentsLimit }: UpdateUserOptions) => {
   await prisma.user.findFirstOrThrow({
     where: {
       id,
@@ -24,6 +25,7 @@ export const updateUser = async ({ id, name, email, roles }: UpdateUserOptions) 
       name,
       email,
       roles,
+      documentsLimit,
     },
   });
 };

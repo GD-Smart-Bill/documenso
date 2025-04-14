@@ -62,7 +62,7 @@ export const adminRouter = router({
   updateUser: adminProcedure
     .input(ZAdminUpdateProfileMutationSchema)
     .mutation(async ({ input, ctx }) => {
-      const { id, name, email, roles } = input;
+      const { id, name, email, roles, documentsLimit } = input;
 
       ctx.logger.info({
         input: {
@@ -71,7 +71,7 @@ export const adminRouter = router({
         },
       });
 
-      return await updateUser({ id, name, email, roles });
+      return await updateUser({ id, name, email, roles, documentsLimit });
     }),
 
   updateRecipient: adminProcedure

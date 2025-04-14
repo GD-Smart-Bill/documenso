@@ -45,7 +45,6 @@ export default function UserPage({ params }: { params: { id: number } }) {
       enabled: !!params.id,
     },
   );
-
   if (isLoadingUser) {
     return <SpinnerBox className="py-32" />;
   }
@@ -82,6 +81,8 @@ const AdminUserPage = ({ user }: { user: User }) => {
   const { toast } = useToast();
   const { revalidate } = useRevalidator();
 
+  const documentCount = user.documents.length;
+  const documentsLimit = user.documentsLimit;
   const roles = user.roles ?? [];
 
   const { mutateAsync: updateUserMutation } = trpc.admin.updateUser.useMutation();
@@ -92,16 +93,28 @@ const AdminUserPage = ({ user }: { user: User }) => {
       name: user?.name ?? '',
       email: user?.email ?? '',
       roles: user?.roles ?? [],
+      documentsLimit: user?.documentsLimit,
     },
   });
 
-  const onSubmit = async ({ name, email, roles }: TUserFormSchema) => {
+  const onSubmit = async ({ name, email, roles, documentsLimit }: TUserFormSchema) => {
+    if (documentsLimit && documentsLimit < documentCount) {
+      toast({
+        title: _(msg`Error`),
+        description: _(msg`Documents limit cannot be less than the number of documents created.`),
+        variant: 'destructive',
+      });
+
+      return;
+    }
+
     try {
       await updateUserMutation({
         id: Number(user?.id),
         name,
         email,
         roles,
+        documentsLimit: documentsLimit ?? undefined,
       });
 
       await revalidate();
@@ -180,6 +193,25 @@ const AdminUserPage = ({ user }: { user: User }) => {
               )}
             />
 
+            <div className="flex flex-col gap-2">
+              Documents: {documentCount}/{documentsLimit}
+            </div>
+            <FormField
+              control={form.control}
+              name="documentsLimit"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-muted-foreground">
+                    <Trans>Max Documents</Trans>
+                  </FormLabel>
+                  <FormControl>
+                    <Input type="number" {...field} value={field.value ?? ''} min="0" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
             <div className="mt-4">
               <Button type="submit" loading={form.formState.isSubmitting}>
                 <Trans>Update user</Trans>
@@ -221,7 +253,7 @@ const AdminUserPage = ({ user }: { user: User }) => {
 
       <div className="mt-16 flex flex-col items-center gap-4">
         {user && <AdminUserDeleteDialog user={user} />}
-        {user && user.disabled && <AdminUserEnableDialog userToEnable={user} />}
+        {user?.disabled && <AdminUserEnableDialog userToEnable={user} />}
         {user && !user.disabled && <AdminUserDisableDialog userToDisable={user} />}
       </div>
     </div>
