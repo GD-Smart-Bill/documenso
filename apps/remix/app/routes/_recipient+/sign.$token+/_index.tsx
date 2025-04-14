@@ -223,7 +223,7 @@ export default function SigningPage() {
                   to="https://documenso.com"
                   className="text-documenso-700 hover:text-documenso-600"
                 >
-                  Check out Documenso.
+                  Check out Smartsign.
                 </Link>
               </Trans>
             </p>
