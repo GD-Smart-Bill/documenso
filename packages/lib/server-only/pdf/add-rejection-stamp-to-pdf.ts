@@ -15,7 +15,7 @@ export async function addRejectionStampToPdf(
   const pages = pdfDoc.getPages();
   pdfDoc.registerFontkit(fontkit);
 
-  const fontBytes = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/noto-sans.ttf`).then(
+  const fontBytes = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(
     async (res) => res.arrayBuffer(),
   );
 
