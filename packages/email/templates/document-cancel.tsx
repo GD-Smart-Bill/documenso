@@ -39,7 +39,7 @@ export const DocumentCancelTemplate = ({
               ) : (
                 <Img
                   src={getAssetUrl('/static/logo.png')}
-                  alt="Documenso Logo"
+                  alt="Smartsign Logo"
                   className="mb-4 h-6"
                 />
               )}
