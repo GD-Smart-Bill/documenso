@@ -90,7 +90,17 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
   // 	remaining.directTemplates = Number.POSITIVE_INFINITY;
   // }
 
-  const [documents, directTemplates] = await Promise.all([
+  const [allTimeDocuments, documents, directTemplates] = await Promise.all([
+    prisma.document.count({
+      where: {
+        userId: user.id,
+        // teamId: null,
+        source: {
+          not: DocumentSource.TEMPLATE_DIRECT_LINK,
+        },
+      },
+    }),
+
     prisma.document.count({
       where: {
         userId: user.id,
@@ -114,9 +124,12 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
     }),
   ]);
 
-  quota.documents = documentsLimit;
   remaining.directTemplates = Math.max(remaining.directTemplates - directTemplates, 0);
-  remaining.documents = Math.max(documentsLimit - documents, 0);
+  remaining.documents =
+    allTimeDocuments > quota.documents
+      ? Math.max(documentsLimit - documents, 0)
+      : Math.max(quota.documents - allTimeDocuments, 0);
+  quota.documents = documentsLimit;
 
   return {
     quota,
@@ -157,7 +170,17 @@ const handleTeamLimits = async ({ email, teamId }: HandleTeamLimitsOptions) => {
 
   const documentsLimit = team.owner.documentsLimit ?? 0;
 
-  const [documents, directTemplates] = await Promise.all([
+  const [allTimeDocuments, documents, directTemplates] = await Promise.all([
+    prisma.document.count({
+      where: {
+        userId: team.ownerUserId,
+        // teamId: null,
+        source: {
+          not: DocumentSource.TEMPLATE_DIRECT_LINK,
+        },
+      },
+    }),
+
     prisma.document.count({
       where: {
         OR: [
@@ -205,8 +228,11 @@ const handleTeamLimits = async ({ email, teamId }: HandleTeamLimitsOptions) => {
   const quota = structuredClone(TEAM_PLAN_LIMITS);
   const remaining = structuredClone(TEAM_PLAN_LIMITS);
 
+  remaining.documents =
+    allTimeDocuments > quota.documents
+      ? Math.max(documentsLimit - documents, 0)
+      : Math.max(quota.documents - allTimeDocuments, 0);
   quota.documents = documentsLimit;
-  remaining.documents = Math.max(documentsLimit - documents, 0);
 
   return {
     quota,
