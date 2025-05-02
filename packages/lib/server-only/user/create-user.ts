@@ -9,6 +9,7 @@ import { prisma } from '@documenso/prisma';
 import { IS_BILLING_ENABLED } from '../../constants/app';
 import { SALT_ROUNDS } from '../../constants/auth';
 import { AppError, AppErrorCode } from '../../errors/app-error';
+import { jobsClient } from '../../jobs/client';
 import { buildLogger } from '../../utils/logger';
 
 export interface CreateUserOptions {
@@ -180,6 +181,14 @@ export const onCreateUserHook = async (user: User) => {
       });
     }
   }
+
+  // Notify the admin that a new user has signed up.
+  await jobsClient.triggerJob({
+    name: 'send.user.signed.up.email.to.admin',
+    payload: {
+      userId: user.id,
+    },
+  });
 
   return user;
 };
