@@ -5,6 +5,7 @@ import { prisma } from '@documenso/prisma';
 
 import { SALT_ROUNDS } from '../../constants/auth';
 import { AppError, AppErrorCode } from '../../errors/app-error';
+import { jobsClient } from '../../jobs/client';
 import { createPersonalOrganisation } from '../organisation/create-organisation';
 
 export interface CreateUserOptions {
@@ -67,6 +68,14 @@ export const createUser = async ({ name, email, password, signature }: CreateUse
  */
 export const onCreateUserHook = async (user: User) => {
   await createPersonalOrganisation({ userId: user.id });
+
+  // Notify the admin that a new user has signed up.
+  await jobsClient.triggerJob({
+    name: 'send.user.signed.up.email.to.admin',
+    payload: {
+      userId: user.id,
+    },
+  });
 
   return user;
 };
