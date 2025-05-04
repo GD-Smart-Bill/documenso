@@ -18,6 +18,7 @@ const posthogProxy = async (request: Request) => {
 
   const headers = new Headers(request.headers);
   headers.set('host', hostname);
+  headers.delete('connection');
 
   const fetchOptions: RequestInit = {
     method: request.method,

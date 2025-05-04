@@ -619,6 +619,10 @@ msgstr "Un nuevo miembro se ha unido a tu organización {organisationName}"
 msgid "A new token was created successfully."
 msgstr "Un nuevo token se ha creado con éxito."
 
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "A new user has signed up."
+msgstr ""
+
 #: apps/remix/app/routes/_unauthenticated+/check-email.tsx
 #: apps/remix/app/components/forms/forgot-password.tsx
 msgid "A password reset email has been sent, if you have an account you should see it in your inbox shortly."
@@ -642,8 +646,8 @@ msgid "A request to use your email has been initiated by {0} on Documenso"
 msgstr "Se ha iniciado una solicitud para usar tu correo electrónico por {0} en Documenso"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso"
-msgstr "Un secreto que se enviará a tu URL para que puedas verificar que la solicitud ha sido enviada por Documenso"
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
@@ -1576,8 +1580,8 @@ msgid "By enabling 2FA, you will be required to enter a code from your authentic
 msgstr "Al habilitar 2FA, se te requerirá ingresar un código de tu aplicación de autenticación cada vez que inicies sesión usando email y contraseña."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By proceeding to use the electronic signature service provided by Documenso, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
-msgstr "Al continuar utilizando el servicio de firma electrónica proporcionado por Documenso, usted afirma que ha leído y entendido esta divulgación. Acepta todos los términos y condiciones relacionados con el uso de firmas electrónicas y transacciones electrónicas según lo detallado aquí."
+msgid "By proceeding to use the electronic signature service provided by Smartsign, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "By proceeding with your electronic signature, you acknowledge and consent that it will be used to sign the given document and holds the same legal validity as a handwritten signature. By completing the electronic signing process, you affirm your understanding and acceptance of these conditions."
@@ -6048,6 +6052,10 @@ msgstr "Banner del sitio"
 msgid "Site Settings"
 msgstr "Configuraciones del sitio"
 
+#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
+msgid "Smartsign will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
+msgstr ""
+
 #: packages/ui/primitives/document-flow/missing-signature-field-dialog.tsx
 msgid "Some signers have not been assigned a signature field. Please assign at least 1 signature field to each signer before proceeding."
 msgstr "Algunos firmantes no han sido asignados a un campo de firma. Asigne al menos 1 campo de firma a cada firmante antes de continuar."
@@ -6525,8 +6533,8 @@ msgid "Thank you for completing the signing process."
 msgstr "Gracias por completar el proceso de firma."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Thank you for using Documenso to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
-msgstr "Gracias por usar Documenso para realizar su firma electrónica de documentos. El propósito de esta divulgación es informarle sobre el proceso, la legalidad y sus derechos con respecto al uso de firmas electrónicas en nuestra plataforma. Al optar por usar una firma electrónica, usted está aceptando los términos y condiciones descritos a continuación."
+msgid "Thank you for using Smartsign to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
+msgstr ""
 
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "That's okay, it happens! Click the button below to reset your password."
@@ -6906,8 +6914,8 @@ msgid "This document was created using a direct link."
 msgstr "Este documento fue creado usando un enlace directo."
 
 #: packages/email/template-components/template-footer.tsx
-msgid "This document was sent using <0>Documenso.</0>"
-msgstr "Este documento fue enviado usando <0>Documenso.</0>"
+msgid "This document was sent using <0>Smartsign.</0>"
+msgstr ""
 
 #: packages/email/template-components/template-document-rejection-confirmed.tsx
 msgid "This email confirms that you have rejected the document <0>\"{documentName}\"</0> sent by {documentOwnerName}."
@@ -7769,8 +7777,8 @@ msgid "Waiting for Your Turn"
 msgstr "Esperando tu turno"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
-msgid "Want to send slick signing links like this one? <0>Check out Documenso.</0>"
-msgstr "¿Quieres enviar enlaces de firma elegantes como este? <0>Consulta Documenso.</0>"
+msgid "Want to send slick signing links like this one? <0>Check out Smartsign.</0>"
+msgstr ""
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Want your own public profile?"
@@ -8086,8 +8094,8 @@ msgid "Welcome back! Here's an overview of your account."
 msgstr "¡Bienvenido de nuevo! Aquí tienes un resumen de tu cuenta."
 
 #: packages/email/template-components/template-confirmation-email.tsx
-msgid "Welcome to Documenso!"
-msgstr "¡Bienvenido a Documenso!"
+msgid "Welcome to Smartsign!"
+msgstr ""
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx
 msgid "Were you trying to edit this document instead?"
@@ -8622,8 +8630,8 @@ msgid "Your email has already been confirmed. You can now use all features of Do
 msgstr "Tu correo electrónico ya ha sido confirmado. Ahora puedes usar todas las funciones de Documenso."
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has been successfully confirmed! You can now use all features of Documenso."
-msgstr "¡Tu correo electrónico ha sido confirmado con éxito! Ahora puedes usar todas las funciones de Documenso."
+msgid "Your email has been successfully confirmed! You can now use all features of Smartsign."
+msgstr ""
 
 #. placeholder {0}: teamEmail.team.name
 #. placeholder {1}: teamEmail.team.url
