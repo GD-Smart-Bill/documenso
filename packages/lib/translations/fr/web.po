@@ -566,6 +566,10 @@ msgstr "Un nouveau membre a rejoint votre équipe"
 msgid "A new token was created successfully."
 msgstr "Un nouveau token a été créé avec succès."
 
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "A new user has signed up."
+msgstr ""
+
 #: apps/remix/app/routes/_unauthenticated+/check-email.tsx
 #: apps/remix/app/components/forms/forgot-password.tsx
 msgid "A password reset email has been sent, if you have an account you should see it in your inbox shortly."
@@ -595,13 +599,13 @@ msgid "A request to use your email has been initiated by {0} on Documenso"
 msgstr "Une demande pour l'utiliser votre e-mail a été initiée par {0} sur Documenso"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso"
-msgstr "Un secret qui sera envoyé à votre URL afin que vous puissiez vérifier que la demande a été envoyée par Documenso"
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
-msgstr "Un secret qui sera envoyé à votre URL afin que vous puissiez vérifier que la demande a été envoyée par Documenso."
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign."
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "A stable internet connection"
@@ -1406,8 +1410,8 @@ msgid "By enabling 2FA, you will be required to enter a code from your authentic
 msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By proceeding to use the electronic signature service provided by Documenso, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
-msgstr "En procédant à l'utilisation du service de signature électronique fourni par Documenso, vous affirmez avoir lu et compris cette divulgation. Vous acceptez tous les termes et conditions liés à l'utilisation des signatures électroniques et des transactions électroniques comme décrit ici."
+msgid "By proceeding to use the electronic signature service provided by Smartsign, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "By proceeding with your electronic signature, you acknowledge and consent that it will be used to sign the given document and holds the same legal validity as a handwritten signature. By completing the electronic signing process, you affirm your understanding and acceptance of these conditions."
@@ -1718,6 +1722,10 @@ msgstr "Consentement aux transactions électroniques"
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Contact Information"
 msgstr "Coordonnées"
+
+#: packages/ui/primitives/document-dropzone.tsx
+msgid "Contact support to get more documents"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
 msgid "Content"
@@ -2225,10 +2233,6 @@ msgstr "Voulez-vous supprimer ce modèle ?"
 msgid "Do you want to duplicate this template?"
 msgstr "Voulez-vous dupliquer ce modèle ?"
 
-#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Documenso will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
-msgstr "Documenso supprimera <0>tous vos documents</0>, ainsi que tous vos documents complétés, signatures, et toutes les autres ressources appartenant à votre compte."
-
 #: apps/remix/app/routes/_authenticated+/documents.$id.logs.tsx
 #: apps/remix/app/components/general/template/template-page-view-documents-table.tsx
 msgid "Document"
@@ -2672,6 +2676,10 @@ msgstr "La vérification par email a été supprimée"
 #: apps/remix/app/components/general/teams/team-email-dropdown.tsx
 msgid "Email verification has been resent"
 msgstr "La vérification par email a été renvoyée"
+
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "Email:"
+msgstr ""
 
 #: packages/ui/primitives/document-flow/add-fields.tsx
 msgid "Empty field"
@@ -3558,6 +3566,10 @@ msgstr "Mes modèles"
 msgid "Name"
 msgstr "Nom"
 
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "Name:"
+msgstr ""
+
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Need to sign documents?"
 msgstr "Besoin de signer des documents ?"
@@ -3594,6 +3606,11 @@ msgstr "Nouveau propriétaire d'équipe"
 #: apps/remix/app/components/dialogs/template-create-dialog.tsx
 msgid "New Template"
 msgstr "Nouveau modèle"
+
+#: packages/lib/server-only/admin/send-user-signed-up-email.ts
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "New user signed up"
+msgstr ""
 
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/embed/embed-document-signing-page.tsx
@@ -4930,6 +4947,10 @@ msgstr "Bannière du site"
 msgid "Site Settings"
 msgstr "Paramètres du site"
 
+#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
+msgid "Smartsign will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
+msgstr ""
+
 #: packages/ui/primitives/document-flow/missing-signature-field-dialog.tsx
 msgid "Some signers have not been assigned a signature field. Please assign at least 1 signature field to each signer before proceeding."
 msgstr "Certains signataires n'ont pas été assignés à un champ de signature. Veuillez assigner au moins 1 champ de signature à chaque signataire avant de continuer."
@@ -5347,8 +5368,8 @@ msgid "Text Color"
 msgstr "Couleur du texte"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Thank you for using Documenso to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
-msgstr "Merci d'utiliser Documenso pour signer vos documents électroniquement. L'objectif de cette clause est de vous informer sur le processus, la légalité et vos droits concernant l'utilisation de la signature électronique sur notre plateforme. En choisissant d'utiliser un sytème de signature électronique, vous acceptez les termes et conditions exposés ci-dessous."
+msgid "Thank you for using Smartsign to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
+msgstr ""
 
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "That's okay, it happens! Click the button below to reset your password."
@@ -5576,8 +5597,8 @@ msgstr ""
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
-msgid "The URL for Documenso to send webhook events to."
-msgstr "L'URL pour Documenso pour envoyer des événements webhook."
+msgid "The URL for Smartsign to send webhook events to."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-delete-dialog.tsx
 msgid "The webhook has been successfully deleted."
@@ -5675,8 +5696,8 @@ msgid "This document was created using a direct link."
 msgstr "Ce document a été créé en utilisant un lien direct."
 
 #: packages/email/template-components/template-footer.tsx
-msgid "This document was sent using <0>Documenso.</0>"
-msgstr "Ce document a été envoyé via <0>Documenso.</0>"
+msgid "This document was sent using <0>Smartsign.</0>"
+msgstr ""
 
 #: packages/email/template-components/template-document-rejection-confirmed.tsx
 msgid "This email confirms that you have rejected the document <0>\"{documentName}\"</0> sent by {documentOwnerName}."
@@ -6448,8 +6469,8 @@ msgid "Waiting for Your Turn"
 msgstr "En attente de votre tour"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
-msgid "Want to send slick signing links like this one? <0>Check out Documenso.</0>"
-msgstr "Vous voulez envoyer des liens de signature élégants comme celui-ci ? <0>Découvrez Documenso.</0>"
+msgid "Want to send slick signing links like this one? <0>Check out Smartsign.</0>"
+msgstr ""
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Want your own public profile?"
@@ -6733,8 +6754,8 @@ msgid "Welcome back, we are lucky to have you."
 msgstr "Contentieux, nous avons de la chance de vous avoir."
 
 #: packages/email/template-components/template-confirmation-email.tsx
-msgid "Welcome to Documenso!"
-msgstr "Bienvenue sur Documenso !"
+msgid "Welcome to Smartsign!"
+msgstr ""
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/waiting.tsx
 msgid "Were you trying to edit this document instead?"
@@ -6758,8 +6779,8 @@ msgid "When you use our platform to affix your electronic signature to documents
 msgstr "Lorsque vous utilisez notre plateforme pour apposer votre signature électronique sur des documents, vous consentez à le faire conformément à la loi sur les signatures électroniques dans le commerce mondial et national (E-Sign Act) et aux autres lois applicables. Cette action indique votre accord à utiliser des moyens électroniques pour signer des documents et recevoir des notifications."
 
 #: apps/remix/app/routes/_profile+/p.$url.tsx
-msgid "While waiting for them to do so you can create your own Documenso account and get started with document signing right away."
-msgstr "En attendant qu'ils le fassent, vous pouvez créer votre propre compte Documenso et commencer à signer des documents dès maintenant."
+msgid "While waiting for them to do so you can create your own Smartsign account and get started with document signing right away."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/document-resend-dialog.tsx
 msgid "Who do you want to remind?"
@@ -7167,12 +7188,12 @@ msgid "Your documents"
 msgstr "Vos documents"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
+msgid "Your email has already been confirmed. You can now use all features of Smartsign."
 msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has been successfully confirmed! You can now use all features of Documenso."
-msgstr "Votre e-mail a été confirmé avec succès ! Vous pouvez maintenant utiliser toutes les fonctionnalités de Documenso."
+msgid "Your email has been successfully confirmed! You can now use all features of Smartsign."
+msgstr ""
 
 #. placeholder {0}: teamEmail.team.name
 #. placeholder {1}: teamEmail.team.url
