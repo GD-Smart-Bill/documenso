@@ -128,13 +128,13 @@ msgstr "{0} הזמינ/ה אותך ל{recipientActionVerb} מסמך"
 
 #. placeholder {0}: memberName || memberEmail
 #: packages/email/templates/team-join.tsx
-msgid "{0} joined the team {teamName} on Smartsign"
-msgstr "{0} הצטרף/ה לצוות {teamName} ב-Smartsign"
+msgid "{0} joined the team {teamName} on Documenso"
+msgstr "{0} joined the team {teamName} on Documenso"
 
 #. placeholder {0}: memberName || memberEmail
 #: packages/email/templates/team-leave.tsx
-msgid "{0} left the team {teamName} on Smartsign"
-msgstr "{0} עזב/ה את הצוות {teamName} ב-Smartsign"
+msgid "{0} left the team {teamName} on Documenso"
+msgstr "{0} left the team {teamName} on Documenso"
 
 #. placeholder {0}: remaining.documents
 #. placeholder {1}: quota.documents
@@ -407,8 +407,8 @@ msgid "<0>{senderName}</0> has requested that you take ownership of the followin
 msgstr "<0>{senderName}</0> ביקש שתיקח בעלות על הצוות הבא"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "<0>{teamName}</0> has requested to use your email address for their team on Smartsign."
-msgstr "<0>{teamName}</0> ביקש להשתמש בכתובת האימייל שלך עבור הצוות שלהם ב-Smartsign."
+msgid "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
+msgstr "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
 
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 msgid "<0>Click to upload</0> or drag and drop"
@@ -561,6 +561,10 @@ msgstr "חבר חדש הצטרף לצוות שלך"
 msgid "A new token was created successfully."
 msgstr "טוקן חדש נוצר בהצלחה."
 
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "A new user has signed up."
+msgstr "A new user has signed up."
+
 #: apps/remix/app/routes/_unauthenticated+/check-email.tsx
 #: apps/remix/app/components/forms/forgot-password.tsx
 msgid "A password reset email has been sent, if you have an account you should see it in your inbox shortly."
@@ -586,8 +590,8 @@ msgstr "בקשה להעברת הבעלות על צוות זה נשלחה אל <0
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Smartsign"
-msgstr "בקשה להשתמש באימייל שלך נוצרה על ידי {0} ב-Smartsign"
+msgid "A request to use your email has been initiated by {0} on Documenso"
+msgstr "A request to use your email has been initiated by {0} on Documenso"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign"
@@ -603,8 +607,8 @@ msgid "A stable internet connection"
 msgstr "חיבור אינטרנט יציב"
 
 #: packages/email/templates/team-join.tsx
-msgid "A team member has joined a team on Smartsign"
-msgstr "חבר צוות הצטרף לצוות ב-Smartsign"
+msgid "A team member has joined a team on Documenso"
+msgstr "A team member has joined a team on Documenso"
 
 #. placeholder {0}: team.name
 #: packages/lib/jobs/definitions/emails/send-team-member-left-email.handler.ts
@@ -612,8 +616,8 @@ msgid "A team member has left {0}"
 msgstr "חבר צוות עזב את {0}"
 
 #: packages/email/templates/team-leave.tsx
-msgid "A team member has left a team on Smartsign"
-msgstr "חבר צוות עזב צוות ב-Smartsign"
+msgid "A team member has left a team on Documenso"
+msgstr "A team member has left a team on Documenso"
 
 #: packages/email/templates/team-delete.tsx
 #: packages/email/templates/team-delete.tsx
@@ -641,16 +645,16 @@ msgid "Accept"
 msgstr "קבל"
 
 #: packages/email/templates/team-invite.tsx
-msgid "Accept invitation to join a team on Smartsign"
-msgstr "קבל הזמנה להצטרף לצוות ב-Smartsign"
+msgid "Accept invitation to join a team on Documenso"
+msgstr "Accept invitation to join a team on Documenso"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "Accept team email request for {teamName} on Smartsign"
-msgstr "קבל בקשת אימייל צוות עבור {teamName} ב-Smartsign"
+msgid "Accept team email request for {teamName} on Documenso"
+msgstr "Accept team email request for {teamName} on Documenso"
 
 #: packages/email/templates/team-transfer-request.tsx
-msgid "Accept team transfer request on Smartsign"
-msgstr "קבל בקשת העברת צוות ב-Smartsign"
+msgid "Accept team transfer request on Documenso"
+msgstr "Accept team transfer request on Documenso"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Acceptance and Consent"
@@ -1714,6 +1718,10 @@ msgstr "הסכמה לעסקאות אלקטרוניות"
 msgid "Contact Information"
 msgstr "פרטי התקשרות"
 
+#: packages/ui/primitives/document-dropzone.tsx
+msgid "Contact support to get more documents"
+msgstr "צרו קשר עם התמיכה כדי לקבל מסמכים נוספים"
+
 #: apps/remix/app/routes/_authenticated+/admin+/site-settings.tsx
 msgid "Content"
 msgstr "תוכן"
@@ -2220,10 +2228,6 @@ msgstr "האם אתה רוצה למחוק תבנית זו?"
 msgid "Do you want to duplicate this template?"
 msgstr "האם אתה רוצה לשכפל תבנית זו?"
 
-#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Smartsign will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
-msgstr "Smartsign ימחק <0>את כל המסמכים שלך</0>, יחד עם כל המסמכים המושלמים שלך, החתימות, וכל המשאבים האחרים השייכים לחשבון שלך."
-
 #: apps/remix/app/routes/_authenticated+/documents.$id.logs.tsx
 #: apps/remix/app/components/general/template/template-page-view-documents-table.tsx
 msgid "Document"
@@ -2667,6 +2671,10 @@ msgstr "אימות האימייל הוסר"
 #: apps/remix/app/components/general/teams/team-email-dropdown.tsx
 msgid "Email verification has been resent"
 msgstr "אימות האימייל נשלח מחדש"
+
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "Email:"
+msgstr "Email:"
 
 #: packages/ui/primitives/document-flow/add-fields.tsx
 msgid "Empty field"
@@ -3227,8 +3235,8 @@ msgid "It's currently not your turn to sign. You will receive an email with inst
 msgstr ""
 
 #: packages/email/templates/team-invite.tsx
-msgid "Join {teamName} on Smartsign"
-msgstr ""
+msgid "Join {teamName} on Documenso"
+msgstr "Join {teamName} on Documenso"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/radio-field.tsx
@@ -3553,6 +3561,10 @@ msgstr "התבניות שלי"
 msgid "Name"
 msgstr "שם"
 
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "Name:"
+msgstr "Name:"
+
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Need to sign documents?"
 msgstr "צריך לחתום על מסמכים?"
@@ -3589,6 +3601,11 @@ msgstr "בעלים חדש לצוות"
 #: apps/remix/app/components/dialogs/template-create-dialog.tsx
 msgid "New Template"
 msgstr "תבנית חדשה"
+
+#: packages/lib/server-only/admin/send-user-signed-up-email.ts
+#: packages/email/templates/new-user-signed-up-email-to-admin.tsx
+msgid "New user signed up"
+msgstr "New user signed up"
 
 #: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/embed/embed-document-signing-page.tsx
@@ -4925,6 +4942,10 @@ msgstr "באנר האתר"
 msgid "Site Settings"
 msgstr "הגדרות האתר"
 
+#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
+msgid "Smartsign will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
+msgstr "Smartsign ימחק <0>את כל המסמכים שלך</0>, יחד עם כל המסמכים המושלמים שלך, החתימות, וכל המשאבים האחרים השייכים לחשבון שלך."
+
 #: packages/ui/primitives/document-flow/missing-signature-field-dialog.tsx
 msgid "Some signers have not been assigned a signature field. Please assign at least 1 signature field to each signer before proceeding."
 msgstr "לחלק מהחותמים לא הוקצה שדה חתימה. נא להקצות לפחות שדה חתימה אחד לכל חותם לפני שממשיכים."
@@ -5125,8 +5146,8 @@ msgstr "צוות"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Smartsign"
-msgstr "צוות \"{0}\" נמחק ב-Smartsign"
+msgid "Team \"{0}\" has been deleted on Documenso"
+msgstr "Team \"{0}\" has been deleted on Documenso"
 
 #: apps/remix/app/components/dialogs/team-checkout-create-dialog.tsx
 msgid "Team checkout"
@@ -5159,8 +5180,8 @@ msgid "Team email removed"
 msgstr "דוא״ל הצוות הוסר"
 
 #: packages/email/templates/team-email-removed.tsx
-msgid "Team email removed for {teamName} on Smartsign"
-msgstr "דוא״ל הצוות הוסר עבור {teamName} ב-Smartsign"
+msgid "Team email removed for {teamName} on Documenso"
+msgstr "Team email removed for {teamName} on Documenso"
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Team email verification"
@@ -6860,8 +6881,8 @@ msgid "You can copy and share these links to recipients so they can action the d
 msgstr "אתה יכול להעתיק ולשתף קישורים אלה לנמענים כדי שיוכלו לפעול על המסמך."
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "You can revoke access at any time in your team settings on Smartsign <0>here.</0>"
-msgstr "אתה יכול לבטל גישה בכל עת בהגדרות הצוות שלך ב-Smartsign <0>כאן.</0>"
+msgid "You can revoke access at any time in your team settings on Documenso <0>here.</0>"
+msgstr "You can revoke access at any time in your team settings on Documenso <0>here.</0>"
 
 #: apps/remix/app/components/forms/public-profile-form.tsx
 msgid "You can update the profile URL by updating the team URL in the general settings page."
@@ -6939,8 +6960,8 @@ msgstr "הוזמנת על ידי <0>{0}</0> להצטרף לצוות שלהם."
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-member-invites.ts
-msgid "You have been invited to join {0} on Smartsign"
-msgstr "הוזמנת להצטרף ל-{0} ב-Smartsign"
+msgid "You have been invited to join {0} on Documenso"
+msgstr "You have been invited to join {0} on Documenso"
 
 #: packages/email/templates/team-invite.tsx
 msgid "You have been invited to join the following team"
@@ -6953,8 +6974,8 @@ msgstr "הוסרת ממסמך"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/request-team-ownership-transfer.ts
-msgid "You have been requested to take ownership of team {0} on Smartsign"
-msgstr "התבקשת לקחת בעלות על צוות {0} ב-Smartsign"
+msgid "You have been requested to take ownership of team {0} on Documenso"
+msgstr "You have been requested to take ownership of team {0} on Documenso"
 
 #. placeholder {0}: data.teamName
 #: apps/remix/app/routes/_unauthenticated+/team.decline.$token.tsx

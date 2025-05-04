@@ -7,7 +7,12 @@ import { AlertTriangle, Plus } from 'lucide-react';
 import { useDropzone } from 'react-dropzone';
 import { Link } from 'react-router';
 
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT, IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
+import {
+  APP_DOCUMENT_UPLOAD_SIZE_LIMIT,
+  APP_SUPPORT_EMAIL,
+  APP_SUPPORT_PHONE,
+  IS_BILLING_ENABLED,
+} from '@documenso/lib/constants/app';
 import { megabytesToBytes } from '@documenso/lib/universal/unit-convertions';
 
 import {
@@ -67,6 +72,10 @@ export const DocumentDropzone = ({
     document: disabled ? msg`You have reached your document limit.` : msg`Add a document`,
     template: msg`Upload Template Document`,
   };
+
+  const disabledExtra = msg`Contact support to get more documents`;
+  const phone = APP_SUPPORT_PHONE;
+  const email = APP_SUPPORT_EMAIL;
 
   return (
     <motion.div
@@ -155,6 +164,26 @@ export const DocumentDropzone = ({
           <p className="text-muted-foreground/80 mt-1 text-center text-sm">
             {_(disabled ? disabledMessage : msg`Drag & drop your PDF here.`)}
           </p>
+
+          {disabled && (
+            <>
+              <p className="text-muted-foreground/80 mt-1 text-center text-sm">
+                {_(disabledExtra)}
+              </p>
+              <a
+                href={`tel:${phone}`}
+                className="text-muted-foreground/80 mt-1 block text-center text-sm"
+              >
+                {phone}
+              </a>
+              <a
+                href={`mailto:${email}`}
+                className="text-muted-foreground/80 mt-1 block text-center text-sm"
+              >
+                {email}
+              </a>
+            </>
+          )}
 
           {disabled && IS_BILLING_ENABLED() && (
             <Button className="hover:bg-warning/80 bg-warning mt-4 w-32" asChild>
