@@ -157,7 +157,7 @@ export const createDocument = async ({
         source: DocumentSource.DOCUMENT,
         documentMeta: {
           create: {
-            language: team?.teamGlobalSettings?.documentLanguage,
+            language: team?.teamGlobalSettings?.documentLanguage ?? 'he',
             timezone: timezone,
             typedSignatureEnabled: team?.teamGlobalSettings?.typedSignatureEnabled ?? true,
             uploadSignatureEnabled: team?.teamGlobalSettings?.uploadSignatureEnabled ?? true,
