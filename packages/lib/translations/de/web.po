@@ -1821,6 +1821,7 @@ msgstr "Zustimmung zu elektronischen Transaktionen"
 msgid "Contact Information"
 msgstr "Kontaktinformationen"
 
+#: packages/ui/primitives/document-upload.tsx
 #: packages/ui/primitives/document-dropzone.tsx
 msgid "Contact support to get more documents"
 msgstr ""

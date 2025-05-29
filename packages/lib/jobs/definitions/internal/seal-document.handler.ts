@@ -144,8 +144,12 @@ export const run = async ({
 
   const pdfData = await getFileServerSide(documentData);
 
+  const isFromTeam = document.teamId !== null;
+  const includeCertificateForTeam =
+    document.team?.teamGlobalSettings?.includeSigningCertificate ?? true;
+  const includeCertificateForUser = true; // TODO: add user setting
   const certificateData =
-    (document.team?.teamGlobalSettings?.includeSigningCertificate ?? true)
+    (isFromTeam && includeCertificateForTeam) || (!isFromTeam && includeCertificateForUser)
       ? await getCertificatePdf({
           documentId,
           language: document.documentMeta?.language,
