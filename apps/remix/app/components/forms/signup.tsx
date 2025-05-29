@@ -308,7 +308,7 @@ export const SignUpForm = ({
             {step === 'BASIC_DETAILS' && (
               <fieldset
                 className={cn(
-                  'flex h-[550px] w-full flex-col gap-y-4',
+                  'flex h-[580px] w-full flex-col gap-y-4',
                   (isGoogleSSOEnabled || isOIDCSSOEnabled) && 'h-[650px]',
                 )}
                 disabled={isSubmitting}
@@ -452,7 +452,7 @@ export const SignUpForm = ({
             {step === 'CLAIM_USERNAME' && (
               <fieldset
                 className={cn(
-                  'flex h-[550px] w-full flex-col gap-y-4',
+                  'flex h-[580px] w-full flex-col gap-y-4',
                   isGoogleSSOEnabled && 'h-[650px]',
                 )}
                 disabled={isSubmitting}

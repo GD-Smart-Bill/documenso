@@ -1977,6 +1977,11 @@ msgstr "צור קישור חתימה ישיר"
 msgid "Create document from template"
 msgstr "צור מסמך מתבנית"
 
+#: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
+#: apps/remix/app/components/dialogs/folder-create-dialog.tsx
+msgid "Create Folder"
+msgstr "צור תיקייה"
+
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Create now"
 msgstr "צור עכשיו"
@@ -2787,6 +2792,7 @@ msgstr "גילוי חתימה אלקטרונית"
 #: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
 #: packages/ui/primitives/template-flow/add-template-fields.tsx
 #: packages/ui/primitives/document-flow/types.ts
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-fields.tsx
@@ -3020,40 +3026,40 @@ msgstr ""
 #: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
 #: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
 msgid "Failed to create folder"
-msgstr "Failed to create folder"
+msgstr "יצירת התיקייה נכשלה"
 
 #: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
 msgid "Failed to reseal document"
-msgstr ""
+msgstr "נכשלה נעילת המסמך מחדש"
 
 #: packages/ui/primitives/document-flow/field-item-advanced-settings.tsx
 msgid "Failed to save settings."
-msgstr ""
+msgstr "שמירת ההגדרות נכשלה."
 
 #: apps/remix/app/routes/embed+/v1+/authoring+/document.edit.$id.tsx
 msgid "Failed to update document"
-msgstr "Failed to update document"
+msgstr "עדכון המסמך נכשל"
 
 #: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
 msgid "Failed to update recipient"
-msgstr ""
+msgstr "עדכון הנמען נכשל"
 
 #: apps/remix/app/routes/embed+/v1+/authoring+/template.edit.$id.tsx
 msgid "Failed to update template"
-msgstr "Failed to update template"
+msgstr "עדכון התבנית נכשל"
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/webhooks.$id.tsx
 msgid "Failed to update webhook"
-msgstr ""
+msgstr "נכשל עדכון webhook"
 
 #: packages/email/templates/bulk-send-complete.tsx
 msgid "Failed: {failedCount}"
-msgstr ""
+msgstr "נכשל: {failedCount}"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
 msgid "Field character limit"
-msgstr ""
+msgstr "מגבלת תווים בשדה"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
@@ -3062,17 +3068,17 @@ msgstr ""
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/email-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/date-field.tsx
 msgid "Field font size"
-msgstr ""
+msgstr "גודל גופן השדה"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
 msgid "Field format"
-msgstr ""
+msgstr "פורמט שדה"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/radio-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/checkbox-field.tsx
 msgid "Field label"
-msgstr ""
+msgstr "תווית שדה"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
 msgid "Field placeholder"
@@ -3080,52 +3086,52 @@ msgstr ""
 
 #: packages/lib/utils/document-audit-logs.ts
 msgid "Field prefilled by assistant"
-msgstr ""
+msgstr "שדה מולא מראש על ידי עוזר"
 
 #: packages/lib/utils/document-audit-logs.ts
 msgid "Field signed"
-msgstr ""
+msgstr "שדה חתום"
 
 #: packages/lib/utils/document-audit-logs.ts
 msgid "Field unsigned"
-msgstr ""
+msgstr "שדה לא חתום"
 
 #: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
 msgid "Fields"
-msgstr ""
+msgstr "שדות"
 
 #: apps/remix/app/components/general/legacy-field-warning-popover.tsx
 msgid "Fields updated"
-msgstr "Fields updated"
+msgstr "שדות עודכנו"
 
 #: apps/remix/app/components/general/document/document-upload.tsx
 #: apps/remix/app/components/general/document/document-drop-zone-wrapper.tsx
 #: apps/remix/app/components/embed/authoring/configure-document-upload.tsx
 msgid "File cannot be larger than {APP_DOCUMENT_UPLOAD_SIZE_LIMIT}MB"
-msgstr ""
+msgstr "הקובץ לא יכול להיות גדול מ {APP_DOCUMENT_UPLOAD_SIZE_LIMIT}MB"
 
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 msgid "File size exceeds the limit of {APP_DOCUMENT_UPLOAD_SIZE_LIMIT} MB"
-msgstr ""
+msgstr "גודל הקובץ חורג מהמגבלה של {APP_DOCUMENT_UPLOAD_SIZE_LIMIT} MB"
 
 #: apps/remix/app/components/dialogs/template-move-to-folder-dialog.tsx
 #: apps/remix/app/components/dialogs/document-move-to-folder-dialog.tsx
 msgid "Folder"
-msgstr "Folder"
+msgstr "תיקייה"
 
 #: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
 msgid "Folder created successfully"
-msgstr "Folder created successfully"
+msgstr "תיקייה נוצרה בהצלחה"
 
 #: apps/remix/app/components/dialogs/template-folder-settings-dialog.tsx
 #: apps/remix/app/components/dialogs/folder-settings-dialog.tsx
 msgid "Folder not found"
-msgstr "Folder not found"
+msgstr "תיקייה לא נמצאה"
 
 #: apps/remix/app/components/dialogs/template-folder-settings-dialog.tsx
 #: apps/remix/app/components/dialogs/folder-settings-dialog.tsx
 msgid "Folder updated successfully"
-msgstr "Folder updated successfully"
+msgstr "התיקייה עודכנה בהצלחה"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/text-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
@@ -3134,7 +3140,7 @@ msgstr "Folder updated successfully"
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/email-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/date-field.tsx
 msgid "Font Size"
-msgstr ""
+msgstr "גודל גופן"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "For any questions regarding this disclosure, electronic signatures, or any related process, please contact us at: <0>{SUPPORT_EMAIL}</0>"
@@ -3146,13 +3152,13 @@ msgstr ""
 
 #: packages/lib/server-only/auth/send-forgot-password.ts
 msgid "Forgot Password?"
-msgstr ""
+msgstr "שכחת סיסמה?"
 
 #: apps/remix/app/routes/_unauthenticated+/forgot-password.tsx
 #: apps/remix/app/components/forms/signin.tsx
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "Forgot your password?"
-msgstr ""
+msgstr "שכחת את הסיסמה שלך?"
 
 #: packages/ui/primitives/document-flow/types.ts
 msgid "Free Signature"
@@ -3166,7 +3172,7 @@ msgstr ""
 #: apps/remix/app/components/embed/embed-document-signing-page.tsx
 #: apps/remix/app/components/embed/embed-direct-template-client-page.tsx
 msgid "Full Name"
-msgstr ""
+msgstr "שם מלא"
 
 #: apps/remix/app/components/general/template/template-edit-form.tsx
 #: apps/remix/app/components/general/teams/team-settings-nav-mobile.tsx
@@ -3175,42 +3181,42 @@ msgstr ""
 #: apps/remix/app/components/general/direct-template/direct-template-page.tsx
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
 msgid "General"
-msgstr ""
+msgstr "כללי"
 
 #: packages/ui/primitives/document-flow/add-subject.tsx
 msgid "Generate Links"
-msgstr ""
+msgstr "הפקת קישורים"
 
 #: packages/ui/components/document/document-global-auth-action-select.tsx
 msgid "Global recipient action authentication"
-msgstr ""
+msgstr "אימות פעולות נמען גלובלי"
 
 #: apps/remix/app/routes/_recipient+/_layout.tsx
 #: apps/remix/app/routes/_profile+/_layout.tsx
 #: apps/remix/app/components/general/generic-error-layout.tsx
 #: packages/ui/primitives/document-flow/document-flow-root.tsx
 msgid "Go Back"
-msgstr ""
+msgstr "חזרה"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Go back home"
-msgstr ""
+msgstr "חזרה לדף הבית"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
 msgid "Go Back Home"
-msgstr ""
+msgstr "חזרה לדף הבית"
 
 #: apps/remix/app/components/general/document/document-certificate-qr-view.tsx
 msgid "Go to document"
-msgstr "Go to document"
+msgstr "מעבר למסמך"
 
 #: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
 msgid "Go to owner"
-msgstr ""
+msgstr "מעבר אל הבעלים"
 
 #: apps/remix/app/routes/_profile+/p.$url.tsx
 msgid "Go to your <0>public profile settings</0> to add documents."
@@ -3222,19 +3228,19 @@ msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
 msgid "has invited you to approve this document"
-msgstr ""
+msgstr "הזמין אותך לאשר מסמך זה"
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
 msgid "has invited you to assist this document"
-msgstr ""
+msgstr "הזמין אותך לסייע במסמך זה"
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
 msgid "has invited you to sign this document"
-msgstr ""
+msgstr "הזמין אותך לחתום על מסמך זה"
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view.tsx
 msgid "has invited you to view this document"
-msgstr ""
+msgstr "הזמין אותך לצפות במסמך זה"
 
 #: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
 #: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
@@ -3243,11 +3249,11 @@ msgstr ""
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 msgid "Having an assistant as the last signer means they will be unable to take any action as there are no subsequent signers to assist."
-msgstr ""
+msgstr "העובדה שעוזר יהיה החותם האחרון פירושה שהוא לא יוכל לבצע כל פעולה מכיוון שאין חותמים נוספים שיסייעו."
 
 #: apps/remix/app/components/embed/embed-document-signing-page.tsx
 msgid "Help complete the document for other signers."
-msgstr ""
+msgstr "עזור/י להשלים את המסמך עבור חותמים אחרים."
 
 #: apps/remix/app/routes/_authenticated+/settings+/profile.tsx
 msgid "Here you can edit your personal details."
@@ -3351,7 +3357,7 @@ msgstr ""
 #: apps/remix/app/components/general/template/template-page-view-information.tsx
 #: apps/remix/app/components/general/document/document-page-view-information.tsx
 msgid "Information"
-msgstr ""
+msgstr "מידע"
 
 #: packages/ui/components/recipient/recipient-action-auth-select.tsx
 #: packages/ui/components/recipient/recipient-action-auth-select.tsx
@@ -3361,11 +3367,11 @@ msgstr ""
 #: apps/remix/app/components/general/document-signing/document-signing-initials-field.tsx
 #: packages/ui/primitives/document-flow/types.ts
 msgid "Initials"
-msgstr ""
+msgstr "ראשי תיבות"
 
 #: apps/remix/app/components/tables/admin-document-recipient-item-table.tsx
 msgid "Inserted"
-msgstr ""
+msgstr "מוכנס"
 
 #: apps/remix/app/routes/_authenticated+/admin+/stats.tsx
 msgid "Instance Stats"
@@ -3373,70 +3379,70 @@ msgstr ""
 
 #: apps/remix/app/components/forms/2fa/view-recovery-codes-dialog.tsx
 msgid "Invalid code. Please try again."
-msgstr ""
+msgstr "קוד לא תקין. אנא נסה שוב."
 
 #: packages/ui/primitives/document-flow/add-signers.types.ts
 msgid "Invalid email"
-msgstr ""
+msgstr "כתובת אימייל לא חוקית"
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.transfer.$token.tsx
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Invalid link"
-msgstr ""
+msgstr "קישור לא תקין"
 
 #: apps/remix/app/routes/_unauthenticated+/team.invite.$token.tsx
 #: apps/remix/app/routes/_unauthenticated+/team.decline.$token.tsx
 msgid "Invalid token"
-msgstr ""
+msgstr "טוקן לא חוקי"
 
 #: apps/remix/app/components/forms/reset-password.tsx
 msgid "Invalid token provided. Please try again."
-msgstr ""
+msgstr "סופק טוקן לא חוקי. אנא נסה שוב."
 
 #: apps/remix/app/routes/_unauthenticated+/team.invite.$token.tsx
 msgid "Invitation accepted!"
-msgstr ""
+msgstr "ההזמנה התקבלה!"
 
 #: apps/remix/app/routes/_unauthenticated+/team.decline.$token.tsx
 msgid "Invitation declined"
-msgstr ""
+msgstr "ההזמנה נדחתה"
 
 #: apps/remix/app/components/tables/team-settings-member-invites-table.tsx
 msgid "Invitation has been deleted"
-msgstr ""
+msgstr "ההזמנה נמחקה"
 
 #: apps/remix/app/components/tables/team-settings-member-invites-table.tsx
 msgid "Invitation has been resent"
-msgstr ""
+msgstr "ההזמנה נשלחה מחדש"
 
 #: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
 msgid "Invite"
-msgstr ""
+msgstr "הזמינו"
 
 #: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
 msgid "Invite member"
-msgstr ""
+msgstr "הזמינו חבר"
 
 #: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
 msgid "Invite Members"
-msgstr ""
+msgstr "הזמנת חברים"
 
 #: apps/remix/app/components/dialogs/team-member-invite-dialog.tsx
 msgid "Invite team members"
-msgstr ""
+msgstr "הזמינו חברי צוות"
 
 #: apps/remix/app/components/tables/team-settings-member-invites-table.tsx
 msgid "Invited At"
-msgstr ""
+msgstr "הוזמן ב-"
 
 #: apps/remix/app/components/tables/team-settings-billing-invoices-table.tsx
 msgid "Invoice"
-msgstr ""
+msgstr "חשבונית"
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/components/tables/internal-audit-log-table.tsx
 msgid "IP Address"
-msgstr ""
+msgstr "כתובת IP"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "It is crucial to keep your contact information, especially your email address, up to date with us. Please notify us immediately of any changes to ensure that you continue to receive all necessary communications."
@@ -3473,48 +3479,48 @@ msgstr "Join {teamName} on Documenso"
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/checkbox-field.tsx
 msgid "Label"
-msgstr ""
+msgstr "תווית"
 
 #: apps/remix/app/components/general/menu-switcher.tsx
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 #: packages/ui/primitives/document-flow/add-settings.tsx
 msgid "Language"
-msgstr ""
+msgstr "שפה"
 
 #: apps/remix/app/components/general/period-selector.tsx
 msgid "Last 14 days"
-msgstr ""
+msgstr "14 הימים האחרונים"
 
 #: apps/remix/app/components/general/period-selector.tsx
 msgid "Last 30 days"
-msgstr ""
+msgstr "30 הימים האחרונים"
 
 #: apps/remix/app/components/general/period-selector.tsx
 msgid "Last 7 days"
-msgstr ""
+msgstr "7 הימים האחרונים"
 
 #: apps/remix/app/components/general/template/template-page-view-information.tsx
 #: apps/remix/app/components/general/document/document-page-view-information.tsx
 msgid "Last modified"
-msgstr ""
+msgstr "השינוי האחרון"
 
 #: apps/remix/app/routes/_authenticated+/documents.f.$folderId.$id.logs.tsx
 #: apps/remix/app/routes/_authenticated+/documents.$id.logs.tsx
 msgid "Last updated"
-msgstr ""
+msgstr "עדכון אחרון"
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/audit-log.tsx
 msgid "Last Updated"
-msgstr ""
+msgstr "עדכון אחרון"
 
 #: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
 msgid "Last updated at"
-msgstr ""
+msgstr "עדכון אחרון ב"
 
 #: apps/remix/app/components/tables/settings-security-passkey-table.tsx
 msgid "Last used"
-msgstr ""
+msgstr "השתמשו לאחרונה"
 
 #: apps/remix/app/routes/_authenticated+/admin+/_layout.tsx
 msgid "Leaderboard"
@@ -3952,9 +3958,10 @@ msgid "No worries, it happens! Enter your email and we'll email you a special li
 msgstr "אל דאגה, זה קורה! הזן את הדוא\"ל שלך ונשלח לך קישור מיוחד לאיפוס הסיסמה שלך."
 
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/lib/constants/document.ts
 msgid "None"
-msgstr "אין"
+msgstr "כלום"
 
 #: apps/remix/app/components/forms/signin.tsx
 msgid "Not supported"
@@ -4215,11 +4222,11 @@ msgstr "Phone"
 
 #: apps/remix/app/components/general/claim-account.tsx
 msgid "Phone number"
-msgstr "Phone number"
+msgstr "מספר טלפון"
 
 #: apps/remix/app/components/forms/signup.tsx
 msgid "Phone Number"
-msgstr "Phone Number"
+msgstr "מספר טלפון"
 
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/checkbox-field.tsx
 msgid "Pick a number"
@@ -4306,7 +4313,7 @@ msgstr "אנא הזן שם תקין."
 #: apps/remix/app/components/general/claim-account.tsx
 #: apps/remix/app/components/forms/signup.tsx
 msgid "Please enter a valid phone number."
-msgstr "Please enter a valid phone number."
+msgstr "אנא הזן מספר טלפון תקין."
 
 #: apps/remix/app/components/general/document-signing/document-signing-form.tsx
 msgid "Please mark as viewed to complete"
@@ -6621,7 +6628,7 @@ msgstr "העלה מסמך מותאם אישית"
 #: apps/remix/app/components/embed/authoring/configure-document-upload.tsx
 #: packages/ui/primitives/document-upload.tsx
 msgid "Upload Document"
-msgstr "Upload Document"
+msgstr "העלאת מסמך"
 
 #: packages/ui/primitives/signature-pad/signature-pad-upload.tsx
 msgid "Upload Signature"

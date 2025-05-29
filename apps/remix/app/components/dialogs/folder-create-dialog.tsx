@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
+import { Trans } from '@lingui/react/macro';
 import type * as DialogPrimitive from '@radix-ui/react-dialog';
 import { FolderPlusIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -115,7 +116,9 @@ export const CreateFolderDialog = ({ trigger, ...props }: CreateFolderDialogProp
         {trigger ?? (
           <Button variant="outline" className="flex items-center space-x-2">
             <FolderPlusIcon className="h-4 w-4" />
-            <span>Create Folder</span>
+            <span>
+              <Trans>Create Folder</Trans>
+            </span>
           </Button>
         )}
       </DialogTrigger>

@@ -1982,6 +1982,11 @@ msgstr "Crea Link di Firma Diretto"
 msgid "Create document from template"
 msgstr "Crea documento da modello"
 
+#: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
+#: apps/remix/app/components/dialogs/folder-create-dialog.tsx
+msgid "Create Folder"
+msgstr ""
+
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Create now"
 msgstr "Crea ora"
@@ -2792,6 +2797,7 @@ msgstr "Divulgazione della firma elettronica"
 #: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
 #: packages/ui/primitives/template-flow/add-template-fields.tsx
 #: packages/ui/primitives/document-flow/types.ts
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-fields.tsx
@@ -3957,6 +3963,7 @@ msgid "No worries, it happens! Enter your email and we'll email you a special li
 msgstr "Non ti preoccupare, succede! Inserisci la tua email e ti invieremo un link speciale per reimpostare la tua password."
 
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/lib/constants/document.ts
 msgid "None"
 msgstr "Nessuno"
