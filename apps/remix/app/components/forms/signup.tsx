@@ -40,6 +40,10 @@ export const ZSignUpFormSchema = z
       .trim()
       .min(1, { message: msg`Please enter a valid name.`.id }),
     email: z.string().email().min(1),
+    phone: z
+      .string()
+      .trim()
+      .min(1, { message: msg`Please enter a valid phone number.`.id }),
     password: ZPasswordSchema,
     signature: z.string().min(1, { message: msg`We need your signature to sign documents`.id }),
   })
@@ -88,6 +92,7 @@ export const SignUpForm = ({
     values: {
       name: '',
       email: initialEmail ?? '',
+      phone: '',
       password: '',
       signature: '',
     },
@@ -97,16 +102,24 @@ export const SignUpForm = ({
 
   const isSubmitting = form.formState.isSubmitting;
 
-  const onFormSubmit = async ({ name, email, password, signature }: TSignUpFormSchema) => {
+
+  const onFormSubmit = async ({
+    name,
+    email,
+    phone,
+    password,
+    signature,
+  }: TSignUpFormSchema) => {
     try {
       await authClient.emailPassword.signUp({
         name,
         email,
+        phone,
         password,
         signature,
       });
 
-      await navigate(`/unverified-account`);
+      await navigate('/unverified-account');
 
       toast({
         title: _(msg`Registration Successful`),
@@ -262,6 +275,22 @@ export const SignUpForm = ({
                   </FormItem>
                 )}
               />
+
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>
+                        <Trans>Phone Number</Trans>
+                      </FormLabel>
+                      <FormControl>
+                        <Input type="tel" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
               <FormField
                 control={form.control}

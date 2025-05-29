@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
-import React from 'react';
+import type React from 'react';
 
 import type { Session } from '@prisma/client';
 import { useLocation } from 'react-router';

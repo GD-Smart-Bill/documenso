@@ -10,6 +10,7 @@ import { setOrganisationType } from './organisations';
 type SeedUserOptions = {
   name?: string;
   email?: string;
+  phone?: string;
   password?: string;
   verified?: boolean;
   setTeamEmailAsOwner?: boolean;
@@ -26,6 +27,7 @@ export const seedTestEmail = () => `${nanoid()}@test.documenso.com`;
 export const seedUser = async ({
   name = nanoid(),
   email,
+  phone = '+1234567890',
   password = 'password',
   verified = true,
   setTeamEmailAsOwner = false,
@@ -42,6 +44,7 @@ export const seedUser = async ({
     data: {
       name,
       email: email.toLowerCase(),
+      phone,
       password: hashSync(password),
       emailVerified: verified ? new Date() : undefined,
       roles: isAdmin ? [Role.USER, Role.ADMIN] : [Role.USER],

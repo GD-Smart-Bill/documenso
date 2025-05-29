@@ -11,11 +11,18 @@ import { createPersonalOrganisation } from '../organisation/create-organisation'
 export interface CreateUserOptions {
   name: string;
   email: string;
+  phone: string;
   password: string;
   signature?: string | null;
 }
 
-export const createUser = async ({ name, email, password, signature }: CreateUserOptions) => {
+export const createUser = async ({
+  name,
+  email,
+  phone,
+  password,
+  signature,
+}: CreateUserOptions) => {
   const hashedPassword = await hash(password, SALT_ROUNDS);
 
   const userExists = await prisma.user.findFirst({
@@ -33,6 +40,7 @@ export const createUser = async ({ name, email, password, signature }: CreateUse
       data: {
         name,
         email: email.toLowerCase(),
+        phone,
         password: hashedPassword, // Todo: (RR7) Drop password.
         signature,
       },

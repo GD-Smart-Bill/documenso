@@ -88,7 +88,11 @@ export const emailPasswordRoute = new Hono<HonoAuthContext>()
     const is2faEnabled = isTwoFactorAuthenticationEnabled({ user });
 
     if (is2faEnabled) {
-      const isValid = await validateTwoFactorAuthentication({ backupCode, totpCode, user });
+      const isValid = await validateTwoFactorAuthentication({
+        backupCode,
+        totpCode,
+        user,
+      });
 
       if (!isValid) {
         await prisma.userSecurityAuditLog.create({
@@ -147,9 +151,9 @@ export const emailPasswordRoute = new Hono<HonoAuthContext>()
       });
     }
 
-    const { name, email, password, signature } = c.req.valid('json');
+    const { name, email, phone, password, signature } = c.req.valid('json');
 
-    const user = await createUser({ name, email, password, signature }).catch((err) => {
+    const user = await createUser({ name, email, phone, password, signature }).catch((err) => {
       console.error(err);
       throw err;
     });
@@ -185,7 +189,9 @@ export const emailPasswordRoute = new Hono<HonoAuthContext>()
    * Verify email endpoint.
    */
   .post('/verify-email', sValidator('json', ZVerifyEmailSchema), async (c) => {
-    const { state, userId } = await verifyEmail({ token: c.req.valid('json').token });
+    const { state, userId } = await verifyEmail({
+      token: c.req.valid('json').token,
+    });
 
     // If email is verified, automatically authenticate user.
     if (state === EMAIL_VERIFICATION_STATE.VERIFIED && userId !== null) {

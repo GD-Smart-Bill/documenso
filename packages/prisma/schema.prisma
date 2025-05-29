@@ -40,6 +40,7 @@ model User {
   id               Int              @id @default(autoincrement())
   name             String?
   email            String           @unique
+  phone            String
   emailVerified    DateTime?
   password         String? // Todo: (RR7) Remove after RR7 migration.
   source           String?

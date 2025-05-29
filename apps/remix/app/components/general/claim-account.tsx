@@ -38,6 +38,10 @@ export const ZClaimAccountFormSchema = z
       .trim()
       .min(1, { message: msg`Please enter a valid name.`.id }),
     email: z.string().email().min(1),
+    phone: z
+      .string()
+      .trim()
+      .min(1, { message: msg`Please enter a valid phone number.`.id }),
     password: ZPasswordSchema,
   })
   .refine(
@@ -64,16 +68,17 @@ export const ClaimAccount = ({ defaultName, defaultEmail }: ClaimAccountProps) =
     values: {
       name: defaultName ?? '',
       email: defaultEmail,
+      phone: '',
       password: '',
     },
     resolver: zodResolver(ZClaimAccountFormSchema),
   });
 
-  const onFormSubmit = async ({ name, email, password }: TClaimAccountFormSchema) => {
+  const onFormSubmit = async ({ name, email, phone, password }: TClaimAccountFormSchema) => {
     try {
-      await authClient.emailPassword.signUp({ name, email, password });
+      await authClient.emailPassword.signUp({ name, email, phone, password });
 
-      await navigate(`/unverified-account`);
+      await navigate('/unverified-account');
 
       toast({
         title: _(msg`Registration Successful`),
@@ -130,6 +135,21 @@ export const ClaimAccount = ({ defaultName, defaultEmail }: ClaimAccountProps) =
                   </FormLabel>
                   <FormControl>
                     <Input {...field} placeholder={_(msg`Enter your email`)} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              name="phone"
+              control={form.control}
+              render={({ field }) => (
+                <FormItem className="mt-4">
+                  <FormLabel>
+                    <Trans>Phone number</Trans>
+                  </FormLabel>
+                  <FormControl>
+                    <Input {...field} placeholder={_(msg`Enter your phone number`)} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
