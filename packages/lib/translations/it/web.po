@@ -5000,6 +5000,11 @@ msgstr "Si prega di inserire un nome significativo per il proprio token. Questo 
 msgid "Please enter a valid name."
 msgstr "Per favore inserisci un nome valido."
 
+#: apps/remix/app/components/general/claim-account.tsx
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Please enter a valid phone number."
+msgstr ""
+
 #: apps/remix/app/components/general/document-signing/document-signing-form.tsx
 msgid "Please mark as viewed to complete"
 msgstr "Si prega di segnare come visualizzato per completare"
@@ -8631,8 +8636,8 @@ msgid "Your documents"
 msgstr "I tuoi documenti"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
-msgstr "La tua email è già stata confermata. Ora puoi utilizzare tutte le funzionalità di Documenso."
+msgid "Your email has already been confirmed. You can now use all features of Smartsign."
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Your email has been successfully confirmed! You can now use all features of Smartsign."

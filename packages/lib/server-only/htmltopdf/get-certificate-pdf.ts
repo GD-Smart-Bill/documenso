@@ -52,10 +52,14 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
     },
   ]);
 
-  await page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}/__htmltopdf/certificate?d=${encryptedId}`, {
-    waitUntil: 'networkidle',
-    timeout: 10_000,
-  });
+  try {
+    await page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}/__htmltopdf/certificate?d=${encryptedId}`, {
+      waitUntil: 'networkidle',
+      timeout: 10_000,
+    });
+  } catch (e) {
+    console.trace('error', e);
+  }
 
   const result = await page.pdf({
     format: 'A4',

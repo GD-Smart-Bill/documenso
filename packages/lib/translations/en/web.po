@@ -4993,6 +4993,11 @@ msgstr "Please enter a meaningful name for your token. This will help you identi
 msgid "Please enter a valid name."
 msgstr "Please enter a valid name."
 
+#: apps/remix/app/components/general/claim-account.tsx
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Please enter a valid phone number."
+msgstr ""
+
 #: apps/remix/app/components/general/document-signing/document-signing-form.tsx
 msgid "Please mark as viewed to complete"
 msgstr "Please mark as viewed to complete"
