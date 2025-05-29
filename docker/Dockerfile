@@ -35,41 +35,6 @@ RUN apk add --no-cache jq
 # Required for node_modules/aws-crt
 RUN apk add --no-cache make cmake g++ openssl bash
 
-# Install system dependencies required for Playwright browsers
-RUN apk add --no-cache \
-    glib \
-    nss \
-    nspr \
-    dbus \
-    atk \
-    atk-dev \
-    atspi \
-    cairo \
-    cairo-dev \
-    cups \
-    dbus-dev \
-    eudev-dev \
-    expat-dev \
-    fontconfig \
-    freetype \
-    gdk-pixbuf \
-    glib-dev \
-    gtk+3.0 \
-    harfbuzz \
-    libdrm \
-    libx11 \
-    libxcomposite \
-    libxdamage \
-    libxext \
-    libxfixes \
-    libxkbcommon \
-    libxrandr \
-    libxss \
-    mesa \
-    pango \
-    ttf-freefont \
-    && rm -rf /var/cache/apk/*
-
 WORKDIR /app
 
 # Disable husky from installing hooks
@@ -117,8 +82,6 @@ RUN turbo run build --filter=@documenso/remix...
 ###########################
 FROM base AS runner
 
-# Install system dependencies required for Playwright browsers in runtime
-RUN apk add --no-cache \
     glib \
     nss \
     nspr \
