@@ -162,6 +162,7 @@ export const handleOAuthCallbackUrl = async (options: HandleOAuthCallbackUrlOpti
     const user = await tx.user.create({
       data: {
         email: email,
+        phone: '0',
         name: name,
         emailVerified: new Date(),
         url: nanoid(17),
