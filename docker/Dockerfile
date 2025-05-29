@@ -35,12 +35,27 @@ RUN apk add --no-cache jq
 # Required for node_modules/aws-crt
 RUN apk add --no-cache make cmake g++ openssl bash
 
+# Install system dependencies required for Playwright browsers
+RUN apk add --no-cache \
+    chromium \
+    nss \
+    freetype \
+    freetype-dev \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    && rm -rf /var/cache/apk/*
+
 WORKDIR /app
 
 # Disable husky from installing hooks
 ENV HUSKY 0
 ENV DOCKER_OUTPUT 1
 ENV NEXT_TELEMETRY_DISABLED 1
+
+# Tell Playwright to use the system-installed Chromium
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+ENV PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 # Encryption keys
 ARG NEXT_PRIVATE_ENCRYPTION_KEY="CAFEBABE"
@@ -65,9 +80,6 @@ COPY --from=builder /app/lingui.config.ts ./lingui.config.ts
 
 RUN npm ci
 
-# Install Playwright browsers after npm dependencies are installed
-RUN npx playwright install --with-deps chromium
-
 # Then copy all the source code (as it changes more often)
 COPY --from=builder /app/out/full/ .
 # Finally copy the turbo.json file so that we can run turbo commands
@@ -82,8 +94,23 @@ RUN turbo run build --filter=@documenso/remix...
 ###########################
 FROM base AS runner
 
+# Install system dependencies required for Playwright browsers in runtime
+RUN apk add --no-cache \
+    chromium \
+    nss \
+    freetype \
+    freetype-dev \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    && rm -rf /var/cache/apk/*
+
 ENV HUSKY 0
 ENV DOCKER_OUTPUT 1
+
+# Tell Playwright to use the system-installed Chromium
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+ENV PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs
@@ -98,9 +125,6 @@ COPY --from=builder --chown=nodejs:nodejs /app/out/json/ .
 COPY --from=builder --chown=nodejs:nodejs /app/out/full/packages/tailwind-config ./packages/tailwind-config
 
 RUN npm ci --only=production
-
-# Copy Playwright browsers from installer stage
-COPY --from=installer --chown=nodejs:nodejs /root/.cache/ms-playwright /home/nodejs/.cache/ms-playwright
 
 # Automatically leverage output traces to reduce image size
 # https://nodejs.org/docs/advanced-features/output-file-tracing
