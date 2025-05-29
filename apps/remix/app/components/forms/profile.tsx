@@ -112,6 +112,12 @@ export const ProfileForm = ({ className }: ProfileFormProps) => {
             </Label>
             <Input id="email" type="email" className="bg-muted mt-2" value={user.email} disabled />
           </div>
+          <div>
+            <Label htmlFor="phone" className="text-muted-foreground">
+              <Trans>Phone</Trans>
+            </Label>
+            <Input id="phone" type="text" className="bg-muted mt-2" value={user.phone} disabled />
+          </div>
 
           <FormField
             control={form.control}

@@ -14,10 +14,12 @@ test('[USER] can sign up with email and password', async ({ page }: { page: Page
   const username = 'Test User';
   const email = seedTestEmail();
   const password = 'Password123#';
+  const phone = '+1234567890';
 
   await page.goto('/signup');
   await page.getByLabel('Name').fill(username);
   await page.getByLabel('Email').fill(email);
+  await page.getByLabel('Phone Number').fill(phone);
   await page.getByLabel('Password', { exact: true }).fill(password);
 
   await signSignaturePad(page);

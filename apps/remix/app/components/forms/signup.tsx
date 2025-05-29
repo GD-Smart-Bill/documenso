@@ -45,6 +45,10 @@ export const ZSignUpFormSchema = z
       .trim()
       .min(1, { message: msg`Please enter a valid name.`.id }),
     email: z.string().email().min(1),
+    phone: z
+      .string()
+      .trim()
+      .min(1, { message: msg`Please enter a valid phone number.`.id }),
     password: ZPasswordSchema,
     signature: z.string().min(1, { message: msg`We need your signature to sign documents`.id }),
     url: z
@@ -107,6 +111,7 @@ export const SignUpForm = ({
     values: {
       name: '',
       email: initialEmail ?? '',
+      phone: '',
       password: '',
       signature: '',
       url: '',
@@ -120,17 +125,25 @@ export const SignUpForm = ({
   const name = form.watch('name');
   const url = form.watch('url');
 
-  const onFormSubmit = async ({ name, email, password, signature, url }: TSignUpFormSchema) => {
+  const onFormSubmit = async ({
+    name,
+    email,
+    phone,
+    password,
+    signature,
+    url,
+  }: TSignUpFormSchema) => {
     try {
       await authClient.emailPassword.signUp({
         name,
         email,
+        phone,
         password,
         signature,
         url,
       });
 
-      await navigate(`/unverified-account`);
+      await navigate('/unverified-account');
 
       toast({
         title: _(msg`Registration Successful`),
@@ -166,7 +179,7 @@ export const SignUpForm = ({
   };
 
   const onNextClick = async () => {
-    const valid = await form.trigger(['name', 'email', 'password', 'signature']);
+    const valid = await form.trigger(['name', 'email', 'phone', 'password', 'signature']);
 
     if (valid) {
       setStep('CLAIM_USERNAME');
@@ -334,6 +347,22 @@ export const SignUpForm = ({
 
                 <FormField
                   control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>
+                        <Trans>Phone Number</Trans>
+                      </FormLabel>
+                      <FormControl>
+                        <Input type="tel" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
                   name="password"
                   render={({ field }) => (
                     <FormItem>
@@ -372,47 +401,41 @@ export const SignUpForm = ({
                 />
 
                 {(isGoogleSSOEnabled || isOIDCSSOEnabled) && (
-                  <>
-                    <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
-                      <div className="bg-border h-px flex-1" />
-                      <span className="text-muted-foreground bg-transparent">
-                        <Trans>Or</Trans>
-                      </span>
-                      <div className="bg-border h-px flex-1" />
-                    </div>
-                  </>
+                  <div className="relative flex items-center justify-center gap-x-4 py-2 text-xs uppercase">
+                    <div className="bg-border h-px flex-1" />
+                    <span className="text-muted-foreground bg-transparent">
+                      <Trans>Or</Trans>
+                    </span>
+                    <div className="bg-border h-px flex-1" />
+                  </div>
                 )}
 
                 {isGoogleSSOEnabled && (
-                  <>
-                    <Button
-                      type="button"
-                      size="lg"
-                      variant={'outline'}
-                      className="bg-background text-muted-foreground border"
-                      disabled={isSubmitting}
-                      onClick={onSignUpWithGoogleClick}
-                    >
-                      <FcGoogle className="mr-2 h-5 w-5" />
-                      <Trans>Sign Up with Google</Trans>
-                    </Button>
-                  </>
+                  <Button
+                    type="button"
+                    size="lg"
+                    variant={'outline'}
+                    className="bg-background text-muted-foreground border"
+                    disabled={isSubmitting}
+                    onClick={onSignUpWithGoogleClick}
+                  >
+                    <FcGoogle className="mr-2 h-5 w-5" />
+                    <Trans>Sign Up with Google</Trans>
+                  </Button>
                 )}
 
                 {isOIDCSSOEnabled && (
-                  <>
-                    <Button
-                      type="button"
-                      size="lg"
-                      variant={'outline'}
-                      className="bg-background text-muted-foreground border"
-                      disabled={isSubmitting}
-                      onClick={onSignUpWithOIDCClick}
-                    >
-                      <FaIdCardClip className="mr-2 h-5 w-5" />
-                      <Trans>Sign Up with OIDC</Trans>
-                    </Button>
-                  </>
+                  <Button
+                    type="button"
+                    size="lg"
+                    variant={'outline'}
+                    className="bg-background text-muted-foreground border"
+                    disabled={isSubmitting}
+                    onClick={onSignUpWithOIDCClick}
+                  >
+                    <FaIdCardClip className="mr-2 h-5 w-5" />
+                    <Trans>Sign Up with OIDC</Trans>
+                  </Button>
                 )}
 
                 <p className="text-muted-foreground mt-4 text-sm">

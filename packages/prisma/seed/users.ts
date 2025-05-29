@@ -7,6 +7,7 @@ import { prisma } from '..';
 type SeedUserOptions = {
   name?: string;
   email?: string;
+  phone?: string;
   password?: string;
   verified?: boolean;
 };
@@ -18,6 +19,7 @@ export const seedTestEmail = () => `${nanoid()}@test.documenso.com`;
 export const seedUser = async ({
   name,
   email,
+  phone = '+1234567890',
   password = 'password',
   verified = true,
 }: SeedUserOptions = {}) => {
@@ -38,6 +40,7 @@ export const seedUser = async ({
     data: {
       name,
       email,
+      phone,
       password: hashSync(password),
       emailVerified: verified ? new Date() : undefined,
       url,

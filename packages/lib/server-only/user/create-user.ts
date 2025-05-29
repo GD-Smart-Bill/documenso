@@ -15,12 +15,20 @@ import { buildLogger } from '../../utils/logger';
 export interface CreateUserOptions {
   name: string;
   email: string;
+  phone: string;
   password: string;
   signature?: string | null;
   url?: string;
 }
 
-export const createUser = async ({ name, email, password, signature, url }: CreateUserOptions) => {
+export const createUser = async ({
+  name,
+  email,
+  phone,
+  password,
+  signature,
+  url,
+}: CreateUserOptions) => {
   const hashedPassword = await hash(password, SALT_ROUNDS);
 
   const userExists = await prisma.user.findFirst({
@@ -53,6 +61,7 @@ export const createUser = async ({ name, email, password, signature, url }: Crea
       data: {
         name,
         email: email.toLowerCase(),
+        phone,
         password: hashedPassword, // Todo: (RR7) Drop password.
         signature,
         url,
