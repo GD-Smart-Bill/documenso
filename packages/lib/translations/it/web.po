@@ -2342,10 +2342,6 @@ msgstr "Vuoi eliminare questo modello?"
 msgid "Do you want to duplicate this template?"
 msgstr "Vuoi duplicare questo modello?"
 
-#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Documenso will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
-msgstr "Documenso eliminerà <0>tutti i tuoi documenti</0>, insieme a tutti i tuoi documenti completati, firme e tutte le altre risorse appartenenti al tuo account."
-
 #: apps/remix/app/routes/_authenticated+/documents.f.$folderId.$id.logs.tsx
 #: apps/remix/app/routes/_authenticated+/documents.$id.logs.tsx
 #: apps/remix/app/components/general/template/template-page-view-documents-table.tsx
@@ -2926,6 +2922,10 @@ msgstr "Inserisci il tuo indirizzo email per ricevere il documento completato."
 #: apps/remix/app/components/general/claim-account.tsx
 msgid "Enter your name"
 msgstr "Inserisci il tuo nome"
+
+#: apps/remix/app/components/general/claim-account.tsx
+msgid "Enter your phone number"
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-text-field.tsx
 msgid "Enter your text here"
@@ -4214,6 +4214,18 @@ msgstr "Personale"
 msgid "Personal Account"
 msgstr "Account personale"
 
+#: apps/remix/app/components/forms/profile.tsx
+msgid "Phone"
+msgstr ""
+
+#: apps/remix/app/components/general/claim-account.tsx
+msgid "Phone number"
+msgstr ""
+
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Phone Number"
+msgstr ""
+
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/checkbox-field.tsx
 msgid "Pick a number"
 msgstr "Scegli un numero"
@@ -4295,6 +4307,11 @@ msgstr "Si prega di inserire un nome significativo per il proprio token. Questo 
 #: apps/remix/app/components/forms/profile.tsx
 msgid "Please enter a valid name."
 msgstr "Per favore inserisci un nome valido."
+
+#: apps/remix/app/components/general/claim-account.tsx
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Please enter a valid phone number."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-form.tsx
 msgid "Please mark as viewed to complete"
@@ -7603,8 +7620,8 @@ msgid "Your documents"
 msgstr "I tuoi documenti"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
-msgstr "La tua email è già stata confermata. Ora puoi utilizzare tutte le funzionalità di Documenso."
+msgid "Your email has already been confirmed. You can now use all features of Smartsign."
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Your email has been successfully confirmed! You can now use all features of Smartsign."
