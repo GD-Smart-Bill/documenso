@@ -29,7 +29,12 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
     // !: Previously we would have to keep the playwright version in sync with the browserless version to avoid errors.
     browser = await chromium.connectOverCDP(browserlessUrl);
   } else {
-    browser = await chromium.launch();
+    // Use system Chromium in Docker environment
+    const executablePath =
+      env('PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH') || '/usr/bin/chromium-browser';
+    browser = await chromium.launch({
+      executablePath,
+    });
   }
 
   if (!browser) {
