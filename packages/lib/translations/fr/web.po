@@ -3073,6 +3073,7 @@ msgstr "Divulgation de signature électronique"
 #: packages/ui/primitives/template-flow/add-template-placeholder-recipients.tsx
 #: packages/ui/primitives/template-flow/add-template-fields.tsx
 #: packages/ui/primitives/document-flow/types.ts
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-signers.tsx
 #: packages/ui/primitives/document-flow/add-fields.tsx
@@ -4513,6 +4514,7 @@ msgstr "Pas de soucis, ça arrive ! Entrez votre email et nous vous enverrons un
 
 #: apps/remix/app/components/tables/admin-claims-table.tsx
 #: apps/remix/app/components/embed/authoring/configure-document-advanced-settings.tsx
+#: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/lib/constants/document.ts
 msgid "None"
 msgstr "Aucun"

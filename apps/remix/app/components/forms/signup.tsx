@@ -239,7 +239,7 @@ export const SignUpForm = ({
           >
             <fieldset
               className={cn(
-                'flex h-[550px] w-full flex-col gap-y-4',
+                'flex h-[580px] w-full flex-col gap-y-4',
                 (isGoogleSSOEnabled || isOIDCSSOEnabled) && 'h-[650px]',
               )}
               disabled={isSubmitting}
