@@ -82,35 +82,6 @@ RUN turbo run build --filter=@documenso/remix...
 ###########################
 FROM base AS runner
 
-    glib \
-    nss \
-    nspr \
-    dbus \
-    atk \
-    atspi \
-    cairo \
-    cups \
-    eudev \
-    expat \
-    fontconfig \
-    freetype \
-    gdk-pixbuf \
-    gtk+3.0 \
-    harfbuzz \
-    libdrm \
-    libx11 \
-    libxcomposite \
-    libxdamage \
-    libxext \
-    libxfixes \
-    libxkbcomposite \
-    libxrandr \
-    libxss \
-    mesa \
-    pango \
-    ttf-freefont \
-    && rm -rf /var/cache/apk/*
-
 ENV HUSKY 0
 ENV DOCKER_OUTPUT 1
 
