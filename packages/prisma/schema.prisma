@@ -41,6 +41,7 @@ model User {
   name             String?
   customerId       String?          @unique
   email            String           @unique
+  phone            String
   emailVerified    DateTime?
   password         String? // Todo: (RR7) Remove after RR7 migration.
   source           String?

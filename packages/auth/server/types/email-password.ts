@@ -35,6 +35,7 @@ export const ZPasswordSchema = z
 export const ZSignUpSchema = z.object({
   name: z.string().min(1),
   email: z.string().email(),
+  phone: z.string().min(1, { message: 'Phone number is required' }),
   password: ZPasswordSchema,
   signature: z.string().nullish(),
   url: z
