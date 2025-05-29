@@ -38,6 +38,11 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
     );
   }
 
+  const version = browser.version();
+  console.log('version', version);
+  const path = chromium.executablePath();
+  console.log('path', path);
+
   const browserContext = await browser.newContext();
 
   const page = await browserContext.newPage();

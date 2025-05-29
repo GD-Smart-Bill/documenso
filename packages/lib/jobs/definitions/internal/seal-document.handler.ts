@@ -149,7 +149,10 @@ export const run = async ({
       ? await getCertificatePdf({
           documentId,
           language: document.documentMeta?.language,
-        }).catch(() => null)
+        }).catch((e) => {
+          console.error('error', e);
+          return null;
+        })
       : null;
 
   console.log(
