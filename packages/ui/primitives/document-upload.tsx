@@ -8,7 +8,11 @@ import { Link } from 'react-router';
 
 import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
 import { useSession } from '@documenso/lib/client-only/providers/session';
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT, IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
+import {
+  APP_DOCUMENT_UPLOAD_SIZE_LIMIT,
+  APP_SUPPORT_EMAIL,
+  APP_SUPPORT_PHONE,
+} from '@documenso/lib/constants/app';
 import { megabytesToBytes } from '@documenso/lib/universal/unit-convertions';
 import { isPersonalLayout } from '@documenso/lib/utils/organisations';
 
@@ -68,28 +72,51 @@ export const DocumentDropzone = ({
     template: msg`Upload Template Document`,
   };
 
-  if (disabled && IS_BILLING_ENABLED()) {
+  const disabledExtra = msg`Contact support to get more documents`;
+  const phone = APP_SUPPORT_PHONE;
+  const email = APP_SUPPORT_EMAIL;
+
+  if (disabled) {
     return (
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button className="hover:bg-warning/80 bg-warning" asChild>
-              <Link
-                to={
-                  isPersonalLayoutMode
-                    ? `/settings/billing`
-                    : `/o/${organisation.url}/settings/billing`
-                }
-              >
-                <Trans>Upgrade</Trans>
-              </Link>
-            </Button>
-          </TooltipTrigger>
+            <div className="flex flex-col items-center justify-center">
+              <Button className="hover:bg-warning/80 bg-warning" asChild>
+                <Link
+                  to={
+                    isPersonalLayoutMode
+                      ? `/settings/billing`
+                      : `/o/${organisation.url}/settings/billing`
+                  }
+                >
+                  <Trans>Upgrade</Trans>
+                </Link>
+              </Button>
+              <div>
+                <p className="text-muted-foreground/80 mt-1 text-center text-sm">
+                  {_(disabledExtra)}
+                </p>
+                <a
+                  href={`tel:${phone}`}
+                  className="text-muted-foreground/80 mt-1 block text-center text-sm"
+                >
+                  {phone}
+                </a>
+                <a
+                  href={`mailto:${email}`}
+                  className="text-muted-foreground/80 mt-1 block text-center text-sm"
+                >
+                  {email}
+                </a>
+              </div>
+            </div>
+          </TooltipTrigger >
           <TooltipContent>
             <p className="text-sm">{_(disabledMessage)}</p>
           </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+        </Tooltip >
+      </TooltipProvider >
     );
   }
 

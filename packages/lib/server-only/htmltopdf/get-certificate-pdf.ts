@@ -33,7 +33,7 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
     const executablePath =
       env('PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH') || '/usr/bin/chromium-browser';
     browser = await chromium.launch({
-      executablePath,
+      executablePath: executablePath === 'none' ? undefined : executablePath,
     });
   }
 

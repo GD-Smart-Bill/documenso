@@ -142,7 +142,7 @@ msgstr "{0} left the team {teamName} on Documenso"
 #: apps/remix/app/components/general/document/document-upload.tsx
 #: apps/remix/app/components/general/document/document-drop-zone-wrapper.tsx
 msgid "{0} of {1} documents remaining this month."
-msgstr "{0} מתוך {1} מסמכים שנותרו החודש."
+msgstr "מתוך {1} נותרו החודש {0} מסמכים."
 
 #. placeholder {0}: table.getFilteredSelectedRowModel().rows.length
 #. placeholder {1}: table.getFilteredRowModel().rows.length
@@ -1816,6 +1816,7 @@ msgstr "הסכמה לעסקאות אלקטרוניות"
 msgid "Contact Information"
 msgstr "פרטי התקשרות"
 
+#: packages/ui/primitives/document-upload.tsx
 #: packages/ui/primitives/document-dropzone.tsx
 msgid "Contact support to get more documents"
 msgstr "צרו קשר עם התמיכה כדי לקבל מסמכים נוספים"
