@@ -198,18 +198,59 @@ export default function SigningCertificate({ loaderData }: Route.ComponentProps)
 
   return (
     <div className="print-provider pointer-events-none mx-auto max-w-screen-md">
-      <div className="flex items-center">
+      <div className={`flex items-center ${documentLanguage === 'he' ? 'justify-end' : ''}`}>
         <h1 className="my-8 text-2xl font-bold">{_(msg`Signing Certificate`)}</h1>
       </div>
 
       <Card>
-        <CardContent className="p-0">
-          <Table overflowHidden>
+        <CardContent className="space-y-4 p-0">
+          <Table overflowHidden dir={documentLanguage === 'he' ? 'rtl' : 'ltr'}>
             <TableHeader>
               <TableRow>
-                <TableHead>{_(msg`Signer Events`)}</TableHead>
-                <TableHead>{_(msg`Signature`)}</TableHead>
-                <TableHead>{_(msg`Details`)}</TableHead>
+                <TableHead className={documentLanguage === 'he' ? 'text-right' : ''}>
+                  {_(msg`Sender`)}
+                </TableHead>
+                <TableHead className={documentLanguage === 'he' ? 'text-right' : ''}>
+                  {_(msg`Details`)}
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+
+            <TableBody className="print:text-xs">
+              <TableRow className="print:break-inside-avoid">
+                <TableCell truncate={false} className="w-[min-content] max-w-[220px] align-top">
+                  <div className="hyphens-auto break-words font-medium">{document.user.name}</div>
+                  <div className="break-all">{document.user.email}</div>
+                </TableCell>
+
+                <TableCell truncate={false} className="w-[min-content] max-w-[220px] align-top">
+                  <p className="text-muted-foreground text-sm print:text-xs">
+                    <span className="font-medium">{_(msg`Sent`)}:</span>{' '}
+                    <span className="inline-block">
+                      {document.createdAt
+                        ? DateTime.fromJSDate(document.createdAt)
+                            .setLocale(APP_I18N_OPTIONS.defaultLocale)
+                            .toFormat('yyyy-MM-dd hh:mm:ss a (ZZZZ)')
+                        : _(msg`Unknown`)}
+                    </span>
+                  </p>
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+
+          <Table overflowHidden dir={documentLanguage === 'he' ? 'rtl' : 'ltr'}>
+            <TableHeader>
+              <TableRow>
+                <TableHead className={documentLanguage === 'he' ? 'text-right' : ''}>
+                  {_(msg`Signer Events`)}
+                </TableHead>
+                <TableHead className={documentLanguage === 'he' ? 'text-right' : ''}>
+                  {_(msg`Signature`)}
+                </TableHead>
+                <TableHead className={documentLanguage === 'he' ? 'text-right' : ''}>
+                  {_(msg`Details`)}
+                </TableHead>
                 {/* <TableHead>Security</TableHead> */}
               </TableRow>
             </TableHeader>
