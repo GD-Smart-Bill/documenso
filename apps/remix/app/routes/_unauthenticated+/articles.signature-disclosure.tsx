@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import { Button } from '@documenso/ui/primitives/button';
 
-const SUPPORT_EMAIL = 'support@documenso.com';
+const SUPPORT_EMAIL = 'support@smartbill.co.il';
 
 export default function SignatureDisclosure() {
   return (

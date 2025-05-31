@@ -2231,6 +2231,7 @@ msgid "Deleting account..."
 msgstr "Suppression du compte..."
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 msgid "Details"
 msgstr "Détails"
 
@@ -4973,6 +4974,7 @@ msgstr "Envoyer l'e-mail de demande de signature de destinataire"
 msgid "Send reminder"
 msgstr "Envoyer un rappel"
 
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/components/tables/documents-table.tsx
 msgid "Sender"
 msgstr "Expéditeur"
@@ -4985,6 +4987,7 @@ msgstr "Envoi de l'e-mail de réinitialisation..."
 msgid "Sending..."
 msgstr "Envoi..."
 
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/components/general/document/document-page-view-recipients.tsx
 msgid "Sent"
@@ -5177,6 +5180,10 @@ msgstr "Les signatures apparaîtront une fois le document complété"
 #: packages/lib/constants/recipient-roles.ts
 msgid "Signed"
 msgstr "Signé"
+
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+msgid "Signed via software by"
+msgstr ""
 
 #: packages/lib/constants/recipient-roles.ts
 msgid "Signer"
@@ -6500,6 +6507,7 @@ msgstr "Non autorisé"
 msgid "Uncompleted"
 msgstr "Non complet"
 
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
