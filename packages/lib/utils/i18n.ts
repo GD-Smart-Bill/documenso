@@ -60,26 +60,31 @@ type ExtractLocaleDataOptions = {
  * Will return the default fallback language if not found.
  */
 export const extractLocaleData = ({ headers }: ExtractLocaleDataOptions): I18nLocaleData => {
-  const headerLocales = (headers.get('accept-language') ?? '').split(',');
-
-  const unknownLanguages = headerLocales
-    .map((locale) => parseLanguageFromLocale(locale))
-    .filter((value): value is SupportedLanguageCodes => value !== null);
-
-  // Filter out locales that are not valid.
-  const languages = (unknownLanguages ?? []).filter((language) => {
-    try {
-      new Intl.Locale(language);
-      return true;
-    } catch {
-      return false;
-    }
-  });
-
   return {
-    lang: languages[0] || APP_I18N_OPTIONS.sourceLang,
-    locales: headerLocales,
+    lang: 'he',
+    locales: ['he'],
   };
+  // todo - revisit this in the future
+  // const headerLocales = (headers.get('accept-language') ?? '').split(',');
+
+  // const unknownLanguages = headerLocales
+  //   .map((locale) => parseLanguageFromLocale(locale))
+  //   .filter((value): value is SupportedLanguageCodes => value !== null);
+
+  // // Filter out locales that are not valid.
+  // const languages = (unknownLanguages ?? []).filter((language) => {
+  //   try {
+  //     new Intl.Locale(language);
+  //     return true;
+  //   } catch {
+  //     return false;
+  //   }
+  // });
+
+  // return {
+  //   lang: languages[0] || APP_I18N_OPTIONS.sourceLang,
+  //   locales: headerLocales,
+  // };
 };
 
 export const parseMessageDescriptor = (_: I18n['_'], value: string | MessageDescriptor) => {
