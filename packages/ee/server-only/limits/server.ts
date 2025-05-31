@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 
 import { prisma } from '@documenso/prisma';
 
-import { FREE_PLAN_LIMITS, TEAM_PLAN_LIMITS } from './constants';
+import { FREE_PLAN_LIMITS, FREE_TRIAL_LIMITS, TEAM_PLAN_LIMITS } from './constants';
 import { ERROR_CODES } from './errors';
 import type { TLimitsResponseSchema } from './schema';
 
@@ -52,44 +52,6 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
   const quota = structuredClone(FREE_PLAN_LIMITS);
   const remaining = structuredClone(FREE_PLAN_LIMITS);
 
-  // const activeSubscriptions = user.subscriptions.filter(
-  // 	({ status }) => status === SubscriptionStatus.ACTIVE,
-  // );
-
-  // if (activeSubscriptions.length > 0) {
-  // 	const documentPlanPrices = await getDocumentRelatedPrices();
-
-  // 	for (const subscription of activeSubscriptions) {
-  // 		const price = documentPlanPrices.find(
-  // 			(price) => price.id === subscription.priceId,
-  // 		);
-
-  // 		if (
-  // 			!price ||
-  // 			typeof price.product === "string" ||
-  // 			price.product.deleted
-  // 		) {
-  // 			continue;
-  // 		}
-
-  // 		const currentQuota = ZLimitsSchema.parse(
-  // 			"metadata" in price.product ? price.product.metadata : {},
-  // 		);
-
-  // 		// Use the subscription with the highest quota.
-  // 		if (
-  // 			currentQuota.documents > quota.documents &&
-  // 			currentQuota.recipients > quota.recipients
-  // 		) {
-  // 			quota = currentQuota;
-  // 			remaining = structuredClone(quota);
-  // 		}
-  // 	}
-
-  // 	// Assume all active subscriptions provide unlimited direct templates.
-  // 	remaining.directTemplates = Number.POSITIVE_INFINITY;
-  // }
-
   const [allTimeDocuments, documents, directTemplates] = await Promise.all([
     prisma.document.count({
       where: {
@@ -126,10 +88,11 @@ const handleUserLimits = async ({ email }: HandleUserLimitsOptions) => {
 
   remaining.directTemplates = Math.max(remaining.directTemplates - directTemplates, 0);
   remaining.documents =
-    allTimeDocuments > quota.documents
-      ? Math.max(documentsLimit - documents, 0)
-      : Math.max(quota.documents - allTimeDocuments, 0);
-  quota.documents = documentsLimit;
+    allTimeDocuments < FREE_TRIAL_LIMITS.documents
+      ? Math.max(FREE_TRIAL_LIMITS.documents - allTimeDocuments, 0)
+      : Math.max(documentsLimit - documents, 0);
+  quota.documents =
+    allTimeDocuments < FREE_TRIAL_LIMITS.documents ? FREE_TRIAL_LIMITS.documents : documentsLimit;
 
   return {
     quota,
@@ -208,31 +171,15 @@ const handleTeamLimits = async ({ email, teamId }: HandleTeamLimitsOptions) => {
     }),
   ]);
 
-  // const { subscription } = team;
-
-  // if (subscription && subscription.status === SubscriptionStatus.INACTIVE) {
-  // 	return {
-  // 		quota: {
-  // 			documents: 0,
-  // 			recipients: 0,
-  // 			directTemplates: 0,
-  // 		},
-  // 		remaining: {
-  // 			documents: 0,
-  // 			recipients: 0,
-  // 			directTemplates: 0,
-  // 		},
-  // 	};
-  // }
-
   const quota = structuredClone(TEAM_PLAN_LIMITS);
   const remaining = structuredClone(TEAM_PLAN_LIMITS);
 
   remaining.documents =
-    allTimeDocuments > quota.documents
-      ? Math.max(documentsLimit - documents, 0)
-      : Math.max(quota.documents - allTimeDocuments, 0);
-  quota.documents = documentsLimit;
+    allTimeDocuments < FREE_TRIAL_LIMITS.documents
+      ? Math.max(FREE_TRIAL_LIMITS.documents - allTimeDocuments, 0)
+      : Math.max(documentsLimit - documents, 0);
+  quota.documents =
+    allTimeDocuments < FREE_TRIAL_LIMITS.documents ? FREE_TRIAL_LIMITS.documents : documentsLimit;
 
   return {
     quota,

@@ -25,15 +25,15 @@ export const seedDatabase = async () => {
 
   const exampleUser = await prisma.user.upsert({
     where: {
-      email: 'example@documenso.com',
+      email: 'dorklein2@gmail.com',
     },
     create: {
       name: 'Example User',
-      email: 'example@documenso.com',
+      email: 'dorklein2@gmail.com',
       phone: '+1234567890',
       emailVerified: new Date(),
       password: hashSync('password'),
-      roles: [Role.USER],
+      roles: [Role.USER, Role.ADMIN],
     },
     update: {},
   });
@@ -62,6 +62,7 @@ export const seedDatabase = async () => {
         title: `Example Document ${i}`,
         documentDataId: documentData.id,
         userId: exampleUser.id,
+        createdAt: new Date(Date.now() - i * 1000 - 60 * 60 * 24 * 30 * 2 * 1000),
         recipients: {
           create: {
             name: String(adminUser.name),
@@ -158,7 +159,7 @@ export const seedDatabase = async () => {
   const team1 = await prisma.team.create({
     data: {
       name: 'Team 1',
-      url: 'team1',
+      url: 'team11',
       ownerUserId: createdUsers[0].id,
     },
   });
@@ -166,7 +167,7 @@ export const seedDatabase = async () => {
   const team2 = await prisma.team.create({
     data: {
       name: 'Team 2',
-      url: 'team2',
+      url: 'team22',
       ownerUserId: createdUsers[1].id,
     },
   });
