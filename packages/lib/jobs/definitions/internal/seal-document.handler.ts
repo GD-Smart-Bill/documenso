@@ -159,12 +159,6 @@ export const run = async ({
         })
       : null;
 
-  console.log(
-    'document.team?.teamGlobalSettings?.includeSigningCertificate',
-    document.team?.teamGlobalSettings?.includeSigningCertificate,
-  );
-  console.log('certificateData', certificateData);
-
   const newDataId = await io.runTask('decorate-and-sign-pdf', async () => {
     const pdfDoc = await PDFDocument.load(pdfData);
 
