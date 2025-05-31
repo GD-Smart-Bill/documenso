@@ -2504,6 +2504,7 @@ msgid "Deleting account..."
 msgstr "Suppression du compte..."
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 msgid "Details"
 msgstr "Détails"
 
@@ -5768,6 +5769,7 @@ msgid "Sending..."
 msgstr "Envoi..."
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/components/general/document/document-page-view-recipients.tsx
 msgid "Sent"
 msgstr "Envoyé"
@@ -5979,6 +5981,10 @@ msgstr "Les signatures apparaîtront une fois le document complété"
 #: packages/lib/constants/recipient-roles.ts
 msgid "Signed"
 msgstr "Signé"
+
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+msgid "Signed via software by"
+msgstr ""
 
 #: packages/lib/constants/recipient-roles.ts
 msgid "Signer"

@@ -1,5 +1,6 @@
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
+import { Trans } from '@lingui/react/macro';
 import { FieldType, SigningStatus } from '@prisma/client';
 import { DateTime } from 'luxon';
 import { redirect } from 'react-router';
@@ -8,6 +9,8 @@ import { match } from 'ts-pattern';
 import { UAParser } from 'ua-parser-js';
 import { renderSVG } from 'uqr';
 
+import LogoImage from '@documenso/assets/logo.png';
+import { isDocumentPlatform } from '@documenso/ee/server-only/util/is-document-platform';
 import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
 import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@documenso/lib/constants/i18n';
 import {
@@ -394,6 +397,26 @@ export default function SigningCertificate({ loaderData }: Route.ComponentProps)
               })}
             </TableBody>
           </Table>
+
+          <div className="flex flex-col items-center justify-end">
+            <div>
+              <p className="text-muted-foreground pb-2 text-sm print:text-xs">
+                <Trans>Signed via software by</Trans>
+              </p>
+            </div>
+            <img
+              src={LogoImage}
+              alt="Smartsign Logo"
+              className="dark:invert"
+              width={170}
+              height={25}
+            />
+            <div>
+              <p className="text-muted-foreground pt-2 text-sm print:text-xs">
+                <a href="https://sign.smartbill.co.il/web">https://sign.smartbill.co.il</a>
+              </p>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

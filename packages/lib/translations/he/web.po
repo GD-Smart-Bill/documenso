@@ -2226,6 +2226,7 @@ msgid "Deleting account..."
 msgstr "מוחק חשבון..."
 
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 msgid "Details"
 msgstr "פרטים"
 
@@ -4968,6 +4969,7 @@ msgstr "שלח אימייל בקשת חתימה לנמען"
 msgid "Send reminder"
 msgstr "שלח תזכורת"
 
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/components/tables/documents-table.tsx
 msgid "Sender"
 msgstr "שולח"
@@ -4980,6 +4982,7 @@ msgstr "שולח אימייל איפוס..."
 msgid "Sending..."
 msgstr "שולח..."
 
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/components/general/document/document-page-view-recipients.tsx
 msgid "Sent"
@@ -5172,6 +5175,10 @@ msgstr "החתימות יופיעו לאחר שהמסמך הושלם"
 #: packages/lib/constants/recipient-roles.ts
 msgid "Signed"
 msgstr "חתום"
+
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
+msgid "Signed via software by"
+msgstr "נחתם באמצעות תוכנה על ידי"
 
 #: packages/lib/constants/recipient-roles.ts
 msgid "Signer"
@@ -6497,6 +6504,7 @@ msgstr "לא מורשה"
 msgid "Uncompleted"
 msgstr "לא הושלם"
 
+#: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
 #: apps/remix/app/routes/_internal+/[__htmltopdf]+/certificate.tsx
