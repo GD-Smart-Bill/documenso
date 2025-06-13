@@ -22,6 +22,11 @@ export class InngestJobProvider extends BaseJobProvider {
   }
 
   static getInstance() {
+    console.log('getting instance', env('NEXT_PRIVATE_JOBS_PROVIDER'));
+    console.log('event key', env('INNGEST_EVENT_KEY'));
+    console.log('next private ingest event key', env('NEXT_PRIVATE_INNGEST_EVENT_KEY'));
+    console.log('next private ingest signing key', env('INNGEST_SIGNING_KEY'));
+
     if (!this._instance) {
       const client = new InngestClient({
         id: env('NEXT_PRIVATE_INNGEST_APP_ID') || 'documenso-app',
