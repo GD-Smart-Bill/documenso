@@ -14,6 +14,7 @@ export const NewUserSignedUpEmailToAdminTemplate = ({
   user: {
     email: string;
     name: string;
+    phone: string;
   };
 }) => {
   const { _ } = useLingui();
@@ -48,6 +49,9 @@ export const NewUserSignedUpEmailToAdminTemplate = ({
               </Text>
               <Text className="my-1 text-center text-base text-slate-400">
                 <Trans>Email:</Trans> {user.email}
+              </Text>
+              <Text className="my-1 text-center text-base text-slate-400">
+                <Trans>Phone:</Trans> {user.phone}
               </Text>
               <Text className="my-1 text-center text-base text-slate-400">
                 <Trans>Name:</Trans> {user.name}
