@@ -909,6 +909,10 @@ msgstr "All Folders"
 msgid "All inserted signatures will be voided"
 msgstr "כל החתימות שהוכנסו יבוטלו"
 
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+msgid "All parties have completed their actions. The document is now being finalized. You will receive an Email copy once it is ready."
+msgstr "כל הצדדים השלימו את פעולותיהם. המסמך נמצא כעת בתהליך גיבוש סופית. תקבלו עותק בדוא"ל ברגע שיהיה מוכן."
+
 #: apps/remix/app/components/dialogs/document-delete-dialog.tsx
 msgid "All recipients will be notified"
 msgstr "כל הנמענים יקבלו הודעה"
@@ -2530,6 +2534,10 @@ msgstr "אימייל מסמך ממתין"
 msgid "Document preferences updated"
 msgstr "העדפות מסמך עודכנו"
 
+#: apps/remix/app/components/general/document/document-status.tsx
+msgid "Document processing"
+msgstr "Document processing"
+
 #: apps/remix/app/components/dialogs/document-resend-dialog.tsx
 msgid "Document re-sent"
 msgstr "מסמך נשלח מחדש"
@@ -2993,7 +3001,7 @@ msgstr "שגיאה"
 
 #: apps/remix/app/components/embed/authoring/configure-document-upload.tsx
 msgid "Error uploading file"
-msgstr "Error uploading file"
+msgstr "שגיאה בהעלאת הקובץ"
 
 #: apps/remix/app/components/forms/team-document-preferences-form.tsx
 msgid "Everyone can access and view the document"
@@ -3001,29 +3009,29 @@ msgstr "כל אחד יכול לגשת ולצפות במסמך"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Everyone has signed"
-msgstr ""
+msgstr "כולם חתמו"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Everyone has signed! You will receive an Email copy of the signed document."
-msgstr ""
+msgstr "כולם חתמו! תקבלו עותק של המסמך החתום במייל."
 
 #: apps/remix/app/components/dialogs/passkey-create-dialog.tsx
 msgid "Exceeded timeout"
-msgstr ""
+msgstr "חרג מהזמן הקצוב"
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings._index.tsx
 msgid "Expired"
-msgstr ""
+msgstr "פג תוקף"
 
 #. placeholder {0}: i18n.date(token.expires, DateTime.DATETIME_FULL)
 #: apps/remix/app/routes/_authenticated+/settings+/tokens.tsx
 msgid "Expires on {0}"
-msgstr ""
+msgstr "פג תוקף בתאריך {0}"
 
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 #: packages/ui/primitives/document-flow/add-settings.tsx
 msgid "External ID"
-msgstr ""
+msgstr "מזהה חיצוני"
 
 #: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
 #: apps/remix/app/components/dialogs/template-folder-create-dialog.tsx
@@ -4422,6 +4430,14 @@ msgstr "תבניות פרטיות ניתנות לשינוי ולצפייה רק 
 #: apps/remix/app/components/dialogs/assistant-confirmation-dialog.tsx
 msgid "Proceed"
 msgstr "המשך"
+
+#: apps/remix/app/components/general/document/document-status.tsx
+msgid "Processing"
+msgstr "עיבוד"
+
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+msgid "Processing document..."
+msgstr "מעבד מסמך..."
 
 #: apps/remix/app/routes/_authenticated+/settings+/profile.tsx
 #: apps/remix/app/components/general/settings-nav-mobile.tsx

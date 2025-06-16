@@ -992,6 +992,10 @@ msgstr "Alle Ordner"
 msgid "All inserted signatures will be voided"
 msgstr "Alle eingefügten Unterschriften werden annulliert"
 
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+msgid "All parties have completed their actions. The document is now being finalized. You will receive an Email copy once it is ready."
+msgstr ""
+
 #: apps/remix/app/components/dialogs/document-delete-dialog.tsx
 msgid "All recipients will be notified"
 msgstr "Alle Empfänger werden benachrichtigt"
@@ -2812,6 +2816,10 @@ msgstr "E-Mail über ausstehende Dokumente"
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.preferences.tsx
 msgid "Document preferences updated"
 msgstr "Dokumentpräferenzen aktualisiert"
+
+#: apps/remix/app/components/general/document/document-status.tsx
+msgid "Document processing"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/document-resend-dialog.tsx
 msgid "Document re-sent"
@@ -5121,6 +5129,14 @@ msgstr "Private Vorlagen können nur von Ihnen bearbeitet und angezeigt werden."
 #: apps/remix/app/components/dialogs/assistant-confirmation-dialog.tsx
 msgid "Proceed"
 msgstr "Fortfahren"
+
+#: apps/remix/app/components/general/document/document-status.tsx
+msgid "Processing"
+msgstr ""
+
+#: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
+msgid "Processing document..."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/settings+/profile.tsx
 #: apps/remix/app/components/general/settings-nav-mobile.tsx
