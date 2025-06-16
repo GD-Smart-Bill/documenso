@@ -70,7 +70,7 @@ export const loader = async ({ request, params: { slug } }: Route.LoaderArgs) =>
   }
 
   // Is hardcoded because this whole meta is hardcoded anyway for Smartsign.
-  throw redirect('https://documenso.com');
+  throw redirect('https://sign.smartbill.co.il');
 };
 
 export default function SharePage() {
