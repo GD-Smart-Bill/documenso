@@ -35,6 +35,7 @@ export const sendUserSignedUpEmail = async ({ userId }: SendUserSignedUpEmailPro
     user: {
       email: user.email,
       name: user.name ?? '',
+      phone: user.phone ?? '',
     },
   });
 
