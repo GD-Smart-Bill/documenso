@@ -15,12 +15,22 @@ export async function addRejectionStampToPdf(
   const pages = pdfDoc.getPages();
   pdfDoc.registerFontkit(fontkit);
 
-  const fontBytes = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(
-    async (res) => res.arrayBuffer(),
-  );
+  let fontBytes: ArrayBuffer;
+  try {
+    const response = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`);
+    if (!response.ok)
+      throw new Error(
+        `Failed to fetch Alef-Regular.ttf: ${response.status} ${response.statusText}`,
+      );
+    fontBytes = await response.arrayBuffer();
+  } catch (error) {
+    throw new Error(
+      `Unable to load Alef-Regular.ttf font for rejection stamp: ${(error as Error).message}`,
+    );
+  }
 
   const font = await pdfDoc.embedFont(fontBytes, {
-    customName: 'Noto',
+    customName: 'Alef',
   });
 
   const form = pdfDoc.getForm();
@@ -36,7 +46,7 @@ export async function addRejectionStampToPdf(
 
     if (!rejectedTitleTextField.acroField.getDefaultAppearance()) {
       rejectedTitleTextField.acroField.setDefaultAppearance(
-        setFontAndSize('Noto', rejectedTitleFontSize).toString(),
+        setFontAndSize('Alef', rejectedTitleFontSize).toString(),
       );
     }
 
