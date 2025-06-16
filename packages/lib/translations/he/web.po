@@ -4433,7 +4433,7 @@ msgstr "המשך"
 
 #: apps/remix/app/components/general/document/document-status.tsx
 msgid "Processing"
-msgstr "עיבוד"
+msgstr "מעבד"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Processing document..."
