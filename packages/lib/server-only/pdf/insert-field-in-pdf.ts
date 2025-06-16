@@ -131,10 +131,11 @@ export const insertFieldInPDF = async (pdf: PDFDocument, field: FieldWithSignatu
     });
   }
 
-  const font = await pdf.embedFont(
-    isSignatureField ? fontCaveat : fontNoto,
-    isSignatureField ? { features: { calt: false } } : undefined,
-  );
+  const font = await pdf.embedFont(isSignatureField ? fontCaveat : fontNoto, {
+    features: isSignatureField ? { calt: false } : undefined,
+    subset: true,
+    customName: 'Alef',
+  });
 
   if (field.type === FieldType.SIGNATURE || field.type === FieldType.FREE_SIGNATURE) {
     await pdf.embedFont(fontCaveat);
