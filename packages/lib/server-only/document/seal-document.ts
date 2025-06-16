@@ -1,3 +1,4 @@
+import fontkit from '@pdf-lib/fontkit';
 import { DocumentStatus, RecipientRole, SigningStatus, WebhookTriggerEvents } from '@prisma/client';
 import { nanoid } from 'nanoid';
 import path from 'node:path';
@@ -9,6 +10,7 @@ import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-
 import { prisma } from '@documenso/prisma';
 import { signPdf } from '@documenso/signing';
 
+import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
 import {
   ZWebhookDocumentSchema,
   mapDocumentToWebhookDocumentPayload,
@@ -126,10 +128,21 @@ export const sealDocument = async ({
     : null;
 
   const doc = await PDFDocument.load(pdfData);
+  doc.registerFontkit(fontkit);
+
+  const fontAlefBytes = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(
+    async (res) => res.arrayBuffer(),
+  );
+
+  const fontAlef = await doc.embedFont(fontAlefBytes, {
+    features: undefined,
+    subset: true,
+    customName: 'Alef',
+  });
 
   // Normalize and flatten layers that could cause issues with the signature
   normalizeSignatureAppearances(doc);
-  await flattenForm(doc);
+  flattenForm(doc, fontAlef);
   flattenAnnotations(doc);
 
   // Add rejection stamp if the document is rejected
@@ -150,11 +163,11 @@ export const sealDocument = async ({
   for (const field of fields) {
     document.useLegacyFieldInsertion
       ? await legacy_insertFieldInPDF(doc, field)
-      : await insertFieldInPDF(doc, field);
+      : await insertFieldInPDF(doc, field, fontAlef);
   }
 
   // Re-flatten post-insertion to handle fields that create arcoFields
-  await flattenForm(doc);
+  flattenForm(doc);
 
   const pdfBytes = await doc.save();
 

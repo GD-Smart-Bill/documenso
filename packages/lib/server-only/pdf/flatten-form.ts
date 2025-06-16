@@ -1,5 +1,4 @@
-import fontkit from '@pdf-lib/fontkit';
-import type { PDFField, PDFWidgetAnnotation } from 'pdf-lib';
+import type { PDFField, PDFFont, PDFWidgetAnnotation } from 'pdf-lib';
 import {
   PDFCheckBox,
   PDFDict,
@@ -14,7 +13,6 @@ import {
   translate,
 } from 'pdf-lib';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
 
 export const removeOptionalContentGroups = (document: PDFDocument) => {
   const context = document.context;
@@ -24,18 +22,10 @@ export const removeOptionalContentGroups = (document: PDFDocument) => {
   }
 };
 
-export const flattenForm = async (document: PDFDocument) => {
+export const flattenForm = (document: PDFDocument, font?: PDFFont) => {
   removeOptionalContentGroups(document);
 
   const form = document.getForm();
-
-  const fontNoto = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/noto-sans.ttf`).then(
-    async (res) => res.arrayBuffer(),
-  );
-
-  document.registerFontkit(fontkit);
-
-  const font = await document.embedFont(fontNoto);
 
   form.updateFieldAppearances(font);
 

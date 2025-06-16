@@ -22,7 +22,6 @@ import { fromCheckboxValue } from '@documenso/lib/universal/field-checkbox';
 import { isSignatureFieldType } from '@documenso/prisma/guards/is-signature-field';
 import type { FieldWithSignature } from '@documenso/prisma/types/field-with-signature';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';
 import {
   ZCheckboxFieldMeta,
   ZDateFieldMeta,
@@ -34,16 +33,11 @@ import {
   ZTextFieldMeta,
 } from '../../types/field-meta';
 
-export const insertFieldInPDF = async (pdf: PDFDocument, field: FieldWithSignature) => {
-  const [fontCaveat, fontNoto] = await Promise.all([
-    fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(async (res) =>
-      res.arrayBuffer(),
-    ),
-    fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(async (res) =>
-      res.arrayBuffer(),
-    ),
-  ]);
-
+export const insertFieldInPDF = async (
+  pdf: PDFDocument,
+  field: FieldWithSignature,
+  font: PDFFont,
+) => {
   const isSignatureField = isSignatureFieldType(field.type);
 
   /**
@@ -129,16 +123,6 @@ export const insertFieldInPDF = async (pdf: PDFDocument, field: FieldWithSignatu
       borderWidth: 1,
       rotate: degrees(pageRotationInDegrees),
     });
-  }
-
-  const font = await pdf.embedFont(isSignatureField ? fontCaveat : fontNoto, {
-    features: isSignatureField ? { calt: false } : undefined,
-    subset: true,
-    customName: 'Alef',
-  });
-
-  if (field.type === FieldType.SIGNATURE || field.type === FieldType.FREE_SIGNATURE) {
-    await pdf.embedFont(fontCaveat);
   }
 
   await match(field)

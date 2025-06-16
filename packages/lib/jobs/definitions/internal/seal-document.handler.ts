@@ -1,3 +1,4 @@
+import fontkit from '@pdf-lib/fontkit';
 import { DocumentStatus, RecipientRole, SigningStatus, WebhookTriggerEvents } from '@prisma/client';
 import { nanoid } from 'nanoid';
 import path from 'node:path';
@@ -6,6 +7,7 @@ import { PDFDocument } from 'pdf-lib';
 import { prisma } from '@documenso/prisma';
 import { signPdf } from '@documenso/signing';
 
+import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';
 import { AppError, AppErrorCode } from '../../../errors/app-error';
 import { sendCompletedEmail } from '../../../server-only/document/send-completed-email';
 import PostHogServerClient from '../../../server-only/feature-flags/get-post-hog-server-client';
@@ -151,10 +153,21 @@ export const run = async ({
 
   const newDataId = await io.runTask('decorate-and-sign-pdf', async () => {
     const pdfDoc = await PDFDocument.load(pdfData);
+    pdfDoc.registerFontkit(fontkit);
+
+    const fontAlefBytes = await fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(
+      async (res) => res.arrayBuffer(),
+    );
+
+    const fontAlef = await pdfDoc.embedFont(fontAlefBytes, {
+      features: undefined,
+      subset: true,
+      customName: 'Alef',
+    });
 
     // Normalize and flatten layers that could cause issues with the signature
     normalizeSignatureAppearances(pdfDoc);
-    await flattenForm(pdfDoc);
+    flattenForm(pdfDoc, fontAlef);
     flattenAnnotations(pdfDoc);
 
     // Add rejection stamp if the document is rejected
@@ -179,13 +192,13 @@ export const run = async ({
       if (field.inserted) {
         document.useLegacyFieldInsertion
           ? await legacy_insertFieldInPDF(pdfDoc, field)
-          : await insertFieldInPDF(pdfDoc, field);
+          : await insertFieldInPDF(pdfDoc, field, fontAlef);
       }
     }
 
     // Re-flatten the form to handle our checkbox and radio fields that
     // create native arcoFields
-    await flattenForm(pdfDoc);
+    flattenForm(pdfDoc, fontAlef);
 
     const pdfBytes = await pdfDoc.save();
     const pdfBuffer = await signPdf({ pdf: Buffer.from(pdfBytes) });
