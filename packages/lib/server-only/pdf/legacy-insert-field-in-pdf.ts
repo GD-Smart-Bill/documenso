@@ -29,12 +29,8 @@ import {
 
 export const legacy_insertFieldInPDF = async (pdf: PDFDocument, field: FieldWithSignature) => {
   const [fontCaveat, fontNoto] = await Promise.all([
-    fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(async (res) =>
-      res.arrayBuffer(),
-    ),
-    fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/Alef-Regular.ttf`).then(async (res) =>
-      res.arrayBuffer(),
-    ),
+    fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/caveat.ttf`).then(async (res) => res.arrayBuffer()),
+    fetch(`${NEXT_PUBLIC_WEBAPP_URL()}/fonts/noto-sans.ttf`).then(async (res) => res.arrayBuffer()),
   ]);
 
   const isSignatureField = isSignatureFieldType(field.type);
@@ -117,11 +113,10 @@ export const legacy_insertFieldInPDF = async (pdf: PDFDocument, field: FieldWith
     });
   }
 
-  const font = await pdf.embedFont(isSignatureField ? fontCaveat : fontNoto, {
-    features: isSignatureField ? { calt: false } : undefined,
-    subset: true,
-    customName: 'Alef',
-  });
+  const font = await pdf.embedFont(
+    isSignatureField ? fontCaveat : fontNoto,
+    isSignatureField ? { features: { calt: false } } : undefined,
+  );
 
   if (field.type === FieldType.SIGNATURE || field.type === FieldType.FREE_SIGNATURE) {
     await pdf.embedFont(fontCaveat);
@@ -368,4 +363,33 @@ export const legacy_insertFieldInPDF = async (pdf: PDFDocument, field: FieldWith
     });
 
   return pdf;
+};
+
+const adjustPositionForRotation = (
+  pageWidth: number,
+  pageHeight: number,
+  xPos: number,
+  yPos: number,
+  pageRotationInDegrees: number,
+) => {
+  if (pageRotationInDegrees === 270) {
+    xPos = pageWidth - xPos;
+    [xPos, yPos] = [yPos, xPos];
+  }
+
+  if (pageRotationInDegrees === 90) {
+    yPos = pageHeight - yPos;
+    [xPos, yPos] = [yPos, xPos];
+  }
+
+  // Invert all the positions since it's rotated by 180 degrees.
+  if (pageRotationInDegrees === 180) {
+    xPos = pageWidth - xPos;
+    yPos = pageHeight - yPos;
+  }
+
+  return {
+    xPos,
+    yPos,
+  };
 };
