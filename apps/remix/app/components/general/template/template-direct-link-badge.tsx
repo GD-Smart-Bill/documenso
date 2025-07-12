@@ -41,7 +41,7 @@ export const TemplateDirectLinkBadge = ({
       )}
       onClick={async () => onCopyClick(token)}
     >
-      <Link2Icon className="mr-1 h-3 w-3" />
+      <Link2Icon className="me-1 h-3 w-3" />
       {enabled ? <Trans>direct link</Trans> : <Trans>direct link disabled</Trans>}
     </button>
   );

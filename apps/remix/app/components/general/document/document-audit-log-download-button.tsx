@@ -74,7 +74,7 @@ export const DocumentAuditLogDownloadButton = ({
       loading={isPending}
       onClick={() => void onDownloadAuditLogsClick()}
     >
-      {!isPending && <DownloadIcon className="mr-1.5 h-4 w-4" />}
+      {!isPending && <DownloadIcon className="me-1.5 h-4 w-4" />}
       <Trans>Download Audit Logs</Trans>
     </Button>
   );

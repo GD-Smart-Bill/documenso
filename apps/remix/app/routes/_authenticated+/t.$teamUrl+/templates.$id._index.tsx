@@ -127,7 +127,7 @@ export default function TemplatePage() {
 
           <Button className="w-full" asChild>
             <Link to={`${templateRootPath}/${template.id}/edit`}>
-              <LucideEdit className="mr-1.5 h-3.5 w-3.5" />
+              <LucideEdit className="me-1.5 h-3.5 w-3.5" />
               <Trans>Edit Template</Trans>
             </Link>
           </Button>

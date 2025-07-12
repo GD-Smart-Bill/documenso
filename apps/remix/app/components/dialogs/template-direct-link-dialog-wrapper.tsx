@@ -27,7 +27,7 @@ export const TemplateDirectLinkDialogWrapper = ({
           setTemplateDirectLinkOpen(true);
         }}
       >
-        <LinkIcon className="mr-1.5 h-3.5 w-3.5" />
+        <LinkIcon className="me-1.5 h-3.5 w-3.5" />
 
         {template.directLink ? (
           <Trans>Manage Direct Link</Trans>

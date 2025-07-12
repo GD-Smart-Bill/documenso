@@ -150,7 +150,7 @@ export function MultiSignDocumentList({ envelopes, onDocumentSelect }: MultiSign
               size="sm"
               onClick={() => handleView(envelope.document)}
             >
-              <EyeIcon className="mr-1 h-4 w-4" />
+              <EyeIcon className="me-1 h-4 w-4" />
               <Trans>View</Trans>
             </Button>
           </div>

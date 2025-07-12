@@ -141,7 +141,7 @@ export const PasskeyCreateDialog = ({ trigger, onSuccess, ...props }: PasskeyCre
       <DialogTrigger onClick={(e) => e.stopPropagation()} asChild={true}>
         {trigger ?? (
           <Button variant="secondary" loading={isPending}>
-            <KeyRoundIcon className="-ms-1 mr-1 h-5 w-5" />
+            <KeyRoundIcon className="-ms-1 me-1 h-5 w-5" />
             <Trans>Add passkey</Trans>
           </Button>
         )}

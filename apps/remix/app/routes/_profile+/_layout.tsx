@@ -77,7 +77,7 @@ export default function PublicProfileLayout() {
               <Button asChild variant="secondary">
                 <Link to="/signup">
                   <div className="hidden flex-row items-center sm:flex">
-                    <PlusIcon className="mr-1 h-5 w-5" />
+                    <PlusIcon className="me-1 h-5 w-5" />
                     <Trans>Create now</Trans>
                   </div>
 

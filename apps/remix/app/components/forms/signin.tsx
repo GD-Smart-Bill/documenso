@@ -410,7 +410,7 @@ export const SignInForm = ({
             className="bg-background text-muted-foreground border"
             onClick={onSignInWithPasskey}
           >
-            {!isPasskeyLoading && <KeyRoundIcon className="-ms-1 mr-1 h-5 w-5" />}
+            {!isPasskeyLoading && <KeyRoundIcon className="-ms-1 me-1 h-5 w-5" />}
             <Trans>Passkey</Trans>
           </Button>
         </fieldset>

@@ -89,7 +89,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
                   })
                     .with({ teamEmail: P.not(null) }, () => (
                       <>
-                        <CheckCircle2 className="mr-1.5 text-green-500 dark:text-green-300" />
+                        <CheckCircle2 className="me-1.5 text-green-500 dark:text-green-300" />
                         <Trans>Active</Trans>
                       </>
                     ))
@@ -102,14 +102,14 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
                       },
                       () => (
                         <>
-                          <Clock className="mr-1.5 text-yellow-500 dark:text-yellow-200" />
+                          <Clock className="me-1.5 text-yellow-500 dark:text-yellow-200" />
                           <Trans>Expired</Trans>
                         </>
                       ),
                     )
                     .with({ emailVerification: P.not(null) }, () => (
                       <>
-                        <Clock className="mr-1.5 text-blue-600 dark:text-blue-300" />
+                        <Clock className="me-1.5 text-blue-600 dark:text-blue-300" />
                         <Trans>Awaiting email confirmation</Trans>
                       </>
                     ))
