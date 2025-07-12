@@ -141,10 +141,10 @@ export default function PublicProfilePage({ loaderData }: Route.ComponentProps) 
         subtitle={t`You can choose to enable or disable the profile for public view.`}
       >
         <Tooltip open={isTooltipOpen} onOpenChange={setIsTooltipOpen}>
-          <TooltipTrigger asChild>
+          <TooltipTrigger asChild dir="ltr">
             <div
               className={cn(
-                'text-muted-foreground/50 flex flex-row items-center justify-center space-x-2 text-xs',
+                'text-muted-foreground/50 flex flex-row items-center justify-center gap-2 text-xs',
                 {
                   '[&>*:first-child]:text-muted-foreground': !isPublicProfileVisible,
                   '[&>*:last-child]:text-muted-foreground': isPublicProfileVisible,
