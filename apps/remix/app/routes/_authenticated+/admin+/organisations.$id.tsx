@@ -191,7 +191,7 @@ export default function OrganisationGroupSettingsPage({ params }: Route.Componen
                 to={`https://dashboard.stripe.com/customers/${organisation.customerId}?create=subscription&subscription_default_customer=${organisation.customerId}`}
               >
                 <Trans>Create subscription</Trans>
-                <ExternalLinkIcon className="ml-2 h-4 w-4" />
+                <ExternalLinkIcon className="ms-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -205,7 +205,7 @@ export default function OrganisationGroupSettingsPage({ params }: Route.Componen
                 to={`https://dashboard.stripe.com/subscriptions/${organisation.subscription.planId}`}
               >
                 <Trans>Manage subscription</Trans>
-                <ExternalLinkIcon className="ml-2 h-4 w-4" />
+                <ExternalLinkIcon className="ms-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -546,7 +546,7 @@ const OrganisationAdminForm = ({ organisation }: OrganisationAdminFormOptions) =
                         />
 
                         <label
-                          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+                          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
                           htmlFor={`flag-${key}`}
                         >
                           {label}

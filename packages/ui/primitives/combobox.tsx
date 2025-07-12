@@ -49,7 +49,7 @@ const Combobox = ({
           disabled={disabled}
         >
           {value ? value : placeholderValue}
-          <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronDown className="ms-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
 

@@ -328,7 +328,7 @@ export function TemplateUseDialog({
 
                             {documentDistributionMethod === DocumentDistributionMethod.EMAIL && (
                               <label
-                                className="text-muted-foreground ml-2 flex items-center text-sm"
+                                className="text-muted-foreground ms-2 flex items-center text-sm"
                                 htmlFor="distributeDocument"
                               >
                                 <Trans>Send document</Trans>
@@ -357,7 +357,7 @@ export function TemplateUseDialog({
 
                             {documentDistributionMethod === DocumentDistributionMethod.NONE && (
                               <label
-                                className="text-muted-foreground ml-2 flex items-center text-sm"
+                                className="text-muted-foreground ms-2 flex items-center text-sm"
                                 htmlFor="distributeDocument"
                               >
                                 <Trans>Create as pending</Trans>
@@ -411,7 +411,7 @@ export function TemplateUseDialog({
                           }}
                         />
                         <label
-                          className="text-muted-foreground ml-2 flex items-center text-sm"
+                          className="text-muted-foreground ms-2 flex items-center text-sm"
                           htmlFor="useCustomDocument"
                         >
                           <Trans>Upload custom document</Trans>

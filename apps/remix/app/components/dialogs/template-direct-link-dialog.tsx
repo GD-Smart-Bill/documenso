@@ -376,7 +376,7 @@ export const TemplateDirectLinkDialog = ({
                     <Label className="flex flex-row">
                       <Trans>Enable Direct Link Signing</Trans>
                       <Tooltip>
-                        <TooltipTrigger tabIndex={-1} className="ml-2">
+                        <TooltipTrigger tabIndex={-1} className="ms-2">
                           <InfoIcon className="h-4 w-4" />
                         </TooltipTrigger>
                         <TooltipContent className="text-foreground z-9999 max-w-md p-4">

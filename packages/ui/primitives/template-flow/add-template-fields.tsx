@@ -605,7 +605,7 @@ export const AddTemplateFieldsFormPartial = ({
                       </span>
                     )}
 
-                    <ChevronsUpDown className="ml-2 h-4 w-4" />
+                    <ChevronsUpDown className="ms-2 h-4 w-4" />
                   </Button>
                 </PopoverTrigger>
 
@@ -622,7 +622,7 @@ export const AddTemplateFieldsFormPartial = ({
                     {/* Note: This is duplicated in `add-fields.tsx` */}
                     {recipientsByRoleToDisplay.map(([role, roleRecipients], roleIndex) => (
                       <CommandGroup key={roleIndex}>
-                        <div className="text-muted-foreground mb-1 ml-2 mt-2 text-xs font-medium">
+                        <div className="text-muted-foreground mb-1 ms-2 mt-2 text-xs font-medium">
                           {_(RECIPIENT_ROLES_DESCRIPTION[role].roleNamePlural)}
                         </div>
 

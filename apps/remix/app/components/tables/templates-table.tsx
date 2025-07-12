@@ -144,7 +144,7 @@ export const TemplatesTable = ({
 
             {row.original.directLink?.token && (
               <TemplateDirectLinkBadge
-                className="ml-2"
+                className="ms-2"
                 token={row.original.directLink.token}
                 enabled={row.original.directLink.enabled}
               />

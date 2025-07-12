@@ -81,7 +81,7 @@ export default function PublicProfilePage({ loaderData }: Route.ComponentProps) 
             <Tooltip>
               <TooltipTrigger>
                 <img
-                  className="ml-2 flex items-center justify-center"
+                  className="ms-2 flex items-center justify-center"
                   alt="Profile badge"
                   src={BADGE_DATA[publicProfile.badge.type].imageSrc}
                   height={24}
@@ -98,7 +98,7 @@ export default function PublicProfilePage({ loaderData }: Route.ComponentProps) 
                   width={24}
                 />
 
-                <div className="ml-2">
+                <div className="ms-2">
                   <p className="text-foreground text-base font-semibold">
                     {BADGE_DATA[publicProfile.badge.type].name}
                   </p>

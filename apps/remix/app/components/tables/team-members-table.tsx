@@ -208,7 +208,7 @@ export const TeamMembersTable = () => {
                 <div className="flex w-full flex-row items-center">
                   <Skeleton className="h-12 w-12 flex-shrink-0 rounded-full" />
 
-                  <div className="ml-2 flex flex-grow flex-col">
+                  <div className="ms-2 flex flex-grow flex-col">
                     <Skeleton className="h-4 w-1/3 max-w-[8rem]" />
                     <Skeleton className="mt-1 h-4 w-1/2 max-w-[12rem]" />
                   </div>

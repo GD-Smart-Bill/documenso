@@ -54,12 +54,12 @@ export const AdminLeaderboardTable = ({
             {_(msg`Name`)}
             {sortBy === 'name' ? (
               sortOrder === 'asc' ? (
-                <ChevronUpIcon className="ml-2 h-4 w-4" />
+                <ChevronUpIcon className="ms-2 h-4 w-4" />
               ) : (
-                <ChevronDownIcon className="ml-2 h-4 w-4" />
+                <ChevronDownIcon className="ms-2 h-4 w-4" />
               )
             ) : (
-              <ChevronsUpDown className="ml-2 h-4 w-4" />
+              <ChevronsUpDown className="ms-2 h-4 w-4" />
             )}
           </div>
         ),
@@ -88,12 +88,12 @@ export const AdminLeaderboardTable = ({
             {_(msg`Signing Volume`)}
             {sortBy === 'signingVolume' ? (
               sortOrder === 'asc' ? (
-                <ChevronUpIcon className="ml-2 h-4 w-4" />
+                <ChevronUpIcon className="ms-2 h-4 w-4" />
               ) : (
-                <ChevronDownIcon className="ml-2 h-4 w-4" />
+                <ChevronDownIcon className="ms-2 h-4 w-4" />
               )
             ) : (
-              <ChevronsUpDown className="ml-2 h-4 w-4" />
+              <ChevronsUpDown className="ms-2 h-4 w-4" />
             )}
           </div>
         ),
@@ -110,12 +110,12 @@ export const AdminLeaderboardTable = ({
               {_(msg`Created`)}
               {sortBy === 'createdAt' ? (
                 sortOrder === 'asc' ? (
-                  <ChevronUpIcon className="ml-2 h-4 w-4" />
+                  <ChevronUpIcon className="ms-2 h-4 w-4" />
                 ) : (
-                  <ChevronDownIcon className="ml-2 h-4 w-4" />
+                  <ChevronDownIcon className="ms-2 h-4 w-4" />
                 )
               ) : (
-                <ChevronsUpDown className="ml-2 h-4 w-4" />
+                <ChevronsUpDown className="ms-2 h-4 w-4" />
               )}
             </div>
           );

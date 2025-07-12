@@ -371,7 +371,7 @@ export const EmbedSignDocumentClientPage = ({
                                         {r.name}
 
                                         {r.id === recipient.id && (
-                                          <span className="text-muted-foreground ml-2">
+                                          <span className="text-muted-foreground ms-2">
                                             {_(msg`(You)`)}
                                           </span>
                                         )}
@@ -483,7 +483,7 @@ export const EmbedSignDocumentClientPage = ({
         {!hidePoweredBy && (
           <div className="bg-primary text-primary-foreground fixed bottom-0 left-0 z-40 rounded-tr px-2 py-1 text-xs font-medium opacity-60 hover:opacity-100">
             <span>Powered by</span>
-            <BrandingLogo className="ml-2 inline-block h-[14px]" />
+            <BrandingLogo className="ms-2 inline-block h-[14px]" />
           </div>
         )}
       </div>

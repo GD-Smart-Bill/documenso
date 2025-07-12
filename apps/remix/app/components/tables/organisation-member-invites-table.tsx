@@ -186,7 +186,7 @@ export const OrganisationMemberInvitesTable = () => {
             <TableCell className="w-1/2 py-4 pr-4">
               <div className="flex w-full flex-row items-center">
                 <Skeleton className="h-12 w-12 flex-shrink-0 rounded-full" />
-                <Skeleton className="ml-2 h-4 w-1/3 max-w-[10rem]" />
+                <Skeleton className="ms-2 h-4 w-1/3 max-w-[10rem]" />
               </div>
             </TableCell>
             <TableCell>

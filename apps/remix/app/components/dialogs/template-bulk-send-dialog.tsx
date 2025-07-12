@@ -247,7 +247,7 @@ export const TemplateBulkSendDialog = ({
 
                       <label
                         htmlFor="send-immediately"
-                        className="text-muted-foreground ml-2 flex items-center text-sm"
+                        className="text-muted-foreground ms-2 flex items-center text-sm"
                       >
                         <Trans>Send documents to recipients immediately</Trans>
                       </label>

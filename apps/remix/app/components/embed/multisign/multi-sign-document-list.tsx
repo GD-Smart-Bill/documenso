@@ -162,7 +162,7 @@ export function MultiSignDocumentList({ envelopes, onDocumentSelect }: MultiSign
         <div className="mt-6">
           <Button onClick={handleNextDocument} className="w-full" size="lg">
             <Trans>View next document</Trans>
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ms-2 h-4 w-4" />
           </Button>
         </div>
       )}

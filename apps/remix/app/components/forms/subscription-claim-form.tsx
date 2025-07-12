@@ -133,7 +133,7 @@ export const SubscriptionClaimForm = ({
                           />
 
                           <label
-                            className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+                            className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
                             htmlFor={`flag-${key}`}
                           >
                             {label}

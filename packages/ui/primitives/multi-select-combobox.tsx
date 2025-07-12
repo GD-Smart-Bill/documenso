@@ -126,7 +126,7 @@ export function MultiSelectCombobox<T = OptionValue>({
                   <span className="truncate">{buttonLabel}</span>
 
                   <div
-                    className={cn('ml-2 flex flex-row items-center', {
+                    className={cn('ms-2 flex flex-row items-center', {
                       'ml-6': showClearButton,
                     })}
                   >

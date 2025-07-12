@@ -34,7 +34,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.RecipientSigned}
         >
           <Trans>Send recipient signed email</Trans>
@@ -72,7 +72,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.RecipientSigningRequest}
         >
           <Trans>Send recipient signing request email</Trans>
@@ -110,7 +110,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.RecipientRemoved}
         >
           <Trans>Send recipient removed email</Trans>
@@ -148,7 +148,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.DocumentPending}
         >
           <Trans>Send document pending email</Trans>
@@ -187,7 +187,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.DocumentCompleted}
         >
           <Trans>Send document completed email</Trans>
@@ -225,7 +225,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.DocumentDeleted}
         >
           <Trans>Send document deleted email</Trans>
@@ -263,7 +263,7 @@ export const DocumentEmailCheckboxes = ({
         />
 
         <label
-          className="text-muted-foreground ml-2 flex flex-row items-center text-sm"
+          className="text-muted-foreground ms-2 flex flex-row items-center text-sm"
           htmlFor={DocumentEmailEvents.OwnerDocumentCompleted}
         >
           <Trans>Send document completed email to the owner</Trans>

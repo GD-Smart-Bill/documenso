@@ -390,7 +390,7 @@ export const AddSignersFormPartial = ({
               control={form.control}
               name="signingOrder"
               render={({ field }) => (
-                <FormItem className="mb-6 flex flex-row items-center space-x-2 space-y-0">
+                <FormItem className="mb-6 flex flex-row items-center gap-2 space-y-0">
                   <FormControl>
                     <Checkbox
                       {...field}
@@ -429,7 +429,7 @@ export const AddSignersFormPartial = ({
               control={form.control}
               name="allowDictateNextSigner"
               render={({ field: { value, ...field } }) => (
-                <FormItem className="mb-6 flex flex-row items-center space-x-2 space-y-0">
+                <FormItem className="mb-6 flex flex-row items-center gap-2 space-y-0">
                   <FormControl>
                     <Checkbox
                       {...field}
@@ -736,7 +736,7 @@ export const AddSignersFormPartial = ({
             />
 
             <div
-              className={cn('mt-2 flex flex-row items-center space-x-4', {
+              className={cn('mt-2 flex flex-row items-center gap-4', {
                 'mt-4': showAdvancedSettings,
               })}
             >
@@ -772,7 +772,7 @@ export const AddSignersFormPartial = ({
                 />
 
                 <label
-                  className="text-muted-foreground ml-2 text-sm"
+                  className="text-muted-foreground ms-2 text-sm"
                   htmlFor="showAdvancedRecipientSettings"
                 >
                   <Trans>Show advanced settings</Trans>

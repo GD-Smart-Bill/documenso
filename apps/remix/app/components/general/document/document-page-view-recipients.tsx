@@ -56,9 +56,9 @@ export const DocumentPageViewRecipients = ({
             className="flex flex-row items-center justify-between"
           >
             {recipients.length === 0 ? (
-              <PlusIcon className="ml-2 h-4 w-4" />
+              <PlusIcon className="ms-2 h-4 w-4" />
             ) : (
-              <PenIcon className="ml-2 h-3 w-3" />
+              <PenIcon className="ms-2 h-3 w-3" />
             )}
           </Link>
         )}

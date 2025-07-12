@@ -54,7 +54,7 @@ const MultiSelectRoleCombobox = ({ listValues, onChange }: ComboboxProps) => {
           className="w-[200px] justify-between"
         >
           {selectedValues.length > 0 ? selectedValues.join(', ') : 'Select values...'}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="ms-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">

@@ -159,7 +159,7 @@ export const ConfigureDocumentRecipients = ({
         control={control}
         name="meta.signingOrder"
         render={({ field }) => (
-          <FormItem className="mb-6 flex flex-row items-center space-x-2 space-y-0">
+          <FormItem className="mb-6 flex flex-row items-center gap-2 space-y-0">
             <FormControl>
               <Checkbox
                 {...field}
@@ -187,7 +187,7 @@ export const ConfigureDocumentRecipients = ({
         control={control}
         name="meta.allowDictateNextSigner"
         render={({ field: { value, ...field } }) => (
-          <FormItem className="mb-6 flex flex-row items-center space-x-2 space-y-0">
+          <FormItem className="mb-6 flex flex-row items-center gap-2 space-y-0">
             <FormControl>
               <Checkbox
                 {...field}

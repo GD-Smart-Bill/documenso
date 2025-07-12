@@ -938,6 +938,10 @@ msgstr "לוח בקרה למנהל"
 msgid "Admin Panel"
 msgstr "Admin Panel"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Admins only"
+msgstr "מנהלים ראשיים בלבד"
+
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 #: packages/ui/primitives/document-flow/add-settings.tsx
 msgid "Advanced Options"
@@ -2881,11 +2885,15 @@ msgstr "מסמך הועלה"
 
 #: packages/lib/utils/document-audit-logs.ts
 msgid "Document viewed"
-msgstr "Document viewed"
+msgstr "המסמך נצפה"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/complete.tsx
 msgid "Document Viewed"
 msgstr "המסמך נצפה"
+
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Document visibility"
+msgstr "נראות המסמך"
 
 #: packages/lib/utils/document-audit-logs.ts
 msgid "Document visibility updated"
@@ -3317,7 +3325,12 @@ msgstr "שגיאה"
 msgid "Error uploading file"
 msgstr "שגיאה בהעלאת הקובץ"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Everyone"
+msgstr "כולם"
+
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Everyone can access and view the document"
 msgstr "כל אחד יכול לגשת ולצפות במסמך"
 
@@ -4215,6 +4228,10 @@ msgstr "נהל את הגדרות האתר שלך כאן"
 msgid "Manager"
 msgstr "מנהל"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Managers and above"
+msgstr "מנהלים ומעלה"
+
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
 msgid "Mark as viewed"
 msgstr "סמן כנצפה"
@@ -4543,7 +4560,7 @@ msgstr "אל דאגה, זה קורה! הזן את הדוא\"ל שלך ונשלח
 #: packages/ui/primitives/document-flow/add-subject.tsx
 #: packages/lib/constants/document.ts
 msgid "None"
-msgstr "כלום"
+msgstr "רק קישור"
 
 #: apps/remix/app/components/forms/signin.tsx
 msgid "Not supported"
@@ -4632,10 +4649,12 @@ msgid "One of the documents in the current bundle has a signing role that is not
 msgstr "One of the documents in the current bundle has a signing role that is not compatible with the current signing experience."
 
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Only admins can access and view the document"
 msgstr "רק מנהלים יכולים לגשת ולצפות במסמך"
 
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Only managers and above can access and view the document"
 msgstr "רק מנהלים ומעלה יכולים לגשת ולצפות במסמך"
 
@@ -6866,6 +6885,10 @@ msgid ""
 msgstr ""
 "The user you are looking for may have been removed, renamed or may have never\n"
 "                    existed."
+
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "The visibility of the document to the recipient."
+msgstr "הנראות של המסמך עבור הנמען."
 
 #: apps/remix/app/components/dialogs/webhook-delete-dialog.tsx
 msgid "The webhook has been successfully deleted."

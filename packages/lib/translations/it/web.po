@@ -943,6 +943,10 @@ msgstr "Pannello admin"
 msgid "Admin Panel"
 msgstr "Pannello di Amministrazione"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Admins only"
+msgstr ""
+
 #: packages/ui/primitives/template-flow/add-template-settings.tsx
 #: packages/ui/primitives/document-flow/add-settings.tsx
 msgid "Advanced Options"
@@ -2892,6 +2896,10 @@ msgstr ""
 msgid "Document Viewed"
 msgstr "Documento visualizzato"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Document visibility"
+msgstr ""
+
 #: packages/lib/utils/document-audit-logs.ts
 msgid "Document visibility updated"
 msgstr "Visibilità del documento aggiornata"
@@ -3322,7 +3330,12 @@ msgstr "Errore"
 msgid "Error uploading file"
 msgstr "Errore durante il caricamento del file"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Everyone"
+msgstr ""
+
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Everyone can access and view the document"
 msgstr "Tutti possono accedere e visualizzare il documento"
 
@@ -4220,6 +4233,10 @@ msgstr "Gestisci le impostazioni del tuo sito qui"
 msgid "Manager"
 msgstr "Responsabile"
 
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "Managers and above"
+msgstr ""
+
 #: apps/remix/app/components/general/document-signing/document-signing-complete-dialog.tsx
 msgid "Mark as viewed"
 msgstr "Segna come visualizzato"
@@ -4637,10 +4654,12 @@ msgid "One of the documents in the current bundle has a signing role that is not
 msgstr "Uno dei documenti nel pacchetto corrente ha un ruolo di firma non compatibile con l'esperienza di firma corrente."
 
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Only admins can access and view the document"
 msgstr "Solo gli amministratori possono accedere e visualizzare il documento"
 
 #: apps/remix/app/components/forms/document-preferences-form.tsx
+#: packages/ui/components/document/document-visibility-select.tsx
 msgid "Only managers and above can access and view the document"
 msgstr "Solo i manager e superiori possono accedere e visualizzare il documento"
 
@@ -6871,6 +6890,10 @@ msgid ""
 msgstr ""
 "L'utente che cerchi potrebbe essere stato rimosso, rinominato o potrebbe non essere mai\n"
 "                    esistito."
+
+#: packages/ui/components/document/document-visibility-select.tsx
+msgid "The visibility of the document to the recipient."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-delete-dialog.tsx
 msgid "The webhook has been successfully deleted."

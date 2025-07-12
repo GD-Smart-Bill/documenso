@@ -72,7 +72,7 @@ export const MenuSwitcher = () => {
             className="flex items-center justify-between"
           >
             <Trans>Create Organisation</Trans>
-            <Plus className="ml-2 h-4 w-4" />
+            <Plus className="ms-2 h-4 w-4" />
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
