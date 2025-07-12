@@ -82,7 +82,7 @@ export const DocumentPageViewRecentActivity = ({
           <ul role="list" className="space-y-6 p-4">
             {hasNextPage && (
               <li className="relative flex gap-x-4">
-                <div className="absolute -bottom-6 left-0 top-0 flex w-6 justify-center">
+                <div className="absolute -bottom-6 start-0 top-0 flex w-6 justify-center">
                   <div className="bg-border w-px" />
                 </div>
 
@@ -112,7 +112,7 @@ export const DocumentPageViewRecentActivity = ({
                 <div
                   className={cn(
                     auditLogIndex === documentAuditLogs.length - 1 ? 'h-6' : '-bottom-6',
-                    'absolute left-0 top-0 flex w-6 justify-center',
+                    'absolute start-0 top-0 flex w-6 justify-center',
                   )}
                 >
                   <div className="bg-border w-px" />

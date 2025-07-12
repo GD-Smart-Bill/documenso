@@ -61,9 +61,9 @@ export default function TemplateEditPage() {
         <div>
           <Link
             to={`${templateRootPath}/${template.id}`}
-            className="flex items-center text-[#7AC455] hover:opacity-80"
+            className="text-documenso-500 flex items-center hover:opacity-80"
           >
-            <ChevronLeft className="me-2 inline-block h-5 w-5" />
+            <ChevronLeft className="me-2 inline-block h-5 w-5 [html[lang='he']_&]:rotate-180" />
             <Trans>Template</Trans>
           </Link>
 
