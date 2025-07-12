@@ -10,7 +10,7 @@ export const getUserById = async ({ id }: GetUserByIdOptions) => {
       id,
     },
     include: {
-      subscriptions: true,
+      // subscriptions: true,
       documents: {
         select: {
           id: true,

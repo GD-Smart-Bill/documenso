@@ -10,7 +10,6 @@ import { UAParser } from 'ua-parser-js';
 import { renderSVG } from 'uqr';
 
 import LogoImage from '@documenso/assets/logo.png';
-import { isDocumentPlatform } from '@documenso/ee/server-only/util/is-document-platform';
 import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
 import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@documenso/lib/constants/i18n';
 import {

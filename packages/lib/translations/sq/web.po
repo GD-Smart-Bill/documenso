@@ -8256,8 +8256,8 @@ msgid "You can enable access to allow all organisation members to access this te
 msgstr "Ju mund të lejoni qasje për të lejuar që të gjithë anëtarët e organizatës të kenë qasje në këtë ekip si standard."
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "You can revoke access at any time in your team settings on Documenso <0>here.</0>"
-msgstr "Mund të revokoni aksesin në çdo kohë në cilësimet e ekipit tuaj në Documenso <0>këtu.</0>"
+msgid "You can revoke access at any time in your team settings on Smartsign <0>here.</0>"
+msgstr "Mund të revokoni aksesin në çdo kohë në cilësimet e ekipit tuaj në Smartsign <0>këtu.</0>"
 
 #: apps/remix/app/components/forms/public-profile-form.tsx
 msgid "You can update the profile URL by updating the team URL in the general settings page."

@@ -105,7 +105,7 @@ export const ConfirmTeamEmailTemplate = ({
 
                 <Text className="mt-2 text-sm">
                   <Trans>
-                    You can revoke access at any time in your team settings on Documenso{' '}
+                    You can revoke access at any time in your team settings on Smartsign{' '}
                     <Link href={`${baseUrl}/settings/teams`}>here.</Link>
                   </Trans>
                 </Text>
