@@ -61,7 +61,7 @@ export const CopyTextButton = ({
             className={cn(
               'flex h-6 w-6 items-center justify-center rounded transition-all hover:bg-neutral-200 hover:active:bg-neutral-300 dark:hover:bg-neutral-500 dark:hover:active:bg-neutral-400',
               {
-                'ml-1': Boolean(badgeContentCopied || badgeContentUncopied),
+                'ms-1': Boolean(badgeContentCopied || badgeContentUncopied),
               },
             )}
           >

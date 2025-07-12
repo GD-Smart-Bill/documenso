@@ -30,7 +30,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
           variant="ghost"
           className={cn('w-full justify-start', pathname === settingsPath && 'bg-secondary')}
         >
-          <Settings className="mr-2 h-5 w-5" />
+          <Settings className="me-2 h-5 w-5" />
           <Trans>General</Trans>
         </Button>
       </Link>
@@ -43,7 +43,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
             pathname?.startsWith(preferencesPath) && 'bg-secondary',
           )}
         >
-          <Settings2 className="mr-2 h-5 w-5" />
+          <Settings2 className="me-2 h-5 w-5" />
 
           <Trans>Preferences</Trans>
         </Button>
@@ -57,7 +57,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
             pathname?.startsWith(publicProfilePath) && 'bg-secondary',
           )}
         >
-          <Globe2Icon className="mr-2 h-5 w-5" />
+          <Globe2Icon className="me-2 h-5 w-5" />
           <Trans>Public Profile</Trans>
         </Button>
       </Link>
@@ -70,7 +70,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
             pathname?.startsWith(membersPath) && 'bg-secondary',
           )}
         >
-          <Users className="mr-2 h-5 w-5" />
+          <Users className="me-2 h-5 w-5" />
           <Trans>Members</Trans>
         </Button>
       </Link>
@@ -80,7 +80,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
           variant="ghost"
           className={cn('w-full justify-start', pathname?.startsWith(groupsPath) && 'bg-secondary')}
         >
-          <GroupIcon className="mr-2 h-5 w-5" />
+          <GroupIcon className="me-2 h-5 w-5" />
           <Trans>Groups</Trans>
         </Button>
       </Link>
@@ -90,7 +90,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
           variant="ghost"
           className={cn('w-full justify-start', pathname?.startsWith(tokensPath) && 'bg-secondary')}
         >
-          <Braces className="mr-2 h-5 w-5" />
+          <Braces className="me-2 h-5 w-5" />
           <Trans>API Tokens</Trans>
         </Button>
       </Link>
@@ -103,7 +103,7 @@ export const TeamSettingsNavDesktop = ({ className, ...props }: TeamSettingsNavD
             pathname?.startsWith(webhooksPath) && 'bg-secondary',
           )}
         >
-          <Webhook className="mr-2 h-5 w-5" />
+          <Webhook className="me-2 h-5 w-5" />
           <Trans>Webhooks</Trans>
         </Button>
       </Link>

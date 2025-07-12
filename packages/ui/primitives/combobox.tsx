@@ -65,7 +65,7 @@ const Combobox = ({
             {options.map((option, index) => (
               <CommandItem key={index} onSelect={() => onOptionSelected(option)}>
                 <Check
-                  className={cn('mr-2 h-4 w-4', option === value ? 'opacity-100' : 'opacity-0')}
+                  className={cn('me-2 h-4 w-4', option === value ? 'opacity-100' : 'opacity-0')}
                 />
 
                 {option}

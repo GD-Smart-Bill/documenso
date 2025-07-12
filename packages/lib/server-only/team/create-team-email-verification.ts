@@ -150,7 +150,7 @@ export const sendTeamEmailVerificationEmail = async (email: string, token: strin
       address: FROM_ADDRESS,
     },
     subject: i18n._(
-      msg`A request to use your email has been initiated by ${team.name} on Documenso`,
+      msg`A request to use your email has been initiated by ${team.name} on Smartsign`,
     ),
     html,
     text,

@@ -162,7 +162,7 @@ export function MultiSelectCombobox<T = OptionValue>({
               <CommandItem key={i} onSelect={() => handleSelect(option.value)}>
                 <Check
                   className={cn(
-                    'mr-2 h-4 w-4',
+                    'me-2 h-4 w-4',
                     selectedValues.includes(option.value) ? 'opacity-100' : 'opacity-0',
                   )}
                 />

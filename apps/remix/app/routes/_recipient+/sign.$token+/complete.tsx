@@ -180,7 +180,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
           })
             .with({ status: DocumentStatus.COMPLETED }, () => (
               <div className="text-documenso-700 mt-4 flex items-center text-center">
-                <CheckCircle2 className="mr-2 h-5 w-5" />
+                <CheckCircle2 className="me-2 h-5 w-5" />
                 <span className="text-sm">
                   <Trans>Everyone has signed</Trans>
                 </span>
@@ -188,7 +188,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
             ))
             .with({ deletedAt: null, waitingForOthers: false }, () => (
               <div className="mt-4 flex items-center text-center text-blue-600">
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                <Loader2 className="me-2 h-5 w-5 animate-spin" />
                 <span className="text-sm">
                   <Trans>Processing document...</Trans>
                 </span>
@@ -196,7 +196,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
             ))
             .with({ deletedAt: null, waitingForOthers: true }, () => (
               <div className="mt-4 flex items-center text-center text-blue-600">
-                <Clock8 className="mr-2 h-5 w-5" />
+                <Clock8 className="me-2 h-5 w-5" />
                 <span className="text-sm">
                   <Trans>Waiting for others to sign</Trans>
                 </span>
@@ -204,7 +204,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
             ))
             .otherwise(() => (
               <div className="flex items-center text-center text-red-600">
-                <Clock8 className="mr-2 h-5 w-5" />
+                <Clock8 className="me-2 h-5 w-5" />
                 <span className="text-sm">
                   <Trans>Document no longer available to sign</Trans>
                 </span>
@@ -266,7 +266,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
                     title={_(msg`Signatures will appear once the document has been completed`)}
                     variant="outline"
                   >
-                    <FileSearch className="mr-2 h-5 w-5" strokeWidth={1.7} />
+                    <FileSearch className="me-2 h-5 w-5" strokeWidth={1.7} />
                     <Trans>View Original Document</Trans>
                   </Button>
                 }

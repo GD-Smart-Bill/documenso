@@ -193,8 +193,8 @@ export const TeamCreateDialog = ({ trigger, onCreated, ...props }: TeamCreateDia
               <AlertDescription className="mt-0">
                 <Trans>
                   You have reached the maximum number of teams for your plan. Please contact sales
-                  at <a href="mailto:support@documenso.com">support@documenso.com</a> if you would
-                  like to adjust your plan.
+                  at <a href="mailto:support@smartbill.co.il">support@smartbill.co.il</a> if you
+                  would like to adjust your plan.
                 </Trans>
               </AlertDescription>
             </Alert>

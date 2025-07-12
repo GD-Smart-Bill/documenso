@@ -188,7 +188,7 @@ export const DocumentMoveToFolderDialog = ({
                             onClick={() => field.onChange(null)}
                             disabled={currentFolderId === null}
                           >
-                            <HomeIcon className="mr-2 h-4 w-4" />
+                            <HomeIcon className="me-2 h-4 w-4" />
                             <Trans>Home (No Folder)</Trans>
                           </Button>
 
@@ -201,7 +201,7 @@ export const DocumentMoveToFolderDialog = ({
                               onClick={() => field.onChange(folder.id)}
                               disabled={currentFolderId === folder.id}
                             >
-                              <FolderIcon className="mr-2 h-4 w-4" />
+                              <FolderIcon className="me-2 h-4 w-4" />
                               {folder.name}
                             </Button>
                           ))}

@@ -117,7 +117,7 @@ export default function DocumentsPage() {
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-x-4 gap-y-8">
           <div className="flex flex-row items-center">
-            <Avatar className="dark:border-border mr-3 h-12 w-12 border-2 border-solid border-white">
+            <Avatar className="dark:border-border me-3 h-12 w-12 border-2 border-solid border-white">
               {team.avatarImageId && <AvatarImage src={formatAvatarUrl(team.avatarImageId)} />}
               <AvatarFallback className="text-muted-foreground text-xs">
                 {team.name.slice(0, 1)}
@@ -157,7 +157,7 @@ export default function DocumentsPage() {
                         <DocumentStatus status={value} />
 
                         {value !== ExtendedDocumentStatus.ALL && (
-                          <span className="ml-1 inline-block opacity-50">{stats[value]}</span>
+                          <span className="ms-1 inline-block opacity-50">{stats[value]}</span>
                         )}
                       </Link>
                     </TabsTrigger>

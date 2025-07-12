@@ -35,7 +35,7 @@ export const run = async ({
       body: JSON.stringify(payloadData),
       headers: {
         'Content-Type': 'application/json',
-        'X-Documenso-Secret': secret ?? '',
+        'X-Smartsign-Secret': secret ?? '',
       },
     });
 

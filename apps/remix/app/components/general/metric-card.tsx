@@ -20,7 +20,7 @@ export const CardMetric = ({ icon: Icon, title, value, className }: CardMetricPr
       <div className="flex h-full max-h-full flex-col px-4 pb-6 pt-4 sm:px-4 sm:pb-8 sm:pt-4">
         <div className="flex items-start">
           {Icon && (
-            <div className="mr-2 h-4 w-4">
+            <div className="me-2 h-4 w-4">
               <Icon className="text-muted-foreground h-4 w-4" />
             </div>
           )}

@@ -98,7 +98,7 @@ export default function SettingsLayout() {
                 variant="ghost"
                 className="group-aria-[current]:bg-secondary w-full justify-start"
               >
-                <route.icon className="mr-2 h-5 w-5" />
+                <route.icon className="me-2 h-5 w-5" />
                 <Trans>{route.label}</Trans>
               </Button>
             </NavLink>

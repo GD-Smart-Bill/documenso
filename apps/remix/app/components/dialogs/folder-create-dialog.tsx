@@ -95,7 +95,7 @@ export const FolderCreateDialog = ({ type, trigger, ...props }: FolderCreateDial
             className="flex items-center"
             data-testid="folder-create-button"
           >
-            <FolderPlusIcon className="mr-2 h-4 w-4" />
+            <FolderPlusIcon className="me-2 h-4 w-4" />
             <Trans>Create Folder</Trans>
           </Button>
         )}

@@ -41,7 +41,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
             pathname?.startsWith('/settings/profile') && 'bg-secondary',
           )}
         >
-          <User className="mr-2 h-5 w-5" />
+          <User className="me-2 h-5 w-5" />
           <Trans>Profile</Trans>
         </Button>
       </Link>
@@ -56,7 +56,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
                 pathname?.startsWith('/settings/preferences') && 'bg-secondary',
               )}
             >
-              <Settings2Icon className="mr-2 h-5 w-5" />
+              <Settings2Icon className="me-2 h-5 w-5" />
               <Trans>Preferences</Trans>
             </Button>
           </Link>
@@ -69,7 +69,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
                 pathname?.startsWith('/settings/public-profile') && 'bg-secondary',
               )}
             >
-              <Globe2Icon className="mr-2 h-5 w-5" />
+              <Globe2Icon className="me-2 h-5 w-5" />
               <Trans>Public Profile</Trans>
             </Button>
           </Link>
@@ -82,7 +82,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
                 pathname?.startsWith('/settings/tokens') && 'bg-secondary',
               )}
             >
-              <BracesIcon className="mr-2 h-5 w-5" />
+              <BracesIcon className="me-2 h-5 w-5" />
               <Trans>API Tokens</Trans>
             </Button>
           </Link>
@@ -95,7 +95,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
                 pathname?.startsWith('/settings/webhooks') && 'bg-secondary',
               )}
             >
-              <WebhookIcon className="mr-2 h-5 w-5" />
+              <WebhookIcon className="me-2 h-5 w-5" />
               <Trans>Webhooks</Trans>
             </Button>
           </Link>
@@ -109,7 +109,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
                   pathname?.startsWith('/settings/billing') && 'bg-secondary',
                 )}
               >
-                <CreditCardIcon className="mr-2 h-5 w-5" />
+                <CreditCardIcon className="me-2 h-5 w-5" />
                 <Trans>Billing</Trans>
               </Button>
             </Link>
@@ -125,7 +125,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
             pathname?.startsWith('/settings/organisations') && 'bg-secondary',
           )}
         >
-          <Users className="mr-2 h-5 w-5" />
+          <Users className="me-2 h-5 w-5" />
           <Trans>Organisations</Trans>
         </Button>
       </Link>
@@ -138,7 +138,7 @@ export const SettingsMobileNav = ({ className, ...props }: SettingsMobileNavProp
             pathname?.startsWith('/settings/security') && 'bg-secondary',
           )}
         >
-          <Lock className="mr-2 h-5 w-5" />
+          <Lock className="me-2 h-5 w-5" />
           <Trans>Security</Trans>
         </Button>
       </Link>

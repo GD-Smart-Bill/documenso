@@ -130,7 +130,7 @@ export const DocumentShareButton = ({
             className={cn('flex-1 text-[11px]', className)}
             loading={isLoading}
           >
-            {!isLoading && <Sparkles className="mr-2 h-5 w-5" />}
+            {!isLoading && <Sparkles className="me-2 h-5 w-5" />}
             <Trans>Share Signature Card</Trans>
           </Button>
         )}
@@ -184,12 +184,12 @@ export const DocumentShareButton = ({
 
           <div className="mt-6 flex items-center gap-4">
             <Button variant="outline" className="flex-1" onClick={onTweetClick}>
-              <FaXTwitter className="mr-2 h-4 w-4" />
+              <FaXTwitter className="me-2 h-4 w-4" />
               Tweet
             </Button>
 
             <Button variant="outline" className="flex-1" onClick={onCopyClick}>
-              <Copy className="mr-2 h-4 w-4" />
+              <Copy className="me-2 h-4 w-4" />
               <Trans>Copy Link</Trans>
             </Button>
           </div>

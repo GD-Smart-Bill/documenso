@@ -151,7 +151,7 @@ export const FolderMoveDialog = ({
                           disabled={!folder?.parentId}
                           onClick={() => field.onChange(null)}
                         >
-                          <HomeIcon className="mr-2 h-4 w-4" />
+                          <HomeIcon className="me-2 h-4 w-4" />
                           <Trans>Home</Trans>
                         </Button>
 
@@ -165,7 +165,7 @@ export const FolderMoveDialog = ({
                               className="w-full justify-start"
                               onClick={() => field.onChange(f.id)}
                             >
-                              <FolderIcon className="mr-2 h-4 w-4" />
+                              <FolderIcon className="me-2 h-4 w-4" />
                               {f.name}
                             </Button>
                           ))}

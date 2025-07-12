@@ -70,7 +70,7 @@ export const FieldContent = ({ field, documentMeta }: FieldIconProps) => {
             {item.value && (
               <Label
                 htmlFor={`checkbox-${index}`}
-                className="text-foreground ml-1.5 text-xs font-normal"
+                className="text-foreground ms-1.5 text-xs font-normal"
               >
                 {item.value}
               </Label>
@@ -102,7 +102,7 @@ export const FieldContent = ({ field, documentMeta }: FieldIconProps) => {
               {item.value && (
                 <Label
                   htmlFor={`option-${index}`}
-                  className="text-foreground ml-1.5 text-xs font-normal"
+                  className="text-foreground ms-1.5 text-xs font-normal"
                 >
                   {item.value}
                 </Label>

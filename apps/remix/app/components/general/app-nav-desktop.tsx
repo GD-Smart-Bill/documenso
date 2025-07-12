@@ -67,7 +67,7 @@ export const AppNavDesktop = ({
   return (
     <div
       className={cn(
-        'ml-8 hidden flex-1 items-center gap-x-12 md:flex md:justify-between',
+        'ms-8 hidden flex-1 items-center gap-x-12 md:flex md:justify-between',
         className,
       )}
       {...props}
@@ -106,7 +106,7 @@ export const AppNavDesktop = ({
         onClick={() => setIsCommandMenuOpen(true)}
       >
         <div className="flex items-center">
-          <Search className="mr-2 h-5 w-5" />
+          <Search className="me-2 h-5 w-5" />
           <Trans>Search</Trans>
         </div>
 

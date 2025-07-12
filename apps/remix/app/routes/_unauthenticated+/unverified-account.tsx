@@ -7,7 +7,7 @@ export default function UnverifiedAccount() {
   return (
     <div className="w-screen max-w-lg px-4">
       <div className="flex items-start">
-        <div className="mr-4 mt-1 hidden md:block">
+        <div className="me-4 mt-1 hidden md:block">
           <Mails className="text-primary h-10 w-10" strokeWidth={2} />
         </div>
         <div className="">

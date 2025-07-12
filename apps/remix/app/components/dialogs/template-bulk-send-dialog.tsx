@@ -115,7 +115,7 @@ export const TemplateBulkSendDialog = ({
       <DialogTrigger asChild>
         {trigger ?? (
           <Button variant="outline">
-            <Upload className="mr-2 h-4 w-4" />
+            <Upload className="me-2 h-4 w-4" />
             <Trans>Bulk Send via CSV</Trans>
           </Button>
         )}
@@ -193,7 +193,7 @@ export const TemplateBulkSendDialog = ({
                             }}
                             disabled={form.formState.isSubmitting}
                           />
-                          <Upload className="mr-2 h-4 w-4" />
+                          <Upload className="me-2 h-4 w-4" />
                           <Trans>Upload CSV</Trans>
                         </label>
                       </Button>

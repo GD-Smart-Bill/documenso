@@ -143,7 +143,7 @@ export const DocumentPageViewDropdown = ({ document }: DocumentPageViewDropdownP
         {(isOwner || isCurrentTeamDocument) && !isComplete && (
           <DropdownMenuItem asChild>
             <Link to={`${documentsPath}/${document.id}/edit`}>
-              <Edit className="mr-2 h-4 w-4" />
+              <Edit className="me-2 h-4 w-4" />
               <Trans>Edit</Trans>
             </Link>
           </DropdownMenuItem>
@@ -151,30 +151,30 @@ export const DocumentPageViewDropdown = ({ document }: DocumentPageViewDropdownP
 
         {isComplete && (
           <DropdownMenuItem onClick={onDownloadClick}>
-            <Download className="mr-2 h-4 w-4" />
+            <Download className="me-2 h-4 w-4" />
             <Trans>Download</Trans>
           </DropdownMenuItem>
         )}
 
         <DropdownMenuItem onClick={onDownloadOriginalClick}>
-          <Download className="mr-2 h-4 w-4" />
+          <Download className="me-2 h-4 w-4" />
           <Trans>Download Original</Trans>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>
           <Link to={`${documentsPath}/${document.id}/logs`}>
-            <ScrollTextIcon className="mr-2 h-4 w-4" />
+            <ScrollTextIcon className="me-2 h-4 w-4" />
             <Trans>Audit Log</Trans>
           </Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={() => setDuplicateDialogOpen(true)}>
-          <Copy className="mr-2 h-4 w-4" />
+          <Copy className="me-2 h-4 w-4" />
           <Trans>Duplicate</Trans>
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={() => setDeleteDialogOpen(true)} disabled={isDeleted}>
-          <Trash2 className="mr-2 h-4 w-4" />
+          <Trash2 className="me-2 h-4 w-4" />
           <Trans>Delete</Trans>
         </DropdownMenuItem>
 
@@ -190,7 +190,7 @@ export const DocumentPageViewDropdown = ({ document }: DocumentPageViewDropdownP
                 disabled={!isPending || isDeleted}
                 onSelect={(e) => e.preventDefault()}
               >
-                <Copy className="mr-2 h-4 w-4" />
+                <Copy className="me-2 h-4 w-4" />
                 <Trans>Signing Links</Trans>
               </DropdownMenuItem>
             }
@@ -205,7 +205,7 @@ export const DocumentPageViewDropdown = ({ document }: DocumentPageViewDropdownP
           trigger={({ loading, disabled }) => (
             <DropdownMenuItem disabled={disabled || isDraft} onSelect={(e) => e.preventDefault()}>
               <div className="flex items-center">
-                {loading ? <Loader className="mr-2 h-4 w-4" /> : <Share className="mr-2 h-4 w-4" />}
+                {loading ? <Loader className="me-2 h-4 w-4" /> : <Share className="me-2 h-4 w-4" />}
                 <Trans>Share Signing Card</Trans>
               </div>
             </DropdownMenuItem>

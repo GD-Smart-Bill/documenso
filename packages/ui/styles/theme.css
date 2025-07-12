@@ -199,6 +199,9 @@
 	html[lang="he"] {
 		--text-direction: rtl;
 	}
+	* {
+		direction: var(--text-direction, ltr) !important;
+	}
 	p,
 	h1,
 	h2,
@@ -206,6 +209,9 @@
 	h4,
 	h5,
 	h6 {
+		direction: var(--text-direction, ltr) !important;
+	}
+	[role="alert"] {
 		direction: var(--text-direction, ltr) !important;
 	}
 }

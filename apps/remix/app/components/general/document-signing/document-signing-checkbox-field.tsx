@@ -292,7 +292,7 @@ export const DocumentSigningCheckboxField = ({
                   {!item.value.includes('empty-value-') && item.value && (
                     <Label
                       htmlFor={`checkbox-${field.id}-${item.id}`}
-                      className="text-foreground ml-1.5 text-xs font-normal"
+                      className="text-foreground ms-1.5 text-xs font-normal"
                     >
                       {item.value}
                     </Label>
@@ -321,7 +321,7 @@ export const DocumentSigningCheckboxField = ({
                 {!item.value.includes('empty-value-') && item.value && (
                   <Label
                     htmlFor={`checkbox-${field.id}-${item.id}`}
-                    className="text-foreground ml-1.5 text-xs font-normal"
+                    className="text-foreground ms-1.5 text-xs font-normal"
                   >
                     {item.value}
                   </Label>

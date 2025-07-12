@@ -186,19 +186,19 @@ const TeamDropdownMenu = ({ team }: { team: TGetOrganisationSessionResponse[0]['
       <DropdownMenuContent align="end" onClick={(e) => e.stopPropagation()}>
         <DropdownMenuItem asChild>
           <Link to={`/t/${team.url}`}>
-            <ArrowRight className="mr-2 h-4 w-4" />
+            <ArrowRight className="me-2 h-4 w-4" />
             <Trans>Go to team</Trans>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link to={`/t/${team.url}/settings`}>
-            <SettingsIcon className="mr-2 h-4 w-4" />
+            <SettingsIcon className="me-2 h-4 w-4" />
             <Trans>Settings</Trans>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link to={`/t/${team.url}/settings/members`}>
-            <UsersIcon className="mr-2 h-4 w-4" />
+            <UsersIcon className="me-2 h-4 w-4" />
             <Trans>Members</Trans>
           </Link>
         </DropdownMenuItem>
@@ -212,7 +212,7 @@ const TeamDropdownMenu = ({ team }: { team: TGetOrganisationSessionResponse[0]['
               teamName={team.name}
               trigger={
                 <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-                  <TrashIcon className="mr-2 h-4 w-4" />
+                  <TrashIcon className="me-2 h-4 w-4" />
                   <Trans>Delete</Trans>
                 </DropdownMenuItem>
               }

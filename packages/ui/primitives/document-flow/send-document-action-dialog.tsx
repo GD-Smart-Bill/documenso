@@ -30,7 +30,7 @@ export const SendDocumentActionDialog = ({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button type="button" className={className}>
-          {loading && <Loader className="text-documenso mr-2 h-5 w-5 animate-spin" />}
+          {loading && <Loader className="text-documenso me-2 h-5 w-5 animate-spin" />}
           <Trans>Send</Trans>
         </Button>
       </DialogTrigger>
@@ -60,7 +60,7 @@ export const SendDocumentActionDialog = ({
 
           {/* We would use DialogAction here but it interrupts the submit action */}
           <Button className={className} {...props}>
-            {loading && <Loader className="mr-2 h-5 w-5 animate-spin" />}
+            {loading && <Loader className="me-2 h-5 w-5 animate-spin" />}
             <Trans>Send</Trans>
           </Button>
         </DialogFooter>

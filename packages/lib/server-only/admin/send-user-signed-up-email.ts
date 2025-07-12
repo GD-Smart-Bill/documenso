@@ -27,7 +27,7 @@ export const sendUserSignedUpEmail = async ({ userId }: SendUserSignedUpEmailPro
   });
 
   const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
-  const senderName = NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso';
+  const senderName = NEXT_PRIVATE_SMTP_FROM_NAME || 'Smartsign';
   const senderAddress = NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com';
 
   const emailTemplate = createElement(NewUserSignedUpEmailToAdminTemplate, {

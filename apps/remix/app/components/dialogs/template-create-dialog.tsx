@@ -89,7 +89,7 @@ export const TemplateCreateDialog = ({ folderId }: TemplateCreateDialogProps) =>
     >
       <DialogTrigger asChild>
         <Button className="cursor-pointer" disabled={!user.emailVerified}>
-          <FilePlus className="-ml-1 mr-2 h-4 w-4" />
+          <FilePlus className="-ms-1 me-2 h-4 w-4" />
           <Trans>New Template</Trans>
         </Button>
       </DialogTrigger>

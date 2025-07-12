@@ -12,7 +12,7 @@ type SetupTwoFactorAuthenticationOptions = {
   user: Pick<User, 'id' | 'email'>;
 };
 
-const ISSUER = 'Documenso';
+const ISSUER = 'Smartsign';
 
 export const setupTwoFactorAuthentication = async ({
   user,

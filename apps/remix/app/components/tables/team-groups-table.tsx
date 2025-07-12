@@ -103,7 +103,7 @@ export const TeamGroupsTable = () => {
                     onSelect={(e) => e.preventDefault()}
                     title="Update team group role"
                   >
-                    <EditIcon className="mr-2 h-4 w-4" />
+                    <EditIcon className="me-2 h-4 w-4" />
                     <Trans>Update role</Trans>
                   </DropdownMenuItem>
                 }
@@ -115,7 +115,7 @@ export const TeamGroupsTable = () => {
                 teamGroupRole={row.original.teamRole}
                 trigger={
                   <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
-                    <Trash2Icon className="mr-2 h-4 w-4" />
+                    <Trash2Icon className="me-2 h-4 w-4" />
                     <Trans>Remove</Trans>
                   </DropdownMenuItem>
                 }

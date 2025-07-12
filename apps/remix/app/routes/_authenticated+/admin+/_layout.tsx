@@ -49,7 +49,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/stats">
-              <BarChart3 className="mr-2 h-5 w-5" />
+              <BarChart3 className="me-2 h-5 w-5" />
               <Trans>Stats</Trans>
             </Link>
           </Button>
@@ -63,7 +63,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/organisations">
-              <Building2Icon className="mr-2 h-5 w-5" />
+              <Building2Icon className="me-2 h-5 w-5" />
               <Trans>Organisations</Trans>
             </Link>
           </Button>
@@ -77,7 +77,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/claims">
-              <Wallet2 className="mr-2 h-5 w-5" />
+              <Wallet2 className="me-2 h-5 w-5" />
               <Trans>Claims</Trans>
             </Link>
           </Button>
@@ -91,7 +91,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/users">
-              <Users className="mr-2 h-5 w-5" />
+              <Users className="me-2 h-5 w-5" />
               <Trans>Users</Trans>
             </Link>
           </Button>
@@ -105,7 +105,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/documents">
-              <FileStack className="mr-2 h-5 w-5" />
+              <FileStack className="me-2 h-5 w-5" />
               <Trans>Documents</Trans>
             </Link>
           </Button>
@@ -119,7 +119,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/leaderboard">
-              <Trophy className="mr-2 h-5 w-5" />
+              <Trophy className="me-2 h-5 w-5" />
               <Trans>Leaderboard</Trans>
             </Link>
           </Button>
@@ -133,7 +133,7 @@ export default function AdminLayout() {
             asChild
           >
             <Link to="/admin/site-settings">
-              <Settings className="mr-2 h-5 w-5" />
+              <Settings className="me-2 h-5 w-5" />
               <Trans>Site Settings</Trans>
             </Link>
           </Button>

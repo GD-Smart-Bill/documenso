@@ -39,7 +39,7 @@ export const ConfirmTeamEmailTemplate = ({
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`Accept team email request for ${teamName} on Documenso`;
+  const previewText = msg`Accept team email request for ${teamName} on Smartsign`;
 
   return (
     <Html>
@@ -75,7 +75,7 @@ export const ConfirmTeamEmailTemplate = ({
               <Text className="text-center text-base">
                 <Trans>
                   <span className="font-bold">{teamName}</span> has requested to use your email
-                  address for their team on Documenso.
+                  address for their team on Smartsign.
                 </Trans>
               </Text>
 

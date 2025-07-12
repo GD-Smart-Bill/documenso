@@ -110,7 +110,7 @@ export const DocumentResendDialog = ({ document, recipients }: DocumentResendDia
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <DropdownMenuItem disabled={isDisabled} onSelect={(e) => e.preventDefault()}>
-          <History className="mr-2 h-4 w-4" />
+          <History className="me-2 h-4 w-4" />
           <Trans>Resend</Trans>
         </DropdownMenuItem>
       </DialogTrigger>

@@ -59,7 +59,7 @@ export const TemplatesTableActionDropdown = ({
 
         <DropdownMenuItem disabled={!isOwner && !isTeamTemplate} asChild>
           <Link to={formatPath}>
-            <Edit className="mr-2 h-4 w-4" />
+            <Edit className="me-2 h-4 w-4" />
             <Trans>Edit</Trans>
           </Link>
         </DropdownMenuItem>
@@ -68,17 +68,17 @@ export const TemplatesTableActionDropdown = ({
           disabled={!isOwner && !isTeamTemplate}
           onClick={() => setDuplicateDialogOpen(true)}
         >
-          <Copy className="mr-2 h-4 w-4" />
+          <Copy className="me-2 h-4 w-4" />
           <Trans>Duplicate</Trans>
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={() => setTemplateDirectLinkDialogOpen(true)}>
-          <Share2Icon className="mr-2 h-4 w-4" />
+          <Share2Icon className="me-2 h-4 w-4" />
           <Trans>Direct link</Trans>
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={() => setMoveToFolderDialogOpen(true)}>
-          <FolderIcon className="mr-2 h-4 w-4" />
+          <FolderIcon className="me-2 h-4 w-4" />
           <Trans>Move to Folder</Trans>
         </DropdownMenuItem>
 
@@ -87,7 +87,7 @@ export const TemplatesTableActionDropdown = ({
           recipients={row.recipients}
           trigger={
             <div className="hover:bg-accent hover:text-accent-foreground relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors">
-              <Upload className="mr-2 h-4 w-4" />
+              <Upload className="me-2 h-4 w-4" />
               <Trans>Bulk Send via CSV</Trans>
             </div>
           }
@@ -97,7 +97,7 @@ export const TemplatesTableActionDropdown = ({
           disabled={!isOwner && !isTeamTemplate}
           onClick={() => setDeleteDialogOpen(true)}
         >
-          <Trash2 className="mr-2 h-4 w-4" />
+          <Trash2 className="me-2 h-4 w-4" />
           <Trans>Delete</Trans>
         </DropdownMenuItem>
       </DropdownMenuContent>

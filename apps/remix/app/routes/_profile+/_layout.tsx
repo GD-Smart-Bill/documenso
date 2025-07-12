@@ -65,7 +65,7 @@ export default function PublicProfileLayout() {
             </Link>
 
             <div className="flex flex-row items-center justify-center">
-              <p className="text-muted-foreground mr-4">
+              <p className="text-muted-foreground me-4">
                 <span className="text-sm sm:hidden">
                   <Trans>Want your own public profile?</Trans>
                 </span>
@@ -117,7 +117,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
       primaryButton={
         <Button asChild className="w-32">
           <Link to="/">
-            <ChevronLeft className="mr-2 h-4 w-4" />
+            <ChevronLeft className="me-2 h-4 w-4" />
             <Trans>Go Back</Trans>
           </Link>
         </Button>

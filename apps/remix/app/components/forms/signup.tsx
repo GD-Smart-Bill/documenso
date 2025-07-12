@@ -102,14 +102,7 @@ export const SignUpForm = ({
 
   const isSubmitting = form.formState.isSubmitting;
 
-
-  const onFormSubmit = async ({
-    name,
-    email,
-    phone,
-    password,
-    signature,
-  }: TSignUpFormSchema) => {
+  const onFormSubmit = async ({ name, email, phone, password, signature }: TSignUpFormSchema) => {
     try {
       await authClient.emailPassword.signUp({
         name,
@@ -276,21 +269,21 @@ export const SignUpForm = ({
                 )}
               />
 
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        <Trans>Phone Number</Trans>
-                      </FormLabel>
-                      <FormControl>
-                        <Input type="tel" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      <Trans>Phone Number</Trans>
+                    </FormLabel>
+                    <FormControl>
+                      <Input type="tel" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
               <FormField
                 control={form.control}
@@ -353,7 +346,7 @@ export const SignUpForm = ({
                     disabled={isSubmitting}
                     onClick={onSignUpWithGoogleClick}
                   >
-                    <FcGoogle className="mr-2 h-5 w-5" />
+                    <FcGoogle className="me-2 h-5 w-5" />
                     <Trans>Sign Up with Google</Trans>
                   </Button>
                 </>
@@ -369,7 +362,7 @@ export const SignUpForm = ({
                     disabled={isSubmitting}
                     onClick={onSignUpWithOIDCClick}
                   >
-                    <FaIdCardClip className="mr-2 h-5 w-5" />
+                    <FaIdCardClip className="me-2 h-5 w-5" />
                     <Trans>Sign Up with OIDC</Trans>
                   </Button>
                 </>

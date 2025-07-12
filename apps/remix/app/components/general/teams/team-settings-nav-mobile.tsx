@@ -38,7 +38,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
               'bg-secondary',
           )}
         >
-          <User className="mr-2 h-5 w-5" />
+          <User className="me-2 h-5 w-5" />
           <Trans>General</Trans>
         </Button>
       </Link>
@@ -53,7 +53,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
               'bg-secondary',
           )}
         >
-          <Settings2 className="mr-2 h-5 w-5" />
+          <Settings2 className="me-2 h-5 w-5" />
           <Trans>Preferences</Trans>
         </Button>
       </Link>
@@ -66,7 +66,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
             pathname?.startsWith(publicProfilePath) && 'bg-secondary',
           )}
         >
-          <Globe2Icon className="mr-2 h-5 w-5" />
+          <Globe2Icon className="me-2 h-5 w-5" />
           <Trans>Public Profile</Trans>
         </Button>
       </Link>
@@ -79,7 +79,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
             pathname?.startsWith(membersPath) && 'bg-secondary',
           )}
         >
-          <Key className="mr-2 h-5 w-5" />
+          <Key className="me-2 h-5 w-5" />
           <Trans>Members</Trans>
         </Button>
       </Link>
@@ -89,7 +89,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
           variant="ghost"
           className={cn('w-full justify-start', pathname?.startsWith(groupsPath) && 'bg-secondary')}
         >
-          <GroupIcon className="mr-2 h-5 w-5" />
+          <GroupIcon className="me-2 h-5 w-5" />
           <Trans>Groups</Trans>
         </Button>
       </Link>
@@ -99,7 +99,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
           variant="ghost"
           className={cn('w-full justify-start', pathname?.startsWith(tokensPath) && 'bg-secondary')}
         >
-          <Braces className="mr-2 h-5 w-5" />
+          <Braces className="me-2 h-5 w-5" />
           <Trans>API Tokens</Trans>
         </Button>
       </Link>
@@ -112,7 +112,7 @@ export const TeamSettingsNavMobile = ({ className, ...props }: TeamSettingsNavMo
             pathname?.startsWith(webhooksPath) && 'bg-secondary',
           )}
         >
-          <Webhook className="mr-2 h-5 w-5" />
+          <Webhook className="me-2 h-5 w-5" />
           <Trans>Webhooks</Trans>
         </Button>
       </Link>

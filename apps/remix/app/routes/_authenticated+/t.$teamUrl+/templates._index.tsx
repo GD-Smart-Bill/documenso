@@ -41,7 +41,7 @@ export default function TemplatesPage() {
 
       <div className="mt-8">
         <div className="flex flex-row items-center">
-          <Avatar className="dark:border-border mr-3 h-12 w-12 border-2 border-solid border-white">
+          <Avatar className="dark:border-border me-3 h-12 w-12 border-2 border-solid border-white">
             {team.avatarImageId && <AvatarImage src={formatAvatarUrl(team.avatarImageId)} />}
             <AvatarFallback className="text-muted-foreground text-xs">
               {team.name.slice(0, 1)}

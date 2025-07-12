@@ -136,7 +136,7 @@ export const OrganisationMembersDataTable = () => {
                     onSelect={(e) => e.preventDefault()}
                     title="Update organisation member role"
                   >
-                    <Edit className="mr-2 h-4 w-4" />
+                    <Edit className="me-2 h-4 w-4" />
                     <Trans>Update role</Trans>
                   </DropdownMenuItem>
                 }
@@ -158,7 +158,7 @@ export const OrganisationMembersDataTable = () => {
                     }
                     title={_(msg`Remove organisation member`)}
                   >
-                    <Trash2 className="mr-2 h-4 w-4" />
+                    <Trash2 className="me-2 h-4 w-4" />
                     <Trans>Remove</Trans>
                   </DropdownMenuItem>
                 }

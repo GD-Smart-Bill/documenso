@@ -179,7 +179,7 @@ export const PublicProfileForm = ({
                               <span className="font-semibold">{field.value}</span>
                             </p>
 
-                            <div className="ml-1 flex h-6 w-6 items-center justify-center rounded transition-all hover:bg-neutral-200 hover:active:bg-neutral-300 dark:hover:bg-neutral-500 dark:hover:active:bg-neutral-400">
+                            <div className="ms-1 flex h-6 w-6 items-center justify-center rounded transition-all hover:bg-neutral-200 hover:active:bg-neutral-300 dark:hover:bg-neutral-500 dark:hover:active:bg-neutral-400">
                               <AnimatePresence mode="wait" initial={false}>
                                 <motion.div
                                   key={copiedTimeout ? 'copied' : 'copy'}

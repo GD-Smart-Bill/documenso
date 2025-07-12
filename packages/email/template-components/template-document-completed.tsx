@@ -30,7 +30,7 @@ export const TemplateDocumentCompleted = ({
             <Text className="text-documenso-500 text-base font-semibold">
               <Img
                 src={getAssetUrl('/static/completed.png')}
-                className="-mt-0.5 mr-2 inline h-7 w-7 align-middle"
+                className="-mt-0.5 me-2 inline h-7 w-7 align-middle"
               />
               <Trans>Completed</Trans>
             </Text>
@@ -52,7 +52,7 @@ export const TemplateDocumentCompleted = ({
           >
             <Img
               src={getAssetUrl('/static/download.png')}
-              className="mb-0.5 mr-2 inline h-5 w-5 align-middle"
+              className="mb-0.5 me-2 inline h-5 w-5 align-middle"
             />
             <Trans>Download</Trans>
           </Button>

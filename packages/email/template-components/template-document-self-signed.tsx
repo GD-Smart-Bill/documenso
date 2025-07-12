@@ -32,7 +32,7 @@ export const TemplateDocumentSelfSigned = ({
             <Text className="text-documenso-500 text-base font-semibold">
               <Img
                 src={getAssetUrl('/static/completed.png')}
-                className="-mt-0.5 mr-2 inline h-7 w-7 align-middle"
+                className="-mt-0.5 me-2 inline h-7 w-7 align-middle"
               />
               <Trans>Completed</Trans>
             </Text>
@@ -60,11 +60,11 @@ export const TemplateDocumentSelfSigned = ({
         <Section className="mb-6 mt-8 text-center">
           <Button
             href={signUpUrl}
-            className="mr-4 rounded-lg border border-solid border-slate-200 px-4 py-2 text-center text-sm font-medium text-black no-underline"
+            className="me-4 rounded-lg border border-solid border-slate-200 px-4 py-2 text-center text-sm font-medium text-black no-underline"
           >
             <Img
               src={getAssetUrl('/static/user-plus.png')}
-              className="mb-0.5 mr-2 inline h-5 w-5 align-middle"
+              className="mb-0.5 me-2 inline h-5 w-5 align-middle"
             />
             <Trans>Create account</Trans>
           </Button>
@@ -75,7 +75,7 @@ export const TemplateDocumentSelfSigned = ({
           >
             <Img
               src={getAssetUrl('/static/review.png')}
-              className="mb-0.5 mr-2 inline h-5 w-5 align-middle"
+              className="mb-0.5 me-2 inline h-5 w-5 align-middle"
             />
             <Trans>View plans</Trans>
           </Button>

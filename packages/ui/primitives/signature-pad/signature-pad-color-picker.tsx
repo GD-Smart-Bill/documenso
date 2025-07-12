@@ -22,7 +22,7 @@ export const SignaturePadColorPicker = ({
   className,
 }: SignaturePadColorPickerProps) => {
   return (
-    <div className={cn('text-foreground absolute right-2 top-2 filter', className)}>
+    <div className={cn('text-foreground absolute end-2 top-2 filter', className)}>
       <Select defaultValue={selectedColor} onValueChange={(value) => setSelectedColor(value)}>
         <SelectTrigger className="h-auto w-auto border-none p-0.5">
           <SelectValue placeholder="" />

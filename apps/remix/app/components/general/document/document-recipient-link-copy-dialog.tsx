@@ -117,12 +117,12 @@ export const DocumentRecipientLinkCopyDialog = ({
                     });
                   }}
                   badgeContentUncopied={
-                    <p className="ml-1 text-xs">
+                    <p className="ms-1 text-xs">
                       <Trans>Copy</Trans>
                     </p>
                   }
                   badgeContentCopied={
-                    <p className="ml-1 text-xs">
+                    <p className="ms-1 text-xs">
                       <Trans>Copied</Trans>
                     </p>
                   }

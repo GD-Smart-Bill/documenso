@@ -144,21 +144,21 @@ export const DocumentsTableActionDropdown = ({
             <Link to={`/sign/${recipient?.token}`}>
               {recipient?.role === RecipientRole.VIEWER && (
                 <>
-                  <EyeIcon className="mr-2 h-4 w-4" />
+                  <EyeIcon className="me-2 h-4 w-4" />
                   <Trans>View</Trans>
                 </>
               )}
 
               {recipient?.role === RecipientRole.SIGNER && (
                 <>
-                  <Pencil className="mr-2 h-4 w-4" />
+                  <Pencil className="me-2 h-4 w-4" />
                   <Trans>Sign</Trans>
                 </>
               )}
 
               {recipient?.role === RecipientRole.APPROVER && (
                 <>
-                  <CheckCircle className="mr-2 h-4 w-4" />
+                  <CheckCircle className="me-2 h-4 w-4" />
                   <Trans>Approve</Trans>
                 </>
               )}
@@ -168,41 +168,41 @@ export const DocumentsTableActionDropdown = ({
 
         <DropdownMenuItem disabled={!canManageDocument || isComplete} asChild>
           <Link to={formatPath}>
-            <Edit className="mr-2 h-4 w-4" />
+            <Edit className="me-2 h-4 w-4" />
             <Trans>Edit</Trans>
           </Link>
         </DropdownMenuItem>
 
         <DropdownMenuItem disabled={!isComplete} onClick={onDownloadClick}>
-          <Download className="mr-2 h-4 w-4" />
+          <Download className="me-2 h-4 w-4" />
           <Trans>Download</Trans>
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={onDownloadOriginalClick}>
-          <FileDown className="mr-2 h-4 w-4" />
+          <FileDown className="me-2 h-4 w-4" />
           <Trans>Download Original</Trans>
         </DropdownMenuItem>
 
         <DropdownMenuItem onClick={() => setDuplicateDialogOpen(true)}>
-          <Copy className="mr-2 h-4 w-4" />
+          <Copy className="me-2 h-4 w-4" />
           <Trans>Duplicate</Trans>
         </DropdownMenuItem>
 
         {onMoveDocument && (
           <DropdownMenuItem onClick={onMoveDocument} onSelect={(e) => e.preventDefault()}>
-            <FolderInput className="mr-2 h-4 w-4" />
+            <FolderInput className="me-2 h-4 w-4" />
             <Trans>Move to Folder</Trans>
           </DropdownMenuItem>
         )}
 
         {/* No point displaying this if there's no functionality. */}
         {/* <DropdownMenuItem disabled>
-          <XCircle className="mr-2 h-4 w-4" />
+          <XCircle className="me-2 h-4 w-4" />
           Void
         </DropdownMenuItem> */}
 
         <DropdownMenuItem onClick={() => setDeleteDialogOpen(true)}>
-          <Trash2 className="mr-2 h-4 w-4" />
+          <Trash2 className="me-2 h-4 w-4" />
           {canManageDocument ? _(msg`Delete`) : _(msg`Hide`)}
         </DropdownMenuItem>
 
@@ -216,7 +216,7 @@ export const DocumentsTableActionDropdown = ({
             trigger={
               <DropdownMenuItem disabled={!isPending} asChild onSelect={(e) => e.preventDefault()}>
                 <div>
-                  <Copy className="mr-2 h-4 w-4" />
+                  <Copy className="me-2 h-4 w-4" />
                   <Trans>Signing Links</Trans>
                 </div>
               </DropdownMenuItem>
@@ -232,7 +232,7 @@ export const DocumentsTableActionDropdown = ({
           trigger={({ loading, disabled }) => (
             <DropdownMenuItem disabled={disabled || isDraft} onSelect={(e) => e.preventDefault()}>
               <div className="flex items-center">
-                {loading ? <Loader className="mr-2 h-4 w-4" /> : <Share className="mr-2 h-4 w-4" />}
+                {loading ? <Loader className="me-2 h-4 w-4" /> : <Share className="me-2 h-4 w-4" />}
                 <Trans>Share Signing Card</Trans>
               </div>
             </DropdownMenuItem>

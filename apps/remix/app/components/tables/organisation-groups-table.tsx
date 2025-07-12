@@ -80,7 +80,7 @@ export const OrganisationGroupsDataTable = () => {
       {
         header: _(msg`Actions`),
         cell: ({ row }) => (
-          <div className="flex justify-end space-x-2">
+          <div className="flex justify-end gap-2">
             <Button asChild variant="outline">
               <Link to={`/o/${organisation.url}/settings/groups/${row.original.id}`}>
                 <Trans>Manage</Trans>

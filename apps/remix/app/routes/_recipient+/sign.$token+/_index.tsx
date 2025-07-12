@@ -194,7 +194,7 @@ export default function SigningPage() {
 
         <div className="relative mt-2 flex w-full flex-col items-center">
           <div className="mt-8 flex items-center text-center text-red-600">
-            <Clock8 className="mr-2 h-5 w-5" />
+            <Clock8 className="me-2 h-5 w-5" />
             <span className="text-sm">
               <Trans>Document Cancelled</Trans>
             </span>

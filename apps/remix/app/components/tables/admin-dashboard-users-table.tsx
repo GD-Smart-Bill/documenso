@@ -92,7 +92,7 @@ export const AdminDashboardUsersTable = ({
           return (
             <Button className="w-24" asChild>
               <Link to={`/admin/users/${row.original.id}`}>
-                <Edit className="-ml-1 mr-2 h-4 w-4" />
+                <Edit className="-ms-1 me-2 h-4 w-4" />
                 Edit
               </Link>
             </Button>

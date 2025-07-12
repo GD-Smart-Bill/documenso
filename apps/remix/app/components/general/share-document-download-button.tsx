@@ -46,7 +46,7 @@ export const ShareDocumentDownloadButton = ({
 
   return (
     <Button loading={isDownloading} onClick={onDownloadClick}>
-      {!isDownloading && <Download className="mr-2 h-4 w-4" />}
+      {!isDownloading && <Download className="me-2 h-4 w-4" />}
       <Trans>Download</Trans>
     </Button>
   );

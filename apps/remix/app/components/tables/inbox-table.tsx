@@ -238,19 +238,19 @@ export const InboxTableActionButton = ({ row }: InboxTableActionButtonProps) => 
           {match(role)
             .with(RecipientRole.SIGNER, () => (
               <>
-                <PencilIcon className="-ml-1 mr-2 h-4 w-4" />
+                <PencilIcon className="-ms-1 me-2 h-4 w-4" />
                 <Trans>Sign</Trans>
               </>
             ))
             .with(RecipientRole.APPROVER, () => (
               <>
-                <CheckCircleIcon className="-ml-1 mr-2 h-4 w-4" />
+                <CheckCircleIcon className="-ms-1 me-2 h-4 w-4" />
                 <Trans>Approve</Trans>
               </>
             ))
             .otherwise(() => (
               <>
-                <EyeIcon className="-ml-1 mr-2 h-4 w-4" />
+                <EyeIcon className="-ms-1 me-2 h-4 w-4" />
                 <Trans>View</Trans>
               </>
             ))}
@@ -259,13 +259,13 @@ export const InboxTableActionButton = ({ row }: InboxTableActionButtonProps) => 
     ))
     .with({ isPending: true, isSigned: true }, () => (
       <Button className="w-32" disabled={true}>
-        <EyeIcon className="-ml-1 mr-2 h-4 w-4" />
+        <EyeIcon className="-ms-1 me-2 h-4 w-4" />
         <Trans>View</Trans>
       </Button>
     ))
     .with({ isComplete: true }, () => (
       <Button className="w-32" onClick={onDownloadClick}>
-        <DownloadIcon className="-ml-1 mr-2 inline h-4 w-4" />
+        <DownloadIcon className="-ms-1 me-2 inline h-4 w-4" />
         <Trans>Download</Trans>
       </Button>
     ))

@@ -68,7 +68,7 @@ const MultiSelectRoleCombobox = ({ listValues, onChange }: ComboboxProps) => {
               <CommandItem key={i} onSelect={() => handleSelect(value)}>
                 <Check
                   className={cn(
-                    'mr-2 h-4 w-4',
+                    'me-2 h-4 w-4',
                     selectedValues.includes(value) ? 'opacity-100' : 'opacity-0',
                   )}
                 />

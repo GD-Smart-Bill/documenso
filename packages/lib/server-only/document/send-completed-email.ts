@@ -118,7 +118,7 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
         },
       ],
       from: {
-        name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Documenso',
+        name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Smartsign',
         address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@documenso.com',
       },
       subject: i18n._(msg`Signing Complete!`),
@@ -195,7 +195,7 @@ export const sendCompletedEmail = async ({ documentId, requestMetadata }: SendDo
           },
         ],
         from: {
-          name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Documenso',
+          name: env('NEXT_PRIVATE_SMTP_FROM_NAME') || 'Smartsign',
           address: env('NEXT_PRIVATE_SMTP_FROM_ADDRESS') || 'noreply@documenso.com',
         },
         subject:

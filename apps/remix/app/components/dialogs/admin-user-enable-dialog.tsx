@@ -72,7 +72,7 @@ export const AdminUserEnableDialog = ({ className, userToEnable }: AdminUserEnab
       >
         <div>
           <AlertTitle>Enable Account</AlertTitle>
-          <AlertDescription className="mr-2">
+          <AlertDescription className="me-2">
             <Trans>
               Enabling the account results in the user being able to use the account again, and all
               the related features such as webhooks, teams, and API keys for example.

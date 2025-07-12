@@ -225,7 +225,7 @@ export function BrandingPreferencesForm({
                           className={cn(
                             'h-auto p-2',
                             'file:text-primary hover:file:bg-primary/90',
-                            'file:mr-4 file:cursor-pointer file:rounded-md file:border-0',
+                            'file:me-4 file:cursor-pointer file:rounded-md file:border-0',
                             'file:p-2 file:py-2 file:font-medium',
                             'file:bg-primary file:text-primary-foreground',
                             !isBrandingEnabled && 'cursor-not-allowed',
@@ -234,7 +234,7 @@ export function BrandingPreferencesForm({
                         />
                       </FormControl>
 
-                      <div className="absolute right-2 top-0 inline-flex h-full items-center justify-center">
+                      <div className="absolute end-2 top-0 inline-flex h-full items-center justify-center">
                         <Button
                           type="button"
                           variant="link"

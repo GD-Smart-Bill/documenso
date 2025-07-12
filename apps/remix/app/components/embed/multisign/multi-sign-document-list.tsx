@@ -145,7 +145,7 @@ export function MultiSignDocumentList({ envelopes, onDocumentSelect }: MultiSign
               .otherwise(() => null)}
 
             <Button
-              className="-mr-2"
+              className="-me-2"
               variant="outline"
               size="sm"
               onClick={() => handleView(envelope.document)}

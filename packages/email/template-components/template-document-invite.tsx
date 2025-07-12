@@ -99,7 +99,7 @@ export const TemplateDocumentInvite = ({
 
         <Section className="mb-6 mt-8 text-center">
           <Button
-            className="mr-4 inline-flex items-center justify-center rounded-lg bg-red-500 px-6 py-3 text-center text-sm font-medium text-black no-underline"
+            className="me-4 inline-flex items-center justify-center rounded-lg bg-red-500 px-6 py-3 text-center text-sm font-medium text-black no-underline"
             href={rejectDocumentLink}
           >
             <Trans>Reject Document</Trans>

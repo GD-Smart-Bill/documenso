@@ -14,7 +14,7 @@ export default function EmailVerificationWithoutTokenPage() {
   return (
     <div className="w-screen max-w-lg px-4">
       <div className="flex w-full items-start">
-        <div className="mr-4 mt-1 hidden md:block">
+        <div className="me-4 mt-1 hidden md:block">
           <XCircle className="text-destructive h-10 w-10" strokeWidth={2} />
         </div>
 

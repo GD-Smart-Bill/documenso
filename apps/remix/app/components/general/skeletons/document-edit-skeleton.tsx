@@ -7,8 +7,8 @@ import { Skeleton } from '@documenso/ui/primitives/skeleton';
 export default function DocumentEditSkeleton() {
   return (
     <div className="mx-auto -mt-4 flex w-full max-w-screen-xl flex-col px-4 md:px-8">
-      <Link to="/" className="flex grow-0 items-center text-documenso-500 hover:opacity-80">
-        <ChevronLeft className="mr-2 inline-block h-5 w-5" />
+      <Link to="/" className="text-documenso-500 flex grow-0 items-center hover:opacity-80">
+        <ChevronLeft className="me-2 inline-block h-5 w-5" />
         <Trans>Documents</Trans>
       </Link>
 

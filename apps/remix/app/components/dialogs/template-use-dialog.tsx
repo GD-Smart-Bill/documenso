@@ -213,7 +213,7 @@ export function TemplateUseDialog({
       <DialogTrigger asChild>
         {trigger || (
           <Button variant="outline" className="bg-background">
-            <Plus className="-ml-1 mr-2 h-4 w-4" />
+            <Plus className="-ms-1 me-2 h-4 w-4" />
             <Trans>Use Template</Trans>
           </Button>
         )}
@@ -520,7 +520,7 @@ export function TemplateUseDialog({
                                 />
 
                                 {field.value && (
-                                  <div className="absolute right-2 top-2">
+                                  <div className="absolute end-2 top-2">
                                     <Button
                                       type="button"
                                       variant="destructive"

@@ -206,8 +206,8 @@ export const AddSubjectFormPartial = ({
 
                     <p className="mt-2">
                       <Trans>
-                        We will generate signing links for you, which you can send to the
-                        recipients through your method of choice.
+                        We will generate signing links for you, which you can send to the recipients
+                        through your method of choice.
                       </Trans>
                     </p>
                   </div>
@@ -248,12 +248,12 @@ export const AddSubjectFormPartial = ({
                               });
                             }}
                             badgeContentUncopied={
-                              <p className="ml-1 text-xs">
+                              <p className="ms-1 text-xs">
                                 <Trans>Copy</Trans>
                               </p>
                             }
                             badgeContentCopied={
-                              <p className="ml-1 text-xs">
+                              <p className="ms-1 text-xs">
                                 <Trans>Copied</Trans>
                               </p>
                             }

@@ -6,7 +6,7 @@ import { cva } from 'class-variance-authority';
 import { cn } from '../lib/utils';
 
 const alertVariants = cva(
-  'relative w-full rounded-lg p-4 [&>svg]:absolute [&>svg]:text-foreground [&>svg]:left-4 [&>svg]:top-4 [&>svg+div]:translate-y-[-3px] [&>svg~*]:pl-8',
+  'relative w-full rounded-lg p-4 [&>svg]:absolute [&>svg]:text-foreground [&>svg]:left-4 [&>svg]:top-4 [&>svg+div]:translate-y-[-3px] [&>svg~*]:pl-8]',
   {
     variants: {
       variant: {
@@ -39,7 +39,11 @@ const Alert = React.forwardRef<
   <div
     ref={ref}
     role="alert"
-    className={cn('space-y-2', alertVariants({ variant, padding }), className)}
+    className={cn(
+      'direction-[var(--text-direction, ltr)] space-y-2',
+      alertVariants({ variant, padding }),
+      className,
+    )}
     {...props}
   />
 ));

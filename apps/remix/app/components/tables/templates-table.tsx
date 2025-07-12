@@ -90,7 +90,7 @@ export const TemplatesTable = ({
                 <ul className="text-muted-foreground space-y-0.5 divide-y [&>li]:p-4">
                   <li>
                     <h2 className="mb-2 flex flex-row items-center font-semibold">
-                      <Globe2Icon className="mr-2 h-5 w-5 text-green-500 dark:text-green-300" />
+                      <Globe2Icon className="me-2 h-5 w-5 text-green-500 dark:text-green-300" />
                       <Trans>Public</Trans>
                     </h2>
 
@@ -117,7 +117,7 @@ export const TemplatesTable = ({
                   </li>
                   <li>
                     <h2 className="mb-2 flex flex-row items-center font-semibold">
-                      <LockIcon className="mr-2 h-5 w-5 text-blue-600 dark:text-blue-300" />
+                      <LockIcon className="me-2 h-5 w-5 text-blue-600 dark:text-blue-300" />
                       {team?.id ? <Trans>Team Only</Trans> : <Trans>Private</Trans>}
                     </h2>
 

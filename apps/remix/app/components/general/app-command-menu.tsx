@@ -309,7 +309,7 @@ const ThemeCommands = () => {
       onSelect={() => setTheme(theme.theme)}
       className="-my-1 mx-2 rounded-lg first:mt-2 last:mb-2"
     >
-      <theme.icon className="mr-2" />
+      <theme.icon className="me-2" />
       {_(theme.label)}
     </CommandItem>
   ));
@@ -364,7 +364,7 @@ const LanguageCommands = () => {
       className="-my-1 mx-2 rounded-lg first:mt-2 last:mb-2"
     >
       <CheckIcon
-        className={cn('mr-2 h-4 w-4', i18n.locale === language.short ? 'opacity-100' : 'opacity-0')}
+        className={cn('me-2 h-4 w-4', i18n.locale === language.short ? 'opacity-100' : 'opacity-0')}
       />
 
       {language.full}

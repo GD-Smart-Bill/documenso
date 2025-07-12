@@ -160,7 +160,7 @@ export default function OrganisationGroupSettingsPage({ params }: Route.Componen
             <Trans>Subscription</Trans>
           </AlertTitle>
 
-          <AlertDescription className="mr-2">
+          <AlertDescription className="me-2">
             {organisation.subscription ? (
               <span>
                 {SUBSCRIPTION_STATUS_MAP[organisation.subscription.status]} subscription found

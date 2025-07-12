@@ -152,7 +152,7 @@ export const sendTeamDeleteEmail = async ({
       name: FROM_NAME,
       address: FROM_ADDRESS,
     },
-    subject: i18n._(msg`Team "${team.name}" has been deleted on Documenso`),
+    subject: i18n._(msg`Team "${team.name}" has been deleted on Smartsign`),
     html,
     text,
   });

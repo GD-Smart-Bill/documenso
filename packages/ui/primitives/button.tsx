@@ -34,7 +34,7 @@ const buttonVariants = cva(
   },
 );
 
-const loaderVariants = cva('mr-2 animate-spin', {
+const loaderVariants = cva('me-2 animate-spin', {
   variants: {
     size: {
       default: 'h-5 w-5',
@@ -76,7 +76,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
         disabled={isDisabled}
       >
-        {isLoading && <Loader className={cn('mr-2 animate-spin', loaderVariants({ size }))} />}
+        {isLoading && <Loader className={cn('me-2 animate-spin', loaderVariants({ size }))} />}
         {props.children}
       </button>
     );

@@ -53,7 +53,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
               <Trans>Team email</Trans>
             </AlertTitle>
 
-            <AlertDescription className="mr-2">
+            <AlertDescription className="me-2">
               <Trans>
                 You can view documents associated with this email and use this identity when sending
                 documents.
@@ -82,7 +82,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
               />
 
               <div className="flex flex-row items-center pr-2">
-                <div className="text-muted-foreground mr-4 flex flex-row items-center text-sm xl:mr-8">
+                <div className="text-muted-foreground me-4 flex flex-row items-center text-sm xl:mr-8">
                   {match({
                     teamEmail: team.teamEmail,
                     emailVerification: team.emailVerification,
@@ -132,7 +132,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
                 <Trans>Team email</Trans>
               </AlertTitle>
 
-              <AlertDescription className="mr-2">
+              <AlertDescription className="me-2">
                 <ul className="text-muted-foreground mt-0.5 list-inside list-disc text-sm">
                   {/* Feature not available yet. */}
                   {/* <li>Display this name and email when sending documents</li> */}
@@ -159,7 +159,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
                 <Trans>Delete team</Trans>
               </AlertTitle>
 
-              <AlertDescription className="mr-2">
+              <AlertDescription className="me-2">
                 <Trans>
                   This team, and any associated data excluding billing invoices will be permanently
                   deleted.

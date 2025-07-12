@@ -73,7 +73,7 @@ export const OrganisationBillingBanner = () => {
       >
         <div className="mx-auto flex max-w-screen-xl items-center justify-center gap-x-4 px-4 py-2 text-sm font-medium">
           <div className="flex items-center">
-            <AlertTriangle className="mr-2.5 h-5 w-5" />
+            <AlertTriangle className="me-2.5 h-5 w-5" />
 
             {match(subscriptionStatus)
               .with(SubscriptionStatus.PAST_DUE, () => <Trans>Payment overdue</Trans>)

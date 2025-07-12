@@ -406,8 +406,8 @@ msgid "<0>\"{0}\"</0>is no longer available to sign"
 msgstr "<0>\"{0}\"</0> steht nicht mehr zur Unterschrift zur Verfügung"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
-msgstr "<0>{teamName}</0> hat angefragt, Ihre E-Mail-Adresse für ihr Team bei Documenso zu verwenden."
+msgid "<0>{teamName}</0> has requested to use your email address for their team on Smartsign."
+msgstr "<0>{teamName}</0> hat angefragt, Ihre E-Mail-Adresse für ihr Team bei Smartsign zu verwenden."
 
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 msgid "<0>Click to upload</0> or drag and drop"
@@ -596,8 +596,8 @@ msgid "A means to print or download documents for your records"
 msgstr "Ein Mittel, um Dokumente für Ihre Unterlagen zu drucken oder herunterzuladen"
 
 #: packages/email/templates/organisation-join.tsx
-msgid "A member has joined your organisation on Documenso"
-msgstr "Ein Mitglied ist Ihrer Organisation bei Documenso beigetreten"
+msgid "A member has joined your organisation on Smartsign"
+msgstr "Ein Mitglied ist Ihrer Organisation bei Smartsign beigetreten"
 
 #: packages/lib/jobs/definitions/emails/send-organisation-member-left-email.handler.ts
 msgid "A member has left your organisation"
@@ -608,8 +608,8 @@ msgid "A member has left your organisation {organisationName}"
 msgstr "Ein Mitglied hat Ihre Organisation {organisationName} verlassen"
 
 #: packages/email/templates/organisation-leave.tsx
-msgid "A member has left your organisation on Documenso"
-msgstr "Ein Mitglied hat Ihre Organisation auf Documenso verlassen"
+msgid "A member has left your organisation on Smartsign"
+msgstr "Ein Mitglied hat Ihre Organisation auf Smartsign verlassen"
 
 #: packages/lib/jobs/definitions/emails/send-organisation-member-joined-email.handler.ts
 msgid "A new member has joined your organisation"
@@ -646,8 +646,8 @@ msgstr "Ein Empfänger wurde aktualisiert"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Documenso"
-msgstr "Eine Anfrage zur Verwendung Ihrer E-Mail wurde von {0} auf Documenso initiiert"
+msgid "A request to use your email has been initiated by {0} on Smartsign"
+msgstr "Eine Anfrage zur Verwendung Ihrer E-Mail wurde von {0} auf Smartsign initiiert"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Smartsign"
@@ -694,12 +694,12 @@ msgid "Accept"
 msgstr "Akzeptieren"
 
 #: packages/email/templates/organisation-invite.tsx
-msgid "Accept invitation to join an organisation on Documenso"
-msgstr "Einladung annehmen, um einer Organisation auf Documenso beizutreten"
+msgid "Accept invitation to join an organisation on Smartsign"
+msgstr "Einladung annehmen, um einer Organisation auf Smartsign beizutreten"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "Accept team email request for {teamName} on Documenso"
-msgstr "Akzeptiere die Team-E-Mail-Anfrage für {teamName} bei Documenso"
+msgid "Accept team email request for {teamName} on Smartsign"
+msgstr "Akzeptiere die Team-E-Mail-Anfrage für {teamName} bei Smartsign"
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Acceptance and Consent"
@@ -3962,8 +3962,8 @@ msgid "It's currently not your turn to sign. You will receive an email with inst
 msgstr "Es ist derzeit nicht deine Reihe zu unterschreiben. Du erhältst eine E-Mail mit Anweisungen, sobald es deine Reihe ist, das Dokument zu unterschreiben."
 
 #: packages/email/templates/organisation-invite.tsx
-msgid "Join {organisationName} on Documenso"
-msgstr "Tritt {organisationName} auf Documenso bei"
+msgid "Join {organisationName} on Smartsign"
+msgstr "Tritt {organisationName} auf Smartsign bei"
 
 #. placeholder {0}: DateTime.fromJSDate(team.createdAt).toRelative({ style: 'short' })
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
@@ -6360,8 +6360,8 @@ msgstr "Team"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Documenso"
-msgstr "Team \"{0}\" wurde auf Documenso gelöscht"
+msgid "Team \"{0}\" has been deleted on Smartsign"
+msgstr "Team \"{0}\" wurde auf Smartsign gelöscht"
 
 #: packages/lib/constants/teams-translations.ts
 msgid "Team Admin"
@@ -6403,8 +6403,8 @@ msgid "Team email removed"
 msgstr "Team-E-Mail entfernt"
 
 #: packages/email/templates/team-email-removed.tsx
-msgid "Team email removed for {teamName} on Documenso"
-msgstr "Team-E-Mail für {teamName} auf Documenso entfernt"
+msgid "Team email removed for {teamName} on Smartsign"
+msgstr "Team-E-Mail für {teamName} auf Smartsign entfernt"
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Team email verification"
@@ -6959,8 +6959,8 @@ msgid "This document has been signed by all recipients"
 msgstr "Dieses Dokument wurde von allen Empfängern unterschrieben"
 
 #: apps/remix/app/components/general/document/document-certificate-qr-view.tsx
-msgid "This document is available in your Documenso account. You can view more details, recipients, and audit logs there."
-msgstr "Dieses Dokument ist in Ihrem Documenso-Konto verfügbar. Dort können Sie weitere Details, Empfänger und Protokolle einsehen."
+msgid "This document is available in your Smartsign account. You can view more details, recipients, and audit logs there."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx
 msgid "This document is currently a draft and has not been sent"
@@ -8430,8 +8430,8 @@ msgstr "Sie wurden von <0>{0}</0> eingeladen, deren Organisation beizutreten."
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Documenso"
-msgstr "Du wurdest eingeladen, {0} auf Documenso beizutreten"
+msgid "You have been invited to join {0} on Smartsign"
+msgstr "Du wurdest eingeladen, {0} auf Smartsign beizutreten"
 
 #: packages/email/templates/organisation-invite.tsx
 msgid "You have been invited to join the following organisation"
@@ -8475,8 +8475,8 @@ msgid "You have reached the maximum limit of {0} direct templates. <0>Upgrade yo
 msgstr "Sie haben das maximale Limit von {0} direkten Vorlagen erreicht. <0>Upgrade your account to continue!</0>"
 
 #: apps/remix/app/components/dialogs/team-create-dialog.tsx
-msgid "You have reached the maximum number of teams for your plan. Please contact sales at <0>support@documenso.com</0> if you would like to adjust your plan."
-msgstr "Sie haben die maximale Anzahl von Teams für Ihren Plan erreicht. Bitte kontaktieren Sie den Verkauf unter <0>support@documenso.com</0>, wenn Sie Ihren Plan ändern möchten."
+msgid "You have reached the maximum number of teams for your plan. Please contact sales at <0>support@smartbill.co.il</0> if you would like to adjust your plan."
+msgstr "Sie haben die maximale Anzahl von Teams für Ihren Plan erreicht. Bitte kontaktieren Sie den Verkauf unter <0>support@smartbill.co.il</0>, wenn Sie Ihren Plan ändern möchten."
 
 #: apps/remix/app/components/general/document/document-upload.tsx
 #: apps/remix/app/components/general/document/document-drop-zone-wrapper.tsx
@@ -8740,8 +8740,8 @@ msgid "Your personal organisation"
 msgstr "Ihre persönliche Organisation"
 
 #: apps/remix/app/components/dialogs/organisation-member-invite-dialog.tsx
-msgid "Your plan does not support inviting members. Please upgrade or your plan or contact sales at <0>support@documenso.com</0> if you would like to discuss your options."
-msgstr "Ihr Plan unterstützt das Einladen von Mitgliedern nicht. Bitte aktualisieren Sie Ihren Plan oder kontaktieren Sie den Verkauf unter <0>support@documenso.com</0>, wenn Sie Ihre Optionen besprechen möchten."
+msgid "Your plan does not support inviting members. Please upgrade or your plan or contact sales at <0>support@smartbill.co.il</0> if you would like to discuss your options."
+msgstr "Ihr Plan unterstützt das Einladen von Mitgliedern nicht. Bitte aktualisieren Sie Ihren Plan oder kontaktieren Sie den Verkauf unter <0>support@smartbill.co.il</0>, wenn Sie Ihre Optionen besprechen möchten."
 
 #: apps/remix/app/components/forms/profile.tsx
 msgid "Your profile has been updated successfully."

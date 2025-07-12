@@ -33,9 +33,9 @@ export const OrganisationInvitations = ({ className }: { className?: string }) =
         <AnimateGenericFadeInOut>
           <Alert variant="secondary" className={className}>
             <div className="flex h-full flex-row items-center p-2">
-              <BellIcon className="mr-4 h-5 w-5 text-blue-800" />
+              <BellIcon className="me-4 h-5 w-5 text-blue-800" />
 
-              <AlertDescription className="mr-2">
+              <AlertDescription className="me-2">
                 <Plural
                   value={data.length}
                   one={

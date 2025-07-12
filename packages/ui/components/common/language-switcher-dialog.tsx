@@ -50,7 +50,7 @@ export const LanguageSwitcherDialog = ({ open, setOpen }: LanguageSwitcherDialog
             >
               <CheckIcon
                 className={cn(
-                  'mr-2 h-4 w-4',
+                  'me-2 h-4 w-4',
                   i18n.locale === language.short ? 'opacity-100' : 'opacity-0',
                 )}
               />

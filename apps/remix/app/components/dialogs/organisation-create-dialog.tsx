@@ -349,7 +349,7 @@ const BillingPlanForm = ({
                 <Trans>Free</Trans>
               </p>
 
-              <Badge size="small" variant="neutral" className="ml-1.5">
+              <Badge size="small" variant="neutral" className="ms-1.5">
                 {canCreateFreeOrganisation ? (
                   <Trans>1 Free organisations left</Trans>
                 ) : (

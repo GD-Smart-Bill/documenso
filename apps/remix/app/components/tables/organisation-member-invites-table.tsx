@@ -145,7 +145,7 @@ export const OrganisationMemberInvitesTable = () => {
                   })
                 }
               >
-                <History className="mr-2 h-4 w-4" />
+                <History className="me-2 h-4 w-4" />
                 <Trans>Resend</Trans>
               </DropdownMenuItem>
 
@@ -157,7 +157,7 @@ export const OrganisationMemberInvitesTable = () => {
                   })
                 }
               >
-                <Trash2 className="mr-2 h-4 w-4" />
+                <Trash2 className="me-2 h-4 w-4" />
                 <Trans>Remove</Trans>
               </DropdownMenuItem>
             </DropdownMenuContent>

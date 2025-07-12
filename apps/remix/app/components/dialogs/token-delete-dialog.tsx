@@ -108,7 +108,7 @@ export default function TokenDeleteDialog({ token, onDelete, children }: TokenDe
     >
       <DialogTrigger asChild={true}>
         {children ?? (
-          <Button className="mr-4" variant="destructive">
+          <Button className="me-4" variant="destructive">
             <Trans>Delete</Trans>
           </Button>
         )}

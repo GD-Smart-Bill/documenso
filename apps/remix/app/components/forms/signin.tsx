@@ -382,7 +382,7 @@ export const SignInForm = ({
               disabled={isSubmitting}
               onClick={onSignInWithGoogleClick}
             >
-              <FcGoogle className="mr-2 h-5 w-5" />
+              <FcGoogle className="me-2 h-5 w-5" />
               Google
             </Button>
           )}
@@ -396,7 +396,7 @@ export const SignInForm = ({
               disabled={isSubmitting}
               onClick={onSignInWithOIDCClick}
             >
-              <FaIdCardClip className="mr-2 h-5 w-5" />
+              <FaIdCardClip className="me-2 h-5 w-5" />
               {oidcProviderLabel || 'OIDC'}
             </Button>
           )}
@@ -410,7 +410,7 @@ export const SignInForm = ({
             className="bg-background text-muted-foreground border"
             onClick={onSignInWithPasskey}
           >
-            {!isPasskeyLoading && <KeyRoundIcon className="-ml-1 mr-1 h-5 w-5" />}
+            {!isPasskeyLoading && <KeyRoundIcon className="-ms-1 mr-1 h-5 w-5" />}
             <Trans>Passkey</Trans>
           </Button>
         </fieldset>

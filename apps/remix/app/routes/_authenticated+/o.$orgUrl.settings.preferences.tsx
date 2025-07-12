@@ -174,7 +174,7 @@ export default function OrganisationSettingsPreferencesPage() {
               <Trans>Branding Preferences</Trans>
             </AlertTitle>
 
-            <AlertDescription className="mr-2">
+            <AlertDescription className="me-2">
               <Trans>Currently branding can only be configured for Teams and above plans.</Trans>
             </AlertDescription>
           </div>

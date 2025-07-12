@@ -484,7 +484,7 @@ const MultiSelect = ({
               {
                 'w-full': hidePlaceholderWhenSelected,
                 'px-3 py-2': selected.length === 0,
-                'ml-1': selected.length !== 0,
+                'ms-1': selected.length !== 0,
               },
               inputProps?.className,
             )}
