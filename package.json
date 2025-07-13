@@ -33,7 +33,12 @@
     "make:version": "npm version --workspace @documenso/remix --include-workspace-root --no-git-tag-version -m \"v%s\"",
     "translate": "npm run translate:extract && npm run translate:compile",
     "translate:extract": "lingui extract --clean",
-    "translate:compile": "lingui compile"
+    "translate:compile": "lingui compile",
+    "test:browserless:light": "npx tsx scripts/run-browserless-stress-test.ts light",
+    "test:browserless:medium": "npx tsx scripts/run-browserless-stress-test.ts medium",
+    "test:browserless:heavy": "npx tsx scripts/run-browserless-stress-test.ts heavy",
+    "test:browserless:extreme": "npx tsx scripts/run-browserless-stress-test.ts extreme",
+    "test:browserless:certificate": "npx tsx scripts/run-browserless-stress-test.ts certificate"
   },
   "packageManager": "npm@10.7.0",
   "engines": {

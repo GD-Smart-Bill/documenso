@@ -24,11 +24,14 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
 
   const browserlessUrl = env('NEXT_PRIVATE_BROWSERLESS_URL');
 
+  console.log('[CERT] browserlessUrl', browserlessUrl);
   if (browserlessUrl) {
     // !: Use CDP rather than the default `connect` method to avoid coupling to the playwright version.
     // !: Previously we would have to keep the playwright version in sync with the browserless version to avoid errors.
     browser = await chromium.connectOverCDP(browserlessUrl);
+    console.log('[CERT] connected to browserless');
   } else {
+    console.log('[CERT] using system chromium');
     // Use system Chromium in Docker environment
     const executablePath =
       env('PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH') || '/usr/bin/chromium-browser';
@@ -44,9 +47,9 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
   }
 
   const version = browser.version();
-  console.log('version', version);
+  console.log('[CERT] version', version);
   const path = chromium.executablePath();
-  console.log('path', path);
+  console.log('[CERT] path', path);
 
   const browserContext = await browser.newContext();
 
@@ -63,6 +66,10 @@ export const getCertificatePdf = async ({ documentId, language }: GetCertificate
   ]);
 
   try {
+    console.log(
+      '[CERT] goto',
+      `${NEXT_PUBLIC_WEBAPP_URL()}/__htmltopdf/certificate?d=${encryptedId}`,
+    );
     await page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}/__htmltopdf/certificate?d=${encryptedId}`, {
       waitUntil: 'networkidle',
       timeout: 10_000,

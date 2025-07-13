@@ -144,11 +144,18 @@ export const run = async ({
   const pdfData = await getFileServerSide(documentData);
 
   // TODO: enable by default
+  console.log(
+    '[CERT] settings.includeSigningCertificate [handler]',
+    settings.includeSigningCertificate,
+  );
   const certificateData = settings.includeSigningCertificate
     ? await getCertificatePdf({
         documentId,
         language: document.documentMeta?.language,
-      }).catch(() => null)
+      }).catch((e) => {
+        console.log('[CERT] error', e);
+        return null;
+      })
     : null;
 
   const newDataId = await io.runTask('decorate-and-sign-pdf', async () => {

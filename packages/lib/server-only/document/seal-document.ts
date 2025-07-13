@@ -115,6 +115,7 @@ export const sealDocument = async ({
   // !: Need to write the fields onto the document as a hard copy
   const pdfData = await getFileServerSide(documentData);
 
+  console.log('[CERT] settings.includeSigningCertificate2', settings.includeSigningCertificate);
   const certificateData = settings.includeSigningCertificate
     ? await getCertificatePdf({
         documentId,

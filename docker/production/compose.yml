@@ -20,10 +20,33 @@ services:
         max-size: '10m'
         max-file: '3'
 
+  browserless:
+    image: ghcr.io/browserless/chromium
+    container_name: browserless
+    environment:
+      - TOKEN=6R0W53R135510
+      - CONCURRENT=5
+      - QUEUED=20
+      - HEALTH=true
+      - TIMEOUT=60000
+      - KEEP_ALIVE=true
+      - PREBOOT_CHROME=true
+      - PREBOOT_QUANTITY=1
+      - FUNCTION_ENABLE_INCOGNITO_MODE=true
+    ports:
+      - '3001:3000'
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+        max-file: '3'
+
   documenso:
     image: documenso/documenso:latest
     depends_on:
       database:
+        condition: service_healthy
+      browserless:
         condition: service_healthy
     environment:
       - PORT=${PORT:-3000}
@@ -69,6 +92,7 @@ services:
       - NEXT_PRIVATE_INNGEST_EVENT_KEY=${NEXT_PRIVATE_INNGEST_EVENT_KEY}
       - INNGEST_SIGNING_KEY=${INNGEST_SIGNING_KEY}
       - INNGEST_DEV=${INNGEST_DEV}
+      - NEXT_PRIVATE_BROWSERLESS_URL=http://browserless:3000
     ports:
       - ${PORT:-3000}:${PORT:-3000}
     volumes:

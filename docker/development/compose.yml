@@ -18,6 +18,28 @@ services:
     ports:
       - 54320:5432
 
+  browserless:
+    image: ghcr.io/browserless/chromium
+    container_name: browserless
+    environment:
+      - TOKEN=6R0W53R135510
+      - CONCURRENT=5
+      - QUEUED=20
+      - HEALTH=true
+      - TIMEOUT=60000
+      - KEEP_ALIVE=true
+      - PREBOOT_CHROME=true
+      - PREBOOT_QUANTITY=1
+      - FUNCTION_ENABLE_INCOGNITO_MODE=true
+    ports:
+      - '3001:3000'
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:3000/health']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
   inbucket:
     image: inbucket/inbucket
     container_name: mailserver
