@@ -115,9 +115,8 @@ export const getServerLimits = async ({
     }),
   ]);
 
-  quota.documents = documentsLimit;
   remaining.directTemplates = Math.max(remaining.directTemplates - directTemplates, 0);
-  remaining.documents = Math.max(documentsLimit - documents, 0);
+  remaining.documents = Math.max(quota.documents - documents, 0);
 
   return {
     quota,
