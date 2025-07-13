@@ -6,6 +6,7 @@ import { Upload } from 'lucide-react';
 import { useDropzone } from 'react-dropzone';
 import { Link } from 'react-router';
 
+import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
 import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
 import { useSession } from '@documenso/lib/client-only/providers/session';
 import {
@@ -47,6 +48,9 @@ export const DocumentDropzone = ({
   const organisation = useCurrentOrganisation();
 
   const isPersonalLayoutMode = isPersonalLayout(organisations);
+  const { quota, remaining } = useLimits();
+
+  const isUploadDisabled = remaining.documents === 0;
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
@@ -111,22 +115,35 @@ export const DocumentDropzone = ({
                 </a>
               </div>
             </div>
-          </TooltipTrigger >
+          </TooltipTrigger>
           <TooltipContent>
             <p className="text-sm">{_(disabledMessage)}</p>
           </TooltipContent>
-        </Tooltip >
-      </TooltipProvider >
+        </Tooltip>
+      </TooltipProvider>
     );
   }
 
   return (
-    <Button loading={loading} aria-disabled={disabled} {...getRootProps()} {...props}>
-      <div className="flex items-center gap-2">
-        <input {...getInputProps()} />
-        {!loading && <Upload className="h-4 w-4" />}
-        {disabled ? _(disabledMessage) : _(heading[type])}
-      </div>
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button loading={loading} aria-disabled={disabled} {...getRootProps()} {...props}>
+          <div className="flex items-center gap-2">
+            <input {...getInputProps()} />
+            {!loading && <Upload className="h-4 w-4" />}
+            {disabled ? _(disabledMessage) : _(heading[type])}
+          </div>
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent side="bottom">
+        {!isUploadDisabled && remaining.documents > 0 && Number.isFinite(remaining.documents) && (
+          <p className="text-muted-foreground/80 text-sm">
+            <Trans>
+              {remaining.documents} of {quota.documents} documents remaining this month.
+            </Trans>
+          </p>
+        )}
+      </TooltipContent>
+    </Tooltip>
   );
 };
