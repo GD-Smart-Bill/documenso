@@ -500,25 +500,6 @@ ALTER TABLE "Team" ADD CONSTRAINT "Team_teamGlobalSettingsId_fkey" FOREIGN KEY (
 
 -- [CUSTOM_CHANGE] FROM HERE ON IT'S ALL CUSTOM
 
--- [CUSTOM_CHANGE] Ensure all teams have valid organisationId before proceeding
--- This is a safety check to prevent null organisationId issues
-UPDATE "Team" 
-SET "organisationId" = (
-  SELECT o."id" 
-  FROM "Organisation" o 
-  WHERE o."ownerUserId" = "Team"."ownerUserId" 
-  LIMIT 1
-)
-WHERE "organisationId" IS NULL AND "ownerUserId" IS NOT NULL;
-
--- [CUSTOM_CHANGE] Additional safety check - remove any teams that still don't have organisationId
--- This can happen if there's no organisation for the team owner
-DELETE FROM "Team" WHERE "organisationId" IS NULL;
-
--- [CUSTOM_CHANGE] Clean up orphaned TeamMember records
--- This can happen if teams were deleted above
-DELETE FROM "TeamMember" WHERE "teamId" NOT IN (SELECT "id" FROM "Team");
-
 /*
  * The current state of the migration is that:
  * - All users have a team with their personal entities excluding subscriptions
@@ -782,7 +763,6 @@ WITH team_internal_groups AS (
         'MEMBER'::"TeamMemberRole"
       ]) as team_role
   FROM "Team" t
-  WHERE t."organisationId" IS NOT NULL -- [CUSTOM_CHANGE] Ensure we only process teams with valid organisationId
 ),
 created_org_groups AS (
   -- Step 2: Create OrganisationGroups with temp data
@@ -802,7 +782,6 @@ created_org_groups AS (
     tig.team_id,
     tig.team_role::TEXT
   FROM team_internal_groups tig
-  WHERE tig."organisationId" IS NOT NULL -- [CUSTOM_CHANGE] Double-check organisationId is not null
   RETURNING "id", temp_team_id, temp_team_role
 )
 -- Step 3: Create TeamGroups using the temp data
@@ -829,7 +808,6 @@ SELECT DISTINCT
   t."organisationId"
 FROM "TeamMember" tm
 JOIN "Team" t ON t."id" = tm."teamId"
-WHERE t."organisationId" IS NOT NULL -- [CUSTOM_CHANGE] Only create members for teams with valid organisationId
 GROUP BY tm."userId", t."organisationId";
 
 -- Create OrganisationMembers for Organisations with 0 members
@@ -859,9 +837,7 @@ JOIN "Organisation" o ON o."id" = t."organisationId"
 JOIN "OrganisationMember" om ON om."userId" = tm."userId" AND om."organisationId" = t."organisationId"
 JOIN "TeamGroup" tg ON tg."teamId" = t."id" AND tg."teamRole" = tm."role"
 JOIN "OrganisationGroup" og ON og."id" = tg."organisationGroupId" AND og."type" = 'INTERNAL_TEAM'::"OrganisationGroupType"
-WHERE tm."userId" != o."ownerUserId"
-  AND t."organisationId" IS NOT NULL -- [CUSTOM_CHANGE] Only process teams with valid organisationId
-  AND om."organisationId" IS NOT NULL; -- [CUSTOM_CHANGE] Only process members with valid organisationId
+WHERE tm."userId" != o."ownerUserId";
 
 -- Add organisation owners to the INTERNAL_ORGANISATION ADMIN group
 INSERT INTO "OrganisationGroupMember" ("id", "groupId", "organisationMemberId")
@@ -873,8 +849,7 @@ FROM "Organisation" o
 JOIN "OrganisationMember" om ON om."organisationId" = o."id" AND om."userId" = o."ownerUserId"
 JOIN "OrganisationGroup" og ON og."organisationId" = o."id"
   AND og."type" = 'INTERNAL_ORGANISATION'::"OrganisationGroupType"
-  AND og."organisationRole" = 'ADMIN'::"OrganisationMemberRole"
-WHERE om."organisationId" IS NOT NULL; -- [CUSTOM_CHANGE] Only process members with valid organisationId
+  AND og."organisationRole" = 'ADMIN'::"OrganisationMemberRole";
 
 -- Add all other organisation members to the INTERNAL_ORGANISATION MEMBER group
 INSERT INTO "OrganisationGroupMember" ("id", "groupId", "organisationMemberId")
@@ -886,8 +861,7 @@ FROM "Organisation" o
 JOIN "OrganisationMember" om ON om."organisationId" = o."id" AND om."userId" != o."ownerUserId"
 JOIN "OrganisationGroup" og ON og."organisationId" = o."id"
   AND og."type" = 'INTERNAL_ORGANISATION'::"OrganisationGroupType"
-  AND og."organisationRole" = 'MEMBER'::"OrganisationMemberRole"
-WHERE om."organisationId" IS NOT NULL; -- [CUSTOM_CHANGE] Only process members with valid organisationId
+  AND og."organisationRole" = 'MEMBER'::"OrganisationMemberRole";
 
 -- Migrate team subscriptions to the organisation level
 UPDATE "Subscription" s
@@ -905,14 +879,6 @@ ALTER TABLE "Organisation" DROP COLUMN "teamId";
 ALTER TABLE "Team" DROP COLUMN "isPersonal";
 ALTER TABLE "TeamGlobalSettings" DROP COLUMN "teamId";
 ALTER TABLE "OrganisationGlobalSettings" DROP COLUMN "organisationId";
-
--- [CUSTOM_CHANGE] Clean up any OrganisationGroup records with null organisationId
--- This can happen if there were issues during the temporary column operations
-DELETE FROM "OrganisationGroup" WHERE "organisationId" IS NULL;
-
--- [CUSTOM_CHANGE] Clean up any OrganisationMember records with null organisationId
--- This can happen if there were issues during the migration process
-DELETE FROM "OrganisationMember" WHERE "organisationId" IS NULL;
 
 -- REAPPLY NOT NULL to any temporary nullable columns
 ALTER TABLE "Team" ALTER COLUMN "organisationId" SET NOT NULL;
