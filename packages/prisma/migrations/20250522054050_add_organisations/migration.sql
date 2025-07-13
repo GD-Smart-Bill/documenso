@@ -500,6 +500,17 @@ ALTER TABLE "Team" ADD CONSTRAINT "Team_teamGlobalSettingsId_fkey" FOREIGN KEY (
 
 -- [CUSTOM_CHANGE] FROM HERE ON IT'S ALL CUSTOM
 
+-- [CUSTOM_CHANGE] Ensure all teams have valid organisationId before proceeding
+-- This is a safety check to prevent null organisationId issues
+UPDATE "Team" 
+SET "organisationId" = (
+  SELECT o."id" 
+  FROM "Organisation" o 
+  WHERE o."ownerUserId" = "Team"."ownerUserId" 
+  LIMIT 1
+)
+WHERE "organisationId" IS NULL AND "ownerUserId" IS NOT NULL;
+
 /*
  * The current state of the migration is that:
  * - All users have a team with their personal entities excluding subscriptions
@@ -763,6 +774,7 @@ WITH team_internal_groups AS (
         'MEMBER'::"TeamMemberRole"
       ]) as team_role
   FROM "Team" t
+  WHERE t."organisationId" IS NOT NULL -- [CUSTOM_CHANGE] Ensure we only process teams with valid organisationId
 ),
 created_org_groups AS (
   -- Step 2: Create OrganisationGroups with temp data
@@ -782,6 +794,7 @@ created_org_groups AS (
     tig.team_id,
     tig.team_role::TEXT
   FROM team_internal_groups tig
+  WHERE tig."organisationId" IS NOT NULL -- [CUSTOM_CHANGE] Double-check organisationId is not null
   RETURNING "id", temp_team_id, temp_team_role
 )
 -- Step 3: Create TeamGroups using the temp data
@@ -879,6 +892,10 @@ ALTER TABLE "Organisation" DROP COLUMN "teamId";
 ALTER TABLE "Team" DROP COLUMN "isPersonal";
 ALTER TABLE "TeamGlobalSettings" DROP COLUMN "teamId";
 ALTER TABLE "OrganisationGlobalSettings" DROP COLUMN "organisationId";
+
+-- [CUSTOM_CHANGE] Clean up any OrganisationGroup records with null organisationId
+-- This can happen if there were issues during the temporary column operations
+DELETE FROM "OrganisationGroup" WHERE "organisationId" IS NULL;
 
 -- REAPPLY NOT NULL to any temporary nullable columns
 ALTER TABLE "Team" ALTER COLUMN "organisationId" SET NOT NULL;
