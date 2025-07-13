@@ -138,7 +138,7 @@ async function getSmartsignLimitsBeforeBillingIsEnabled({
 }): Promise<TLimitsResponseSchema> {
   console.log('getSmartsignLimitsBeforeBillingIsEnabled');
 
-  const [user, documents, directTemplates] = await Promise.all([
+  const [user, documents, allTimeDocuments, directTemplates] = await Promise.all([
     prisma.user.findUnique({
       where: {
         id: organisation.ownerUserId,
@@ -148,6 +148,22 @@ async function getSmartsignLimitsBeforeBillingIsEnabled({
       where: {
         team: {
           organisationId: organisation.id,
+        },
+        createdAt: {
+          gte: DateTime.utc().startOf('month').toJSDate(),
+        },
+        source: {
+          not: DocumentSource.TEMPLATE_DIRECT_LINK,
+        },
+      },
+    }),
+    prisma.document.count({
+      where: {
+        team: {
+          organisationId: organisation.id,
+        },
+        createdAt: {
+          gte: DateTime.utc().startOf('month').toJSDate(),
         },
         source: {
           not: DocumentSource.TEMPLATE_DIRECT_LINK,
@@ -170,13 +186,13 @@ async function getSmartsignLimitsBeforeBillingIsEnabled({
   const quota = structuredClone(FREE_TRIAL_LIMITS);
   const remaining = structuredClone(FREE_TRIAL_LIMITS);
 
-  quota.documents = documentsLimit;
   remaining.directTemplates = Math.max(remaining.directTemplates - directTemplates, 0);
 
   // for new users, we let them have free documents.
-  if (documents < FREE_TRIAL_LIMITS.documents) {
-    remaining.documents = Math.max(FREE_TRIAL_LIMITS.documents - documents, 0);
+  if (allTimeDocuments < FREE_TRIAL_LIMITS.documents) {
+    remaining.documents = Math.max(FREE_TRIAL_LIMITS.documents - allTimeDocuments, 0);
   } else {
+    quota.documents = documentsLimit;
     remaining.documents = Math.max(documentsLimit - documents, 0);
   }
 
