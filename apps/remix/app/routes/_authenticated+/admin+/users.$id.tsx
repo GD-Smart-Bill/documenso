@@ -81,7 +81,7 @@ const AdminUserPage = ({ user }: { user: User }) => {
   const { toast } = useToast();
   const { revalidate } = useRevalidator();
 
-  const documentCount = user.documents.length;
+  const documentCount = 0; // user.documents.length;
   const documentsLimit = user.documentsLimit;
   const roles = user.roles ?? [];
 
