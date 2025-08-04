@@ -26,6 +26,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 
+const options = {
+  cMapUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/cmaps/`,
+  standardFontDataUrl: `https://unpkg.com/pdfjs-dist@${pdfjs.version}/standard_fonts`,
+  disableFontFace: true,
+};
+
 export type OnPDFViewerPageClick = (_event: {
   pageNumber: number;
   numPages: number;
@@ -179,6 +185,7 @@ export const PDFViewer = ({
         <>
           <PDFDocument
             file={documentBytes.buffer}
+            options={options}
             className={cn('w-full overflow-hidden rounded', {
               'h-[80vh] max-h-[60rem]': numPages === 0,
             })}
