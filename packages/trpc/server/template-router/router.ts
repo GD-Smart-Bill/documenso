@@ -474,10 +474,10 @@ export const templateRouter = router({
         },
       });
 
-      if (csv.length > 4 * 1024 * 1024) {
+      if (csv.length > 15 * 1024 * 1024) {
         throw new TRPCError({
           code: 'BAD_REQUEST',
-          message: 'File size exceeds 4MB limit',
+          message: 'File size exceeds 15MB limit',
         });
       }
 

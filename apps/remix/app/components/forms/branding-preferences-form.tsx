@@ -8,6 +8,7 @@ import { Loader } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@documenso/lib/constants/app';
 import { getFile } from '@documenso/lib/universal/upload/get-file';
 import { cn } from '@documenso/ui/lib/utils';
 import { Button } from '@documenso/ui/primitives/button';
@@ -29,14 +30,14 @@ import {
 } from '@documenso/ui/primitives/select';
 import { Textarea } from '@documenso/ui/primitives/textarea';
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = APP_DOCUMENT_UPLOAD_SIZE_LIMIT * 1024 * 1024; // 50MB
 const ACCEPTED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 
 const ZBrandingPreferencesFormSchema = z.object({
   brandingEnabled: z.boolean().nullable(),
   brandingLogo: z
     .instanceof(File)
-    .refine((file) => file.size <= MAX_FILE_SIZE, 'File size must be less than 5MB')
+    .refine((file) => file.size <= MAX_FILE_SIZE, 'File size must be less than 50MB')
     .refine(
       (file) => ACCEPTED_FILE_TYPES.includes(file.type),
       'Only .jpg, .png, and .webp files are accepted',
@@ -251,7 +252,7 @@ export function BrandingPreferencesForm({
                     </div>
 
                     <FormDescription>
-                      <Trans>Upload your brand logo (max 5MB, JPG, PNG, or WebP)</Trans>
+                      <Trans>Upload your brand logo (max 50MB, JPG, PNG, or WebP)</Trans>
 
                       {canInherit && (
                         <span>

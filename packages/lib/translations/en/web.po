@@ -140,6 +140,7 @@ msgstr "{0} invited you to {recipientActionVerb} a document"
 #. placeholder {1}: quota.documents
 #: apps/remix/app/components/general/document/document-upload.tsx
 #: apps/remix/app/components/general/document/document-drop-zone-wrapper.tsx
+#: packages/ui/primitives/document-upload.tsx
 msgid "{0} of {1} documents remaining this month."
 msgstr "{0} of {1} documents remaining this month."
 
@@ -7607,8 +7608,8 @@ msgid "Upload Template Document"
 msgstr "Upload Template Document"
 
 #: apps/remix/app/components/forms/branding-preferences-form.tsx
-msgid "Upload your brand logo (max 5MB, JPG, PNG, or WebP)"
-msgstr "Upload your brand logo (max 5MB, JPG, PNG, or WebP)"
+msgid "Upload your brand logo (max 50MB, JPG, PNG, or WebP)"
+msgstr ""
 
 #: apps/remix/app/components/general/template/template-page-view-information.tsx
 #: apps/remix/app/components/general/document/document-page-view-information.tsx

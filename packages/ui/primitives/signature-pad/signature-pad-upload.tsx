@@ -18,8 +18,8 @@ const loadImage = async (file: File | undefined): Promise<HTMLImageElement> => {
     throw new Error('Invalid file type');
   }
 
-  if (file.size > 5 * 1024 * 1024) {
-    throw new Error('Image size should be less than 5MB');
+  if (file.size > 15 * 1024 * 1024) {
+    throw new Error('Image size should be less than 15MB');
   }
 
   return new Promise((resolve, reject) => {
