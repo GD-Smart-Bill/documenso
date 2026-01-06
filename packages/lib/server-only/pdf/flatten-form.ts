@@ -13,7 +13,6 @@ import {
   translate,
 } from 'pdf-lib';
 
-
 export const removeOptionalContentGroups = (document: PDFDocument) => {
   const context = document.context;
   const catalog = context.lookup(context.trailerInfo.Root);

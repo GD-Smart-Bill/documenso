@@ -176,9 +176,9 @@ export const DocumentSigningAuthProvider = ({
   // Assume that a user must be logged in for any auth requirements.
   const isAuthRedirectRequired = Boolean(
     derivedRecipientActionAuth &&
-      derivedRecipientActionAuth.length > 0 &&
-      !derivedRecipientActionAuth.includes(DocumentAuth.EXPLICIT_NONE) &&
-      user?.email !== recipient.email,
+    derivedRecipientActionAuth.length > 0 &&
+    !derivedRecipientActionAuth.includes(DocumentAuth.EXPLICIT_NONE) &&
+    user?.email !== recipient.email,
   );
 
   const refetchPasskeys = async () => {
